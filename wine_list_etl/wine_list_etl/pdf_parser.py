@@ -16,6 +16,8 @@ def tabulate_rects(rects: list):
         "y0",
         "x1",
         "y1",
+        "bottom",
+        "top",
         "width",
         "height",
         "pts",
@@ -46,30 +48,23 @@ def tabulate_pages(pages: list):
     return pages_df
 
 
-def parse_wine_list(
-    pdf_path: str | Path, pages_outpath: str | Path, rect_outpath: str | Path
-):
+def parse_wine_list(pdf_path: str | Path, page_range: tuple[int, int]):
     """
     parse the wine list pdf and return pages and rects objects as csv files.
     """
 
-    logger.info(f"parsing pdf at {Path}..")
+    logger.info(f"parsing pdf at {pdf_path}..")
 
     pdf = pdfplumber.open(pdf_path)
 
-    pages = pdf.pages
+    pages = pdf.pages[slice(page_range[0], page_range[1])]
 
-    rects = pdf.rects
+    rects = pdf.rects[slice(page_range[0], page_range[1])]
 
     pages_df = tabulate_pages(pages=pages)
 
     rect_df = tabulate_rects(rects=rects)
 
-    logger.info(f"writing page data to {pages_outpath}..")
+    logger.info("returning tables as dfs..")
 
-    pages_df.to_csv(pages_outpath)
-
-    logger.info(f"writing rect data to {rect_outpath}..")
-    rect_df.to_csv(rect_outpath)
-
-    logger.info("parsing complete!")
+    return pages_df, rect_df

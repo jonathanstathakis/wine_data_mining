@@ -1,5 +1,6 @@
 import duckdb as db
 from wine_list_etl.definitions import BASE_DIR
+from wine_list_etl.pdf_parser import parse_wine_list
 from pathlib import Path
 import logging
 
@@ -15,27 +16,47 @@ def exc_sql(conn, fname: str | Path):
     conn.execute(query)
 
 
-def wine_list_etl(
-    conn: db.DuckDBPyConnection, pages_path: str | Path, rects_path: str | Path
+def load_page_data(
+    conn: db.DuckDBPyConnection, pdf_path: str | Path, page_range: tuple[int, int]
 ):
-    """ """
+    """Add pages and rectangle tables to database via dataframe objs.
+
+    Args:
+        conn (DuckDBPyConnection): database connection object.
+        pdf_path (str|Path): path to the input pdf file.
+        page_range (tuple[int, int]): a 2 element tuple representing the page range.
+    """
+    page_df, rect_df = parse_wine_list(pdf_path, page_range=page_range)
+
+    fname = Path(BASE_DIR) / "queries" / "wine_list_etl" / "load_wine_list_pages.sql"
+
+    with open(fname, "r") as f:
+        query = f.read()
+
+    conn.execute(query)
+
+
+def wine_list_etl(
+    conn: db.DuckDBPyConnection, pdf_path: str | Path, page_range: tuple[int, int]
+):
+    """Execute a ETL pipeline using the queries in queries/wine_list_etl to
+    load the database connected with `conn` with a table wine_list representing
+    the wine list as parsed from the pdf at `pdf_path`.
+
+    Args:
+        conn (DuckDBPyConnection): database connection object.
+        pdf_path (str|Path): path to the input pdf file.
+        page_range (tuple[int, int]): a 2 element tuple representing the page range.
+    """
 
     # load pages raw and rects
 
-    logger.debug("reading 'load_wine_list_pages.sql' query file..")
+    load_page_data(conn=conn, pdf_path=pdf_path, page_range=page_range)
+    exc_sql(conn, "wine_list_etl/add_line_numbers.sql")
+    exc_sql(conn, "wine_list_etl/aggregate_lines.sql")
+    exc_sql(conn, "wine_list_etl/label_sections.sql")
+    exc_sql(conn, "wine_list_etl/decompose_line_text.sql")
 
-    with open(Path(BASE_DIR) / "queries" / "load_wine_list_pages.sql", "r") as f:
-        load_query = f.read()
-
-    subbed_load_query = load_query.replace("pagesraw_path", str(pages_path)).replace(
-        "rect_path", str(rects_path)
-    )
-
-    logger.debug("executing query..")
-    conn.execute(subbed_load_query)
-
-    logger.debug("reading wine_list_etl.sql query..")
-
-    exc_sql(conn, "add_line_numbers.sql")
+    breakpoint()
 
     logger.info("finished wine_list_etl!")

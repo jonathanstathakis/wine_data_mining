@@ -1,31 +1,11 @@
-begin transaction;
+
 -- load wine list pagesRaw from source file
 -- load rectangle data from source file
 -- add line_num label over page number
 -- aggregate text in line and store remaining word data as json
 
-create or replace table aggregated as (
-    select
-        line_num,
-        page_num,
-        ROW_NUMBER()
-            over (
-                order by page_num asc, line_num asc
-            )
-            as line_num_tot,
-        STRING_AGG(text, ' ') as merged_text,
-        ARRAY_AGG(TO_JSON(line_numbered_pages)) as word_json
-    from
-        line_numbered_pages
-    group by
-        line_num,
-        page_num
-    order by
-        line_num_tot
-);
 
-
-create table if not exists word_0 as (
+create temp table if not exists word_0 as (
     select
         page_num,
         line_num_tot,
@@ -37,8 +17,39 @@ create table if not exists word_0 as (
         word_json -> '$[0].height' as height
     from aggregated
 );
+create or replace temp table rect_joined as (
 
-create or replace table wine_list as (
+    select
+        r.page_num,
+        w.page_num as w_page_num,
+        w.line_num,
+        r.rect_num,
+        r.top as rect_top,
+        r.bottom as rect_bottom,
+        w.bottom as word_bottom,
+        w.text,
+        w.height as w_height,
+        r.bottom - w.height::float as bottom_sub_height
+    from
+        rect as r
+    left join
+        word_0 as w
+        on
+        -- some section headers are incorreectly formatted,
+        -- superimposing on the underline
+        -- use a buffer of 1 to accomodate for this
+
+            r.bottom + 1 > w.bottom
+            and w.bottom > (r.bottom - w.height::float)
+            and r.page_num = w.page_num
+    order by
+        w_page_num,
+        w.line_num,
+        r.rect_num
+);
+
+
+create or replace temp table wine_list as (
     with subsubsection as (
         select
             line_num_tot,
@@ -67,36 +78,6 @@ create or replace table wine_list as (
             line_num_tot
     ),
 
-    rect_joined as (
-
-        select
-            r.page_num,
-            w.page_num as w_page_num,
-            w.line_num,
-            r.rect_num,
-            r.top as rect_top,
-            r.bottom as rect_bottom,
-            w.bottom as word_bottom,
-            w.text,
-            w.height as w_height,
-            r.bottom - w.height::float as bottom_sub_height
-        from
-            rect as r
-        left join
-            word_0 as w
-            on
-            -- some section headers are incorreectly formatted,
-            -- superimposing on the underline
-            -- use a buffer of 1 to accomodate for this
-
-                r.bottom + 1 > w.bottom
-                and w.bottom > (r.bottom - w.height::float)
-                and r.page_num = w.page_num
-        order by
-            w_page_num,
-            w.line_num,
-            r.rect_num
-    ),
 
     subsection as (
         select
@@ -204,7 +185,7 @@ create temp table pivoted as (
         line_num_tot
 );
 
-create table if not exists section_labels as (
+create temp table if not exists section_labels as (
     with section_labelled as (
         select
             line_num_tot,
@@ -296,7 +277,7 @@ create temp table subsection_labels as (
     select * from subsection_filled
 );
 
-create table if not exists subsubsection_labels as (
+create temp table if not exists subsubsection_labels as (
 
     with subsubsection_labelled as (
         select
@@ -373,98 +354,3 @@ create or replace table wine_list as (
         p.line_num_tot
 );
 
--- cleanup.
--- TODO: break off vintages and prices at least.
-
-
-drop table aggregated;
-drop table line_numbered_pages;
-drop table pagesraw;
-drop table pivoted;
-drop table rect;
-drop table section_labels;
-drop table subsection_labels;
-drop table subsubsection_labels;
-drop table word_0;
-
-create or replace table wine_list as (
-  select
-        * exclude merged_text,
-        --- parse and cleanup prices.
-        regexp_extract(merged_text, '([\d,\,]+)$',1) as price_ext,
-        -- parse and cleanup vintages
-        REGEXP_EXTRACT(merged_text, '^(NV|\d{4})\b', 1) as vintage_ext,
-        REGEXP_EXTRACT(merged_text, '(\(\d{2}\))', 1) as base_year_ext,
-        REGEXP_EXTRACT(merged_text, '\s(‘.+’)\s', 1) as cuvee_name_ext,
-        REGEXP_EXTRACT(merged_text, '(\(disg \d{4}\))', 1) as disgorg_year_ext,
-        base_year_ext.replace('(','').replace(')','').trim() as base_year,
-        cuvee_name_ext.trim().regexp_replace('^‘','').regexp_replace('’$','').trim() as cuvee_name,
-        disgorg_year_ext.trim().replace('(disg ','').replace(')','').trim() as disgorg_year,
-        price_ext.replace(',','').trim()::int as price,
-        merged_text
-          .replace(price_ext,'')
-          .replace(vintage_ext,'')
-          .replace(base_year_ext,'')
-          .replace(cuvee_name_ext,'')
-          .replace(disgorg_year_ext, '')
-          .replace('  ',' ')
-          .trim() as merged_text_ext,
-    from wine_list
-)
-;
-show tables;
-
-commit;
---
--- /* decomposition of text field
--- * its going to have be done in sections i.e. champagne follows different rules to
--- * other seections.
--- TODO: continue this line of approach, or scrap. Works fine for Champagnes, not for still
--- due to lack of distinct delimiters.
--- */
---
--- -- with champagne as (
--- --   select
--- --     line_num_tot,
--- --     merged_text,
--- --     REGEXP_EXTRACT(merged_text, '^(NV|\d{4})\b', 1) as vintage,
--- --     REGEXP_EXTRACT(merged_text, '\((\d{2})\)', 1) as base_year,
--- --     REGEXP_EXTRACT(merged_text, '\s‘(.+)’\s', 1) as cuvee_name,
--- --     REGEXP_EXTRACT(merged_text, '\(disg (\d{4})\)', 1) as disgorg_year,
--- --     REGEXP_EXTRACT(merged_text, '([\d,\,]+)$', 1) as price,
--- --     REGEXP_EXTRACT(merged_text, '’\s(.+)\s\(', 1) as sweetness,
--- --     REGEXP_EXTRACT(merged_text, '\d{4}\)\s(.+?)\s[\d,\,]+$',1) as region,
--- --     merged_text
--- --         .replace(vintage, '')
--- --         .replace(base_year, '')
--- --         .replace(cuvee_name, '')
--- --         .replace(disgorg_year, '')
--- --         .replace(price, '')
--- --         .replace(sweetness, '')
--- --         .replace(region, '')
--- --         .replace('()','')
--- --         .replace('‘’','')
--- --         .replace('(disg )','')
--- --         .trim() as producer 
--- -- from pivot_with_section_labels
--- -- where section = 'Sparkling Wine'
--- -- )
--- -- , still_wines as (
--- -- select
--- --     merged_text,
--- --     REGEXP_EXTRACT(merged_text, '\d{4}') as vintage,
--- --     REGEXP_EXTRACT(merged_text, '\s([\d,\,]+)$', 1) as price,
--- --     REGEXP_EXTRACT(merged_text, '‘(.+)’', 1) as cuvee_name
--- -- from
--- --   pivot_with_section_labels
--- -- where section != 'Sparkling Wine'
--- -- )
--- -- select * from still_wines;
---
--- /*
--- TODO:
--- - [ ] start breaking down merged_text field.
--- - [ ] organise etl line
--- - [ ] write orchestrating python function (i.e. airflow.)
---
--- */
