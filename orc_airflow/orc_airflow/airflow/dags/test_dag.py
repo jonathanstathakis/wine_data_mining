@@ -7,5 +7,7 @@ def test_dag():
     def test_task():
         return "Hello World"
 
+    test_task()
+
 
 test_dag()

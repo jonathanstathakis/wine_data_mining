@@ -5,14 +5,20 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "apache-airflow>=3.0.2",
-    "duckdb>=1.3.1",
-    "flask-appbuilder>=4.7.0",
-    "graphviz>=0.21",
-    "pandas>=2.3.0",
-    "pathlib>=1.0.1",
-    "wine-list-etl",
+  "apache-airflow>=3.0.2",
+  "duckdb>=1.3.1",
+  "flask-appbuilder>=4.7.0",
+  "graphviz>=0.21",
+  "ipython>=9.4.0",
+  "pandas>=2.3.0",
+  "pathlib>=1.0.1",
+  "wine-list-etl",
 ]
+
+
+# needed to treat as package i.e. import from submodules
+[tool.uv]
+package = true
 
 [tool.uv.sources]
 wine-list-etl = { path = "../wine_list_etl", editable = true }
