@@ -1,5 +1,0 @@
-{"timestamp":"2025-07-08T15:04:06.049038Z","level":"warning","event":"Process exited abnormally","exit_code":124,"logger":"processor"}
-{"timestamp":"2025-07-08T15:04:36.248719Z","level":"warning","event":"Process exited abnormally","exit_code":124,"logger":"processor"}
-{"timestamp":"2025-07-08T15:05:06.499547Z","level":"warning","event":"Process exited abnormally","exit_code":124,"logger":"processor"}
-{"timestamp":"2025-07-08T15:05:12.585796Z","level":"warning","event":"Process exited abnormally","exit_code":124,"logger":"processor"}
-{"timestamp":"2025-07-08T15:05:42.776176Z","level":"warning","event":"Process exited abnormally","exit_code":124,"logger":"processor"}
