@@ -15,9 +15,8 @@ def dag_wine_list_etl():
         duckdb_conn_id = "data_mining_db"
         from wine_list_etl.etl import run_etl
 
-        duckdb_hook = DuckDBHook(duckdb_conn_id=duckdb_conn_id)
-        conn = duckdb_hook.get_conn()
-
+        hook = DuckDBHook.get_hook(duckdb_conn_id)
+        conn = hook.get_conn()
         pdf_path = RESOURCES / "bennelong_wine_list.pdf"
         page_range = (6, -1)
         run_etl(conn=conn, pdf_path=pdf_path, page_range=page_range)
