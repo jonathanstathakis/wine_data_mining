@@ -26,9 +26,17 @@ def tabulate_rects(rects: list):
     ]
 
     logger.info("extracting rectangles..")
-    fields = [[rect[col] for col in columns] for rect in rects]
+
+    dfs = []
+    for page in rects:
+        for rect in page:
+            vals = [rect[col] for col in columns]
+            df = pd.DataFrame([vals], columns=columns)
+            dfs.append(df)
+
+    df = pd.concat(dfs)
     logger.info("tabulating rectangles..")
-    df = pd.DataFrame(fields, columns=columns)
+
     return df
 
 

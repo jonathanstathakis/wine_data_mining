@@ -1,4 +1,4 @@
-create temp table aggregated as (
+create table aggregated as (
     select
         line_num,
         page_num,

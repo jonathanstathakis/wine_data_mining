@@ -1,4 +1,4 @@
-create temp table if not exists line_numbered_pages as (
+create table line_numbered_pages as (
     with recursive unique_tops as (
         select distinct
             page_num,

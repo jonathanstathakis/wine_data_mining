@@ -2,9 +2,6 @@
 * Create wine_list table with labelled section through subsection for each line.
 *
 */
-
-
-
 create temp table word_0 as (
     select
         page_num,
@@ -17,6 +14,26 @@ create temp table word_0 as (
         word_json -> '$[0].height' as height
     from aggregated
 );
+
+/*
+* Use conditional joins to filter word_0 based on proximity
+* to a rectangle.
+*
+* Condition are as follows:
+* - the bottom of a rectangle + 1 unit is greater than the bottom
+* of the word
+* - the bottom of the word is greater than the bottom of the 
+* rectangle minus the height of the word
+* - they are on the same page.
+*
+* graphically, as follows:
+*
+* word:      [<a_word>
+* rectangle:  --------
+*
+* The y values (top, bottom) in a page are inverted, higher is lower
+* down a page.
+*/
 create temp table rect_joined as (
 
     select
@@ -48,23 +65,18 @@ create temp table rect_joined as (
         r.rect_num
 );
 
-
+/*
+* Use a number of identifying attributes to label the section, subsection
+* and subsubsections:
+*
+* section: first word starts at a x value greater than 200
+* subsection: first word is above a rectangle (i.e. underlined)
+* subsubsection: first word font is italic.
+* 
+*/
 -- create a table of filled subsection labels
 create temp table with_line_type as (
-    with subsubsection as (
-        select
-            line_num_tot,
-            page_num,
-            line_num,
-            'subsubsection' as line_type
-        from
-            word_0
-        where
-            fontname like '%Italic%'
-        order by
-            line_num_tot
-    ),
-
+with 
     section as (
         select
             line_num_tot,
@@ -78,7 +90,6 @@ create temp table with_line_type as (
         order by
             line_num_tot
     ),
-
 
     subsection as (
         select
@@ -98,6 +109,20 @@ create temp table with_line_type as (
         order by
             a.page_num,
             a.line_num
+    ),
+
+    subsubsection as (
+        select
+            line_num_tot,
+            page_num,
+            line_num,
+            'subsubsection' as line_type
+        from
+            word_0
+        where
+            fontname like '%Italic%'
+        order by
+            line_num_tot
     ),
 
     line_type_labelled as (
@@ -135,7 +160,7 @@ create temp table with_line_type as (
             line_type != 'page_number'
     ),
 
-    /* 
+    /*
     * we should first make 'line type' into individual columns.
     */
     -- removal of lines otherwise irredemable or superfluous.
@@ -165,6 +190,7 @@ create temp table with_line_type as (
 
     select * from text_filtered
 );
+
 
 -- assign a section, subsection and subsubsection label to each wine/line.
 create temp table pivoted as (
@@ -339,15 +365,15 @@ create or replace table wine_list as (
         p.merged_text
     from
         pivoted as p
-    inner join
+    left join
         section_labels as sl
         on
             p.line_num_tot = sl.line_num_tot
-    inner join
+    left join
         subsection_labels as ssl
         on
             p.line_num_tot = ssl.line_num_tot
-    inner join
+    left join
         subsubsection_labels as sssl
         on
             p.line_num_tot = sssl.line_num_tot

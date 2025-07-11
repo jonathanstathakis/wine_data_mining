@@ -1,11 +1,8 @@
-from operator import add
 from airflow.sdk import task, dag
-import duckdb as db
-from orc_airflow.definitions import DB_PATH, RESOURCES
+from orc_airflow.definitions import RESOURCES
 from duckdb_provider.hooks.duckdb_hook import DuckDBHook
 from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 
-from airflow.sdk import Variable
 import logging
 import os
 from pathlib import Path
@@ -20,17 +17,17 @@ logger = logging.getLogger(__name__)
 def dag_wine_list_etl():
     duckdb_conn_id = "data_mining_db"
 
-    @task
-    def run_wine_list_etl():
-        from wine_list_etl.etl import run_etl
-
-        hook = DuckDBHook.get_hook(duckdb_conn_id)
-        conn = hook.get_conn()
-        pdf_path = RESOURCES / "bennelong_wine_list.pdf"
-        page_range = (5, -1)
-        run_etl(conn=conn, pdf_path=pdf_path, page_range=page_range)
-
-    run_wine_list_etl()
+    # @task
+    # def run_wine_list_etl():
+    #     from wine_list_etl.etl import run_etl
+    #
+    #     hook = DuckDBHook.get_hook(duckdb_conn_id)
+    #     conn = hook.get_conn()
+    #     pdf_path = RESOURCES / "bennelong_wine_list.pdf"
+    #     page_range = (5, -1)
+    #     run_etl(conn=conn, pdf_path=pdf_path, page_range=page_range)
+    #
+    # run_wine_list_etl()
 
     @task
     def extract_doc_data():
@@ -47,14 +44,17 @@ def dag_wine_list_etl():
         pdf = pdfplumber.open(pdf_path)
         page_range = (5, -1)
 
-        pages = pdf.pages[slice(page_range[0], page_range[1])]
+        page_slice = slice(page_range[0], page_range[1])
 
-        rects = pdf.rects[slice(page_range[0], page_range[1])]
+        pages = pdf.pages[page_slice]
+
+        rects = [page.rects for page in pages]
 
         page_df = tabulate_pages(pages=pages)
 
         rect_df = tabulate_rects(rects=rects)
 
+        breakpoint()
         logger.info("returning tables as dfs..")
         query_path = TEMPLATE_SEARCHPATH / "load_wine_list_pages.sql"
         with open(query_path, "r") as f:
