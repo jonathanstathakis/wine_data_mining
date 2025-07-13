@@ -1,4 +1,4 @@
-create table aggregated as (
+create or replace table aggregated as (
     select
         line_num,
         page_num,

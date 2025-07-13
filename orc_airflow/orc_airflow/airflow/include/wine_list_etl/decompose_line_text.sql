@@ -1,5 +1,5 @@
 
-create or replace table wine_list as (
+create or replace table wine_list_staging as (
   select
         *,
         --- parse and cleanup prices.
@@ -21,7 +21,7 @@ create or replace table wine_list as (
           .replace(disgorg_year_ext, '')
           .replace('  ',' ')
           .trim() as merged_text_ext,
-    from wine_list
+    from wine_list_staging
       order by
         page_num,
         line_num

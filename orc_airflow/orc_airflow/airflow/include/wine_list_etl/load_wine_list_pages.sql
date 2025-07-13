@@ -1,11 +1,11 @@
-create table pagesraw as (
+create or replace table pagesraw as (
     select
         page_number as page_num,
         * exclude (page_number)
     from page_df
 );
 
-create table rect as (
+create or replace table rect as (
     select
         page_number as page_num,
         row_number() over () as rect_num_tot,

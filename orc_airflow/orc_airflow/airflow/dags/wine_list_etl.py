@@ -54,7 +54,6 @@ def dag_wine_list_etl():
 
         rect_df = tabulate_rects(rects=rects)
 
-        breakpoint()
         logger.info("returning tables as dfs..")
         query_path = TEMPLATE_SEARCHPATH / "load_wine_list_pages.sql"
         with open(query_path, "r") as f:
@@ -87,11 +86,26 @@ def dag_wine_list_etl():
         sql="decompose_line_text.sql",
     )
 
+    @task
+    def load_wine_list():
+        hook = DuckDBHook.get_hook(duckdb_conn_id)
+        conn = hook.get_conn()
+
+        query_file = "load_wine_list.sql"
+        query_path = TEMPLATE_SEARCHPATH / query_file
+
+        with open(query_path, "r") as f:
+            query_string = f.read()
+
+        conn.execute(query_string)
+
+    load_wine_list = load_wine_list()
+
     # cleanup
     cleanup = SQLExecuteQueryOperator(
         task_id="cleanup",
         conn_id=duckdb_conn_id,
-        sql="drop table pagesraw; drop table rect; show tables;",
+        sql="drop table pagesraw; drop table rect; drop table aggregated; drop table line_numbered_pages; drop table wine_list_staging; show tables;",
         show_return_value_in_logs=True,
     )
 
@@ -101,6 +115,7 @@ def dag_wine_list_etl():
         >> aggregate_lines
         >> label_sections
         >> decompose_line_text
+        >> load_wine_list
         >> cleanup
     )
 

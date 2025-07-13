@@ -1,4 +1,4 @@
-create table line_numbered_pages as (
+create or replace table line_numbered_pages as (
     with recursive unique_tops as (
         select distinct
             page_num,

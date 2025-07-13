@@ -354,7 +354,7 @@ create temp table subsubsection_labels as (
 );
 
 -- label section - subsubsection columns via pivoted
-create or replace table wine_list as (
+create or replace table wine_list_staging as (
     select
         p.line_num_tot,
         p.page_num,
