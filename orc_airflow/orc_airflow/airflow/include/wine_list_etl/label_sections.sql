@@ -22,7 +22,7 @@ create temp table word_0 as (
 * Condition are as follows:
 * - the bottom of a rectangle + 1 unit is greater than the bottom
 * of the word
-* - the bottom of the word is greater than the bottom of the 
+* - the bottom of the word is greater than the bottom of the
 * rectangle minus the height of the word
 * - they are on the same page.
 *
@@ -72,11 +72,11 @@ create temp table rect_joined as (
 * section: first word starts at a x value greater than 200
 * subsection: first word is above a rectangle (i.e. underlined)
 * subsubsection: first word font is italic.
-* 
+*
 */
 -- create a table of filled subsection labels
 create temp table with_line_type as (
-with 
+    with
     section as (
         select
             line_num_tot,
@@ -383,4 +383,3 @@ create or replace table wine_list_staging as (
     order by
         p.line_num_tot
 );
-

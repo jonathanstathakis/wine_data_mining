@@ -17,18 +17,6 @@ logger = logging.getLogger(__name__)
 def dag_wine_list_etl():
     duckdb_conn_id = "data_mining_db"
 
-    # @task
-    # def run_wine_list_etl():
-    #     from wine_list_etl.etl import run_etl
-    #
-    #     hook = DuckDBHook.get_hook(duckdb_conn_id)
-    #     conn = hook.get_conn()
-    #     pdf_path = RESOURCES / "bennelong_wine_list.pdf"
-    #     page_range = (5, -1)
-    #     run_etl(conn=conn, pdf_path=pdf_path, page_range=page_range)
-    #
-    # run_wine_list_etl()
-
     @task
     def extract_doc_data():
         from orc_airflow.pdf_parser import tabulate_pages, tabulate_rects
