@@ -104,7 +104,7 @@ def dag_wine_list_etl():
         >> label_sections
         >> decompose_line_text
         >> load_wine_list
-        >> cleanup
+        # >> cleanup
     )
 
 

@@ -1,4 +1,4 @@
-create or replace table extracted as (
+create or replace table bp_extracted as (
 select
   product_id,
   _comment
@@ -52,8 +52,8 @@ SELECT
 )
     select * from t);
 
-alter table extracted add column if not exists variety varchar[];
-update extracted as a set variety = b.variety from variety_ext as b where a.product_id = b.product_id;
+alter table bp_extracted add column if not exists variety varchar[];
+update bp_extracted as a set variety = b.variety from variety_ext as b where a.product_id = b.product_id;
 
 
 -- remove values in varieties from comm_deg.
@@ -75,26 +75,23 @@ update extracted as a set variety = b.variety from variety_ext as b where a.prod
 
 
  from
-     extracted);
+     bp_extracted);
 
-update extracted as a
+update bp_extracted as a
     set decomp_comm = b.comm_deg_no_variety
 from
     comm_deg_ex_var as b
 where
     a.product_id = b.product_id;
 
--- drop table comm_deg_ex_var;
--- drop table variety_ext;
--- drop table bp_raw_loading;
-create or replace table bepoz_items (
+create or replace table bp_items (
   product_id int primary key,
   cuvee_producer varchar,
   vol int,
   vintage varchar,
   variety varchar[]
 );
-insert into bepoz_items 
+insert into bp_items 
 select 
     product_id,
     decomp_comm as cuvee_producer,
@@ -102,10 +99,7 @@ select
     ext_vintage as vintage,
     variety as variety,
 from
-    extracted;
+    bp_extracted;
 
-drop table bp_raw_loading;
-drop table extracted;
-drop table varieties;
 
-select * from bepoz_items limit 10;
+select * from bp_items limit 10;

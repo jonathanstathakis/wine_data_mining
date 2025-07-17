@@ -1,9 +1,5 @@
 from airflow.sdk import task, dag
-from orc_airflow.definitions import RESOURCES
 from duckdb_provider.hooks.duckdb_hook import DuckDBHook
-from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
-
-import duckdb as db
 import logging
 import os
 from pathlib import Path
