@@ -1,7 +1,7 @@
-
-create or replace table wine_list_staging as (
+create or replace table decomposeMergeText as (
+  with regexp_extracted as (
   select
-        *,
+        line_num_tot,
         --- parse and cleanup prices.
         regexp_extract(merged_text, '([\d,\,]+)$', 1) as price_ext,
         -- parse and cleanup vintages
@@ -9,21 +9,48 @@ create or replace table wine_list_staging as (
         REGEXP_EXTRACT(merged_text, '(\(\d{2}\))', 1) as base_year_ext,
         REGEXP_EXTRACT(merged_text, '\s(‘.+’)\s', 1) as cuvee_name_ext,
         REGEXP_EXTRACT(merged_text, '(\(disg \d{4}\))', 1) as disgorg_year_ext,
-        base_year_ext.replace('(','').replace(')','').trim() as base_year,
-        cuvee_name_ext.trim().regexp_replace('^‘','').regexp_replace('’$','').trim() as cuvee_name,
-        disgorg_year_ext.trim().replace('(disg ','').replace(')','').trim() as disgorg_year,
-        price_ext.replace(',','').trim() as price,
-        merged_text
-          .replace(price_ext,'')
-          .replace(vintage_ext,'')
-          .replace(base_year_ext,'')
-          .replace(cuvee_name_ext,'')
-          .replace(disgorg_year_ext, '')
-          .replace('  ',' ')
-          .trim() as merged_text_ext,
-    from wine_list_staging
+        merged_text,
+    from WINELISTSTAGING 
       order by
         page_num,
         line_num
+),
+  
+  cleaned as (
+    select
+            line_num_tot,
+            vintage_ext.trim() as vintage,
+            base_year_ext.replace('(','').replace(')','').trim() as base_year,
+            cuvee_name_ext.trim().regexp_replace('^‘','').regexp_replace('’$','').trim() as cuvee_name,
+            disgorg_year_ext.trim().replace('(disg ','').replace(')','').trim() as disgorg_year,
+            price_ext.replace(',','').trim() as price,
+            merged_text
+              .replace(price_ext,'')
+              .replace(vintage_ext,'')
+              .replace(base_year_ext,'')
+              .replace(cuvee_name_ext,'')
+              .replace(disgorg_year_ext, '')
+              .replace('  ',' ')
+              .trim() as merged_text_ext,
+    from
+            regexp_extracted
+)
+select * from cleaned
 )
 ;
+-- update WINELISTSTAGING with the values
+update WINELISTSTAGING as a
+    set
+        vintage = b.vintage,
+        base_year = b.base_year,
+        cuvee_name = b.cuvee_name,
+        disgorg_year = b.disgorg_year,
+        price = b.price,
+        merged_text_ext = b.merged_text_ext
+    from
+        decomposeMergeText as b
+    where
+        a.line_num_tot = b.line_num_tot;
+
+select line_num_tot, vintage, cuvee_name, base_year, disgorg_year, price, merged_text_ext from WINELISTSTAGING;
+

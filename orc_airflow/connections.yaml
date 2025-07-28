@@ -1,0 +1,13 @@
+- conn_id: data_mining_db
+  conn_type: duckdb
+  description: null
+  extra_dejson: {}
+  get_uri: duckdb://%2FUsers%2Fjonathan%2Fjonathan%2Fprojects%2Fwine_wiki%2Fwine_data_mining%2Forc_airflow%2Fdata_mining.db/test_data_mining.db
+  host: /Users/jonathan/jonathan/projects/wine_wiki/wine_data_mining/orc_airflow/test_data_mining.db
+  id: "1"
+  is_encrypted: "False"
+  is_extra_encrypted: "False"
+  login: null
+  password: null
+  port: null
+  schema: data_mining.db

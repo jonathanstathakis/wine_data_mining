@@ -354,15 +354,15 @@ create temp table subsubsection_labels as (
 );
 
 -- label section - subsubsection columns via pivoted
-create or replace table wine_list_staging as (
+insert into WINELISTSTAGING by name (
     select
-        p.line_num_tot,
-        p.page_num,
-        p.line_num,
-        sl.section,
-        ssl.subsection,
-        sssl.subsubsection,
-        p.merged_text
+        p.line_num_tot as line_num_tot,
+        p.page_num as page_num,
+        p.line_num as line_num,
+        sl.section as section,
+        ssl.subsection as subsection,
+        sssl.subsubsection as subsubsection,
+        p.merged_text as merged_text
     from
         pivoted as p
     left join
