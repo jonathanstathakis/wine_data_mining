@@ -159,8 +159,14 @@ def dag_wine_list_etl():
 
     1. tables pagesraw and rect added to db.
     2. add_line_numbers: identifies lines as groups of words within 4 units vertically and assigns line numbers as such.
-    3. aggregate_lines: create merged strings and through all other data into a json field.
+    3. aggregate_lines: create merged strings and throw all other data into a json field.
+    4. label_sections: create a table of wine list lines with section labels.
 
+    aggregated -> wineListLines through line_num_tot.
+
+    line_numbered_pages -> aggregated is a many to one join through page_num + line_num.
+
+    A cleanup could have a lineage through line_numbered_pages and aggregated to ensure normalization.
     """
     duckdb_conn_id = "data_mining_db_test"
 
@@ -213,7 +219,7 @@ def dag_wine_list_etl():
     )
 
     # label sections
-    create_insert_wine_list_staging_label_sections = SQLExecuteQueryOperator(
+    create_insert_wineListLines_label_sections = SQLExecuteQueryOperator(
         task_id="label_sections", conn_id=duckdb_conn_id, sql="label_sections.sql"
     )
 
@@ -272,7 +278,7 @@ def dag_wine_list_etl():
         extract_doc_data
         >> add_line_numbers
         >> aggregate_lines
-        >> create_insert_wine_list_staging_label_sections
+        >> create_insert_wineListLines_label_sections
         >> decompose_line_text
         >> load_wine_list
         # finer-grained information extraction, region, village, cuvee name, varieties etc.

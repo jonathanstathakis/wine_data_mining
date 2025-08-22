@@ -50,7 +50,7 @@ select
     price,
     merged_text.lower() as merged_text
 from
-   WINELISTSTAGING 
+   wineListLines 
 order by
     line_num_tot);
 

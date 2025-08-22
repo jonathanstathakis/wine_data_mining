@@ -353,19 +353,15 @@ create temp table subsubsection_labels as (
     select * from subsubsection_filled
 );
 
-create or replace table WINELISTSTAGING (
-    LINE_NUM_TOT int,
+create or replace table wineListLines (
+    LINE_NUM_TOT int primary key,
     PAGE_NUM int,
     LINE_NUM int,
     SECTION varchar,
     SUBSECTION varchar,
     SUBSUBSECTION varchar,
     MERGED_TEXT varchar,
-    -- PRICE_EXT varchar,
-    -- VINTAGE_EXT varchar,
     VINTAGE varchar,
-    -- BASE_YEAR_EXT varchar,
-    -- DISGORG_YEAR_EXT varchar,
     BASE_YEAR varchar,
     CUVEE_NAME varchar,
     DISGORG_YEAR varchar,
@@ -374,7 +370,7 @@ create or replace table WINELISTSTAGING (
 );
 
 -- label section - subsubsection columns via pivoted
-insert into WINELISTSTAGING by name (
+insert into wineListLines by name (
     select
         p.line_num_tot as line_num_tot,
         p.page_num as page_num,

@@ -10,7 +10,7 @@ create or replace table decomposeMergeText as (
         REGEXP_EXTRACT(merged_text, '\s(‘.+’)\s', 1) as cuvee_name_ext,
         REGEXP_EXTRACT(merged_text, '(\(disg \d{4}\))', 1) as disgorg_year_ext,
         merged_text,
-    from WINELISTSTAGING 
+    from wineListLines 
       order by
         page_num,
         line_num
@@ -38,8 +38,8 @@ create or replace table decomposeMergeText as (
 select * from cleaned
 )
 ;
--- update WINELISTSTAGING with the values
-update WINELISTSTAGING as a
+-- update wineListLines with the values
+update wineListLines as a
     set
         vintage = b.vintage,
         base_year = b.base_year,
@@ -52,5 +52,5 @@ update WINELISTSTAGING as a
     where
         a.line_num_tot = b.line_num_tot;
 
-select line_num_tot, vintage, cuvee_name, base_year, disgorg_year, price, merged_text_ext from WINELISTSTAGING;
+select line_num_tot, vintage, cuvee_name, base_year, disgorg_year, price, merged_text_ext from wineListLines;
 
