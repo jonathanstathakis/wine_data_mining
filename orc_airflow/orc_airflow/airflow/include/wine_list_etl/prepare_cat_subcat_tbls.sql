@@ -1,7 +1,9 @@
 -- begin transaction;
 -- category table. need category ids and an order, based on line num.
+drop table if exists SubSubsection CASCADE;
 drop table if exists SubSection CASCADE;
-drop table Section CASCADE;
+drop table if exists Section CASCADE;
+
 create or replace table Section(
     section varchar primary key,
     section_order int default -1
