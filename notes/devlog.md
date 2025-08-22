@@ -79,3 +79,18 @@ To do this we need:
 The strings are just too different. Furthermore, the integrity of the bepoz dataset is questionable. Until the two datasets can be reconciled I will move on with uploading the wine list dataset to the webapp. Bepoz linkage can wait.
 
 For now we'll simply run a dag which scans the current pdf and loads 'new' wines into a holding table until a user verifies their entry. A webpage can provide a view which shows the new wines.
+
+## Uploading Wines - Planning
+
+2025-07-17 11:01
+
+To upload the wines extracted by wine list we can get them as a csv and upload that to python anywhere then run a migration. Im expecting to be able to adapt this pretty simply. Question is how to use the ORM. We can use the wine_wiki_site test project to experiment. Going to need a date-added field to enable removal during testing but also useful. 'date-added-to-website' to be clear.
+
+TODO:
+
+- [ ] add wine.csv to test project
+- [ ] experiment with shell
+- [ ] write data migration script
+- [ ] test
+
+Im expecting this to require a little translation and configuration on both ends, especially fields that are missing from either.

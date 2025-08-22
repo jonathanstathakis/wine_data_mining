@@ -65,6 +65,7 @@ def dag_wine_list_etl():
     #
     import os
 
+    # TODO: add this env var in prod env.
     export_path_dir = Path(os.environ["WINE_LIST_EXP_DIR"])
 
     export_section_path = export_path_dir / "section.csv"
@@ -117,6 +118,14 @@ def dag_wine_list_etl():
             task_id="prepare_cat_subcat_tables",
             conn_id=duckdb_conn_id,
             sql="prepare_cat_subcat_tbls.sql",
+            show_return_value_in_logs=True,
+                    #
+        # TODO: fix subsbusection missing rows.
+        # >> fine_grained_extract
+        >> SQLExecuteQueryOperator(
+            task_id="prepare_subsubsection",
+            conn_id=duckdb_conn_id,
+            sql="prepare_subsubsection.sql",
             show_return_value_in_logs=True,
         )
         >> SQLExecuteQueryOperator(

@@ -67,33 +67,3 @@ unique (section, subsection, subsubsection)
 );
 
 
- create or replace temp table SUBSUBSECTIONSTAGING as
- with LISTSUBSUBSECTION as (
-     select
-         first(SECTION) as SECTION,
-         first(SUBSECTION) as SUBSECTION,
-         first(SUBSUBSECTION) as SUBSUBSECTION,
-         first(LINE_NUM_TOT) as line_num_tot,
-         row_number() over (order by first(line_num_tot))-1  as subsubsection_order 
-     from WINE_LIST
-     group by
-         SUBSUBSECTION
-     order by  
-         subsubsection_order
- )
-
- select * from LISTSUBSUBSECTION;
-
- insert into SubSubSection (section, subsection, subsubsection, subsubsection_order)
- select 
-     section,
-     subsection,
-     subsubsection,
-     subsubsection_order,
-     -- DEFAULT as subsubsection_id
-     from SubSubSectionStaging
- on conflict (subsubsection_id) do update set
-     subsubsection_order = EXCLUDED.subsubsection_order
- ;
-
- -- rollback;
