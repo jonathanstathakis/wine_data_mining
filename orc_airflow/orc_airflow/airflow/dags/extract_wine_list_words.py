@@ -14,8 +14,8 @@ TEMPLATE_SEARCHPATH = Path(os.environ.get("AIRFLOW_HOME")) / "include" / "wine_l
 logger = logging.getLogger(__name__)
 
 
-@dag(dag_id="wine_list_etl", template_searchpath=str(TEMPLATE_SEARCHPATH))
-def dag_wine_list_etl():
+@dag(dag_id="extract_wine_list_words", template_searchpath=str(TEMPLATE_SEARCHPATH))
+def extract_line_list_words():
     """
      Need documentation.
 
@@ -223,78 +223,16 @@ def dag_wine_list_etl():
         task_id="label_sections", conn_id=duckdb_conn_id, sql="label_sections.sql"
     )
 
-    # decompose line text
-    decompose_line_text = SQLExecuteQueryOperator(
-        task_id="decompose_line_text",
-        conn_id=duckdb_conn_id,
-        sql="decompose_line_text.sql",
-    )
-
-    # load the wine_list table.
-    load_wine_list = SQLExecuteQueryOperator(
-        task_id="load_wine_list",
-        conn_id=duckdb_conn_id,
-        sql="load_wine_list.sql",
-    )
-
-    prepare_cat_subcat_tables = SQLExecuteQueryOperator(
-        task_id="prepare_cat_subcat_tables",
-        conn_id=duckdb_conn_id,
-        sql="prepare_cat_subcat_tbls.sql",
-    )
-
-    # exporting the results of the ETL. long term we'll have this
-    # dump directly into the cloud database for user review but during
-    # dev a csv dump is fine.
-
-    export_path_dir = Path("/Users/jonathan/jonathan/projects/wine_wiki/wine_list_db")
-    export_section_path = export_path_dir / "section.csv"
-    export_subsection_path = export_path_dir / "subsection.csv"
-    export_wine_list_path = export_path_dir / "wine_list.csv"
-
-    # export section
-    export_section = SQLExecuteQueryOperator(
-        task_id="export_section",
-        conn_id=duckdb_conn_id,
-        sql=f"copy section to '{export_section_path}';",
-    )
-
-    # export subsection
-    export_subsection = SQLExecuteQueryOperator(
-        task_id="export_subsection",
-        conn_id=duckdb_conn_id,
-        sql=f"copy SubSection to '{export_subsection_path}';",
-    )
-
-    # export wines
-    export_wine_list = SQLExecuteQueryOperator(
-        task_id="export_wine_list",
-        conn_id=duckdb_conn_id,
-        sql=f"copy wine_list to '{export_wine_list_path}';",
-    )
-
     # test until label_sections..
     (
         extract_doc_data
         >> add_line_numbers
         >> aggregate_lines
         >> create_insert_wineListLines_label_sections
-        >> decompose_line_text
-        >> load_wine_list
-        # finer-grained information extraction, region, village, cuvee name, varieties etc.
-        >> SQLExecuteQueryOperator(
-            task_id="fine_grained_extract",
-            conn_id=duckdb_conn_id,
-            sql="fine_grained_extract.sql",
-        )
-        >> prepare_cat_subcat_tables
-        >> export_section
-        >> export_subsection
-        >> export_wine_list
     )  # type: ignore
 
 
-dag_wine_list_etl()
+extract_line_list_words()
 
 if __name__ == "__main__":
-    dag_wine_list_etl().test()  # type: ignore
+    extract_line_list_words().test()  # type: ignore
