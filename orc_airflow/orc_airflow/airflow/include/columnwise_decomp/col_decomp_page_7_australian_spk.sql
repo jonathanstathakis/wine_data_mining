@@ -1,4 +1,3 @@
-
 /*
 * bespoke query for page 7 australian sparkling. v similar to champagnes but no dyness.
 */
@@ -24,34 +23,24 @@ create temp table EXTRACTEDWORDS as (
     order by A.LINE_NUM, B.X0
 )
 ;
--- select * from EXTRACTEDWORDS;
--- -- add price column and fill through self-join
-create or replace table COLUMNDECOMPPAGE6 (
+create or replace table colDecoPage7AusSpk (
     LINE_NUM_TOT int primary key,
     VINTAGE varchar default '',
     BASE_YEAR varchar default '',
     PROD_WINE_NAME varchar default '',
-    DRYNESS varchar default '',
     DISGORGE_DATE varchar default '',
     GEO_INT varchar default '',
     VOL varchar default '750',
     PRICE int,
 );
-insert into COLUMNDECOMPPAGE6 (LINE_NUM_TOT)
+insert into colDecoPage7AusSpk (LINE_NUM_TOT)
 select distinct LINE_NUM_TOT
 from EXTRACTEDWORDS
 order by LINE_NUM_TOT;
 
 
 -- vintage.
--- several different forms to manage.
--- NV finishes at 92 but have to handle base year
--- vintage wine vintage ends at < 105.
--- maybe a double decomp
--- this doesnt appear to capture base year subtext at all..
--- possibly because it extends beyond 105. useful..
--- base year ends at 106. range 91 > 107
-update COLUMNDECOMPPAGE6 A set
+update colDecoPage7AusSpk A set
     VINTAGE = TEXT
 from
     EXTRACTEDWORDS B
@@ -63,8 +52,7 @@ where
 
 
 --base year
--- base year ends at 106. range 91 > 107
-update COLUMNDECOMPPAGE6 A set
+update colDecoPage7AusSpk A set
     BASE_YEAR = TEXT
 from
     EXTRACTEDWORDS B
@@ -74,8 +62,7 @@ where
 ;
 
 
--- producer_winename. Appears to start after 121.
-update columnDecompPage6 a set
+update colDecoPage7AusSpk a set
 prod_wine_name = b.prod_wine_name
 from (
 select
@@ -96,10 +83,8 @@ group by
 where
 a.line_num_tot = b.line_num_tot;
 
-
-
 ----dryness
---update columnDecompPage6 a set
+--update colDecoPage7AusSpk a set
 --dryness = case when b.text = 'Extra' then 'Extra-Brut' else b.text END
 --from (
 --select
@@ -127,7 +112,7 @@ a.line_num_tot = b.line_num_tot;
 
 
 --disgorge date
-UPDATE columnDecompPage6 AS a
+UPDATE colDecoPage7AusSpk AS a
 SET disgorge_date = b.text
 FROM (
     SELECT
@@ -144,7 +129,7 @@ WHERE a.line_num_tot = b.line_num_tot;
 
 --
 --geo int
-update columnDecompPage6 a set
+update colDecoPage7AusSpk a set
 geo_int = b.geo_int
 from (
 select
@@ -166,15 +151,8 @@ group by
 where
 a.line_num_tot = b.line_num_tot;
 
--- select *
--- from
---     EXTRACTEDWORDS
--- where
--- x0 > 490
--- ;
-
 -- --volume
--- update columnDecompPage6 a set
+-- update colDecoPage7AusSpk a set
 -- vol = b.text
 -- from
 --    extractedWords  b
@@ -185,7 +163,7 @@ a.line_num_tot = b.line_num_tot;
 -- ;
 --
 -- price
-update columnDecompPage6 a set
+update colDecoPage7AusSpk a set
 price = text.replace(',','')
    from extractedWords b 
 where
@@ -193,4 +171,4 @@ where
 and
   x0 > 630;
 
-select * from COLUMNDECOMPPAGE6;
+select * from colDecoPage7AusSpk;

@@ -50,11 +50,52 @@ def columwise_decomp_etl():
     """
     duckdb_conn_id = "data_mining_db_test"
 
-    ()  # type: ignore
     SQLExecuteQueryOperator(
-        task_id="decompose_page",
+        task_id="decompose_base_pages",
         conn_id=duckdb_conn_id,
-        sql="base_page_decomp.sql",
+        sql="col_decomp_base.sql",
+        return_last=True,
+    )
+
+    SQLExecuteQueryOperator(
+        task_id="decompose_page_27_dry_sherry",
+        conn_id=duckdb_conn_id,
+        sql="col_decomp_page_27_dry_sherry.sql",
+        return_last=True,
+    )
+
+    SQLExecuteQueryOperator(
+        task_id="decomp_page_6_7_champagne",
+        conn_id=duckdb_conn_id,
+        sql="col_decomp_page_6_7_champagne.sql",
+        return_last=True,
+    )
+
+    SQLExecuteQueryOperator(
+        task_id="col_decomp_page_7_aus_spk",
+        conn_id=duckdb_conn_id,
+        sql="col_decomp_page_7_australian_spk.sql",
+        return_last=True,
+    )
+
+    SQLExecuteQueryOperator(
+        task_id="col_decomp",
+        conn_id=duckdb_conn_id,
+        sql="col_decomp_page_9_riz.sql",
+        return_last=True,
+    )
+
+    SQLExecuteQueryOperator(
+        task_id="join_decomps",
+        conn_id=duckdb_conn_id,
+        sql="join_decompositions.sql",
+        return_last=True,
+    )
+
+    SQLExecuteQueryOperator(
+        task_id="cleanup",
+        conn_id=duckdb_conn_id,
+        sql="cleanup.sql",
         return_last=True,
     )
 
@@ -62,4 +103,4 @@ def columwise_decomp_etl():
 columwise_decomp_etl()
 
 if __name__ == "__main__":
-    columwise_decomp_etl().test()  #
+    columwise_decomp_etl().test()

@@ -94,3 +94,22 @@ TODO:
 - [ ] test
 
 Im expecting this to require a little translation and configuration on both ends, especially fields that are missing from either.
+
+## Adding Columnwise Partitioning
+
+2025-08-22 13:50
+
+The original approach ignored the presence of columns in the wine list, extracting each horizontal line as continuous. The expectation was that the data would be structured enough to match by similarity to other sources. This proved to be a false assumption, and as such are now looking to preserve the structure and information. To that end I have created a branch and will look to adapt or refactor the ETL pipeline to partition the lines by the presence of columns. It should be quite simple, working from the right to the left we will identify where the column starts (as the strings are left-aligned) and label thusly. The first step is to see where we can action this.
+
+## Adding Columnwise Partitioning - Figuring out an Insertion Point
+
+2025-08-22 14:46
+
+A lesson I learned long ago is to never, ever EVER modify old code, especially stale old code. Work with what you have, final. Optimisations are never worth it. Unless they are..
+
+Anyway, on that topic, the result of the ETL as it stands is a denormalised, duplicated mess with a ton of manually created \*Ref tables used in the fine grained extraction, a wine list staging table, text decomposition tables, and more. That's fine though. The problem is that somewhere along the way we deleted the pdf data such as x and y coordinates. The simplest solution will be to modify that deletion, instead storing in a table. I believe the reason for this was difficulty in identifying an appropriate primary key considering that the section lines are turned into fields. Should have just kept the natural primary key from the line ordering and be damned with monotonicity.
+
+So, TODO:
+
+- [ ] identify where word data deleted
+- [ ] move to own table.

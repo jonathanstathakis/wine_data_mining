@@ -1,40 +1,6 @@
 /*
 Using the content lines identified in wineListLines backtrack to get the raw pdf word data
 then start identifying the columns.
-
-price x0 is >639.
-*/
-
-
--- 06 will need work (different format)
--- 07 will need work (different formats)
--- 08,
--- 09 excluding riesling (diferent format)
--- 10
--- 11
--- 12
--- 13
--- 14
--- 15
--- 16
--- 17
--- 18
--- 19
--- 20 
--- 21 
--- 22
--- 23
--- 24 
--- 25
--- 26
--- 27 will need work (different format)
-
-/*
-* dont run on pages: 6, 7, 9 (riesling), 27
-*/
-
-/*
-* we will consume extractedWords, deleting rows as we go.
 */
 
 create temp table extractedWords as (
@@ -53,9 +19,13 @@ join LINE_NUMBERED_PAGES B
         A.LINE_NUM = B.LINE_NUM
         and A.PAGE_NUM = B.PAGE_NUM
 where 
-A.PAGE_NUM not in (6,7,9,27)
+A.PAGE_NUM not in (6,7,9, 27)
 OR
   A.PAGE_NUM = 9 AND subsection <> 'Riesling'
+OR
+  a.page_num = 27 and subsection != 'Sherry, Spain'
+OR
+  a.page_num = 27 and subsection = 'Sherry, Spain' and subsubsection  = 'Sweet'
 order by A.LINE_NUM, b.x0)
 ;
 

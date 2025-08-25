@@ -1,0 +1,41 @@
+-- select
+--   line_num_tot,
+--   merged_text,
+--   x0,
+--   vintage,
+--   CASE
+--     WHEN
+--       line_num_tot = 105 and prod_wine_name ilike '%Ried Heiligenstein%'
+--     THEN 'Bründlmayer Ried Heiligenstein Lyra'
+--     WHEN
+--       line_num_tot = 322 and prod_wine_name ilike '%Pierre-Yves%' 
+--     THEN 'Pierre Yves Colin-Morey ''Vieilles Vignes'''
+--     ELSE prod_wine_name END
+--   as prod_wine_name,
+--   CASE
+--     WHEN
+--       line_num_tot = 105 and prod_wine_name ilike '%Ried Heiligenstein%'
+--     THEN
+--       'Kamptal OTW Erste Lage'
+--     WHEN line_num_tot = 322 and prod_wine_name ilike '%Pierre-Yves'
+--     THEN 'Chassagne-Montrachet'
+--     ELSE geo_int END
+--   as geo_int,
+--   CASE
+--     WHEN
+--       line_num_tot = 105 and prod_wine_name ilike '%Ried Heiligenstein%'
+--     THEN '750'
+--     WHEN line_num_tot = 322
+--     THEN '750'
+--     WHEN
+--       line_num_tot = 222
+--     THEN '750'
+-- ELSE vol END
+--   as vol,
+--   price,
+-- from
+--   extractedWords
+-- order by
+--   line_num_tot,
+--   x0;
+--
