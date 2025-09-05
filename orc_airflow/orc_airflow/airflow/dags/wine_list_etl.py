@@ -166,6 +166,12 @@ def wine_etl_transform_section_labels():
             sql="create_insert_sectionLabelsByLine.sql",
             autocommit=True,
         )
+        >> SQLExecuteQueryOperator(
+            task_id="add_line_type_to_pageline",
+            conn_id=duckdb_conn_id,
+            sql="insert_line_type_pageline.sql",
+            autocommit=True,
+        )
     )
 
 

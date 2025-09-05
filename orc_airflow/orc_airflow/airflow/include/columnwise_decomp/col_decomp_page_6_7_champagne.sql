@@ -2,28 +2,6 @@
 bespoke decomp query for page 6 and page 7 champagnes.
 */
 
-create temp table EXTRACTEDWORDS as (
-    select
-        A.LINE_NUM_TOT,
-        A.PAGE_NUM,
-        B.LINE_NUM,
-        A.MERGED_TEXT,
-        B.TEXT,
-        B.X0,
-        B.X1,
-        B.WIDTH
-    from WINELISTLINES A
-    join LINE_NUMBERED_PAGES B
-        on
-            A.LINE_NUM = B.LINE_NUM
-            and A.PAGE_NUM = B.PAGE_NUM
-    where
-        A.PAGE_NUM = 6
-    OR
-        A.page_num = 7 and a.subsection = 'Champagne'
-    order by A.LINE_NUM, B.X0
-)
-;
 -- -- add price column and fill through self-join
 create or replace table colDecoChampagne (
     LINE_NUM_TOT int primary key,
@@ -39,6 +17,10 @@ create or replace table colDecoChampagne (
 insert into colDecoChampagne (LINE_NUM_TOT)
 select distinct LINE_NUM_TOT
 from EXTRACTEDWORDS
+    where
+        PAGE_NUM = 6
+    OR
+        page_num = 7 and subsection = 'Champagne'
 order by LINE_NUM_TOT;
 
 

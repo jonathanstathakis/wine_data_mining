@@ -2,7 +2,6 @@
 * combine the tables formed in the columnar decompositions into 1 table.
 *
 */
-show tables;
 
 create or replace table COLDECOWINES (
     LINE_NUM_TOT int primary key,
@@ -21,7 +20,7 @@ create or replace table COLDECOWINES (
 
 insert into COLDECOWINES (LINE_NUM_TOT)
 select distinct LINE_NUM_TOT
-from WINELISTLINES
+from EXTRACTEDWORDS
 order by LINE_NUM_TOT;
 
 -- champagne
@@ -78,7 +77,6 @@ where
     A.LINE_NUM_TOT = B.LINE_NUM_TOT;
 
 -- everything else
-describe columnDecomp;
 update COLDECOWINES A set
     VINTAGE = B.VINTAGE,
     PROD_WINE_NAME = B.PROD_WINE_NAME,
@@ -86,8 +84,8 @@ update COLDECOWINES A set
     VOL = B.VOL,
     PRICE = B.PRICE
 from
-    columnDecomp B
+    COLUMNDECOMP B
 where
     A.LINE_NUM_TOT = B.LINE_NUM_TOT;
 
-select * from COLDECOWINES;
+select * from COLDECOWINES limit 20;

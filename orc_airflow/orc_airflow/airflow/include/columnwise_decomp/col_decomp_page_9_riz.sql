@@ -2,27 +2,6 @@
 * bespoke query for page 9 German riesling.
 */
 
-create temp table EXTRACTEDWORDS as (
-    select
-        A.LINE_NUM_TOT,
-        A.PAGE_NUM,
-        B.LINE_NUM,
-        A.MERGED_TEXT,
-        B.TEXT,
-        B.X0,
-        B.X1,
-        B.WIDTH
-    from WINELISTLINES A
-    join LINE_NUMBERED_PAGES B
-        on
-            A.LINE_NUM = B.LINE_NUM
-            and A.PAGE_NUM = B.PAGE_NUM
-    where
-        A.PAGE_NUM = 9
-    and a.SUBSECTION = 'Riesling'
-    order by A.LINE_NUM, B.X0
-)
-;
 create or replace table colDecoPage9Riz (
     LINE_NUM_TOT int primary key,
     VINTAGE varchar default '',
@@ -35,6 +14,9 @@ create or replace table colDecoPage9Riz (
 insert into colDecoPage9Riz (LINE_NUM_TOT)
 select distinct LINE_NUM_TOT
 from EXTRACTEDWORDS
+    where
+        PAGE_NUM = 9
+    and SUBSECTION = 'Riesling'
 order by LINE_NUM_TOT;
 
 -- vintage.

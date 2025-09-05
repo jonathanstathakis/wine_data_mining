@@ -2,27 +2,6 @@
 * bespoke decomp query for dry spanish sherry - no vintage column
 */
 
-create temp table EXTRACTEDWORDS as (
-    select
-        A.LINE_NUM_TOT,
-        A.PAGE_NUM,
-        B.LINE_NUM,
-        A.MERGED_TEXT,
-        B.TEXT,
-        B.X0,
-        B.X1,
-        B.WIDTH
-    from WINELISTLINES as A
-    inner join LINE_NUMBERED_PAGES as B
-        on
-            A.LINE_NUM = B.LINE_NUM
-            and A.PAGE_NUM = B.PAGE_NUM
-    where
-        A.PAGE_NUM = 27
-        and A.SUBSECTION = 'Sherry, Spain'
-        and SUBSUBSECTION = 'Dry'
-    order by A.LINE_NUM, B.X0
-);
 
 create or replace table DRYSHERRY (
     LINE_NUM_TOT int primary key,
