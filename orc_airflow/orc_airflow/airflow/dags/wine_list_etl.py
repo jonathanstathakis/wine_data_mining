@@ -67,6 +67,11 @@ def dag_wine_list_etl_transform():
     """ """
     duckdb_conn_id = "wine_list_etl_transform"
 
+    # REMOVE ME - for dev only
+    Path(
+        "/Users/jonathan/jonathan/projects/wine_wiki/wine_data_mining/orc_airflow/wine_list_etl_transform.db"
+    ).unlink(missing_ok=True)
+
     (
         SQLExecuteQueryOperator(
             task_id="setup_env",
@@ -75,19 +80,9 @@ def dag_wine_list_etl_transform():
             params={"TEMPLATE_SEARCHPATH": str(INCLUDE / "wine_list_etl_transform")},
         )
         >> SQLExecuteQueryOperator(
-            task_id="create_schema", conn_id=duckdb_conn_id, sql="create_schema.sql"
-        )
-        >> SQLExecuteQueryOperator(
-            task_id="insert_run_id",
+            task_id="create_schema",
             conn_id=duckdb_conn_id,
-            sql="insert_runid.sql",
-            show_return_value_in_logs=True,
-        )
-        >> SQLExecuteQueryOperator(
-            task_id="insert_document",
-            conn_id=duckdb_conn_id,
-            sql="insert_document.sql",
-            params={"pdf_path": str(pdf_path)},
+            sql="create_tform_schema.sql",
         )
         # load page text csv into database
         >> SQLExecuteQueryOperator(

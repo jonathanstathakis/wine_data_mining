@@ -86,13 +86,11 @@ create temp table PAGELINESTAGING as (
 
 
 insert into PAGELINE (
-    RUN_ID,
     PAGE_ID,
     PAGE_LINE_NUM,
     ANCHOR_TOP
 )
 select
-    (select RUN_ID from CURRRUN),
     PAGE_ID,
     LINE_NUM as PAGE_LINE_NUM,
     FIRST(ANCHOR_TOP)
@@ -127,11 +125,6 @@ from (
 where
     PAGELINE.ID = X.ID;
 
--- select *
--- from PAGELINE
--- order by
---     LINE_NUM_TOT
--- ;
 -- need to add line_id to text as well.
 
 update RAWTEXT set

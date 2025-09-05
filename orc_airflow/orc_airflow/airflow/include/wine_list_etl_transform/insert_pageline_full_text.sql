@@ -8,7 +8,6 @@
 -- begin;
 create temp table full_line_text as (
     select
-        first(p.run_id) as run_id,
         first(p.id) as line_id,
         first(p.line_num_tot) as line_num_tot,
         string_agg(t.text, ' ') as line_text
@@ -29,8 +28,6 @@ set
     full_line_text = a.line_text
 from full_line_text a
 where
-    a.run_id = l.run_id
-    and
     a.line_id = l.id;
 -- select * from pageline limit 10;
 -- rollback;

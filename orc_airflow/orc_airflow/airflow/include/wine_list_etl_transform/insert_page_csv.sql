@@ -6,23 +6,6 @@
 create temp table load_page_csv as select * from read_csv('{{ params.pages_csv_path }}');
 
 -- get curent run and insert.
-create table if not exists page_csv (
-id int primary key,
-text varchar,
-x0 varchar,
-x1 double,
-top double,
-doctop double,
-bottom double,
-upright bool,
-height double,
-width double,
-direction varchar,
-fontname varchar,
-size double,
-page_number int
-);
-
 insert into page_csv (
 id,
 text,
@@ -55,6 +38,7 @@ fontname,
 size,
 page_number
   from load_page_csv
+-- is this necessary?
 on conflict (id) do update 
   set
       text = excluded.text,

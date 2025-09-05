@@ -1,5 +1,4 @@
-insert into RAWTEXTSTAGING (
-    RUN_ID,
+insert into RAWTEXT (
     PAGE_ID,
     TEXT,
     X0,
@@ -15,7 +14,6 @@ insert into RAWTEXTSTAGING (
     SIZE
 )
 select
-    (select RUN_ID from CURRRUN) as RUN_ID,
     B.ID as PAGE_ID,
     A.TEXT,
     A.X0,

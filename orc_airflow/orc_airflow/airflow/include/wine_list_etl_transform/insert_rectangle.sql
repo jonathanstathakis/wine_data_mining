@@ -4,7 +4,6 @@
 */
 insert into rectangle (
     page_id,
-    run_id,
     x0,
     y0,
     x1,
@@ -18,7 +17,6 @@ insert into rectangle (
 )
 select
     b.id as page_id,
-    (select run_id from currrun) as run_id,
     a.x0,
     a.y0,
     a.x1,
