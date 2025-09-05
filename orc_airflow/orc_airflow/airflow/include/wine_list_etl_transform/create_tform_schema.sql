@@ -34,66 +34,41 @@ create sequence if not exists page_id_seq;
 
 create table if not exists page (
 id int primary key default nextval('page_id_seq'),
-page_number int,
+page_number int not null unique,
 );
 
-create sequence if not exists sectionPath_seq;
-
-create table if not exists sectionPath (
-id int primary key default nextval('sectionPath_seq'),
-path varchar 
-);
 
 create sequence if not exists pageline_seq;
 
 create table if not exists pageLine (
 id int primary key default nextval('pageline_seq'),
-page_id int,
-anchor_top double,
-page_line_num int, -- page num erlative to line num
+page_id int not null,
+anchor_top double not null,
+page_line_num int not null, -- page num erlative to line num
 line_num_tot int, -- total line num, or abs  .
 sectionpath_id int,
 full_line_text varchar -- denormalised rawText, useful for dev.
 );
 
-create sequence if not exists rawtext_id;
-
-create table if not exists rawText (
-id int primary key default nextval('rawtext_id'),
-page_id int,
-line_id int,
-text varchar,
-x0 double,
-x1 double,
-top double,
-doctop double,
-bottom double,
-upright bool,
-height double,
-width double,
-direction varchar,
-fontname varchar,
-size double,
-);
 
 create sequence if not exists rawtext_id;
 
 create table if not exists rawText (
 id int primary key default nextval('rawtext_id'),
 page_id int,
-line_id int,
-text varchar,
-x0 double,
-x1 double,
-top double,
-doctop double,
-bottom double,
-upright bool,
-height double,
-width double,
-direction varchar,
-fontname varchar,
-size double,
+line_id int, -- initally empty because its calculated from values in this table.
+text varchar not null,
+x0 double not null,
+x1 double not null,
+top double not null,
+doctop double not null,
+bottom double not null,
+upright bool not null,
+height double not null,
+width double not null,
+direction varchar not null,
+fontname varchar not null,
+size double not null,
 );
 
 create sequence if not exists rect_id;

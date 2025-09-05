@@ -8,9 +8,6 @@ import logging
 import os
 from pathlib import Path
 
-import logging
-
-logging.disable(logging.WARNING)
 # airflow doesnt give option to set path in config or rel to proj root
 INCLUDE = Path(os.environ.get("AIRFLOW_HOME")) / "include"
 
@@ -63,14 +60,9 @@ def wine_list_etl_extract():
     dag_id="wine_list_etl_transform",
     template_searchpath=str(INCLUDE / "wine_list_etl_transform"),
 )
-def dag_wine_list_etl_transform():
+def wine_list_etl_transform():
     """ """
     duckdb_conn_id = "wine_list_etl_transform"
-
-    # REMOVE ME - for dev only
-    Path(
-        "/Users/jonathan/jonathan/projects/wine_wiki/wine_data_mining/orc_airflow/wine_list_etl_transform.db"
-    ).unlink(missing_ok=True)
 
     (
         SQLExecuteQueryOperator(
@@ -130,12 +122,69 @@ def dag_wine_list_etl_transform():
             sql="insert_pageline_full_text.sql",
             autocommit=True,
         )
-        # # insert section labels
-        # >> SQLExecuteQueryOperator(
-        #     task_id="insert_section_label",
-        #     conn_id=duckdb_conn_id,
-        #     sql="insert_section_label.sql",
-        # )
+    )
+
+
+@dag(
+    dag_id="wine_list_etl_transform_section_label",
+    template_searchpath=str(INCLUDE / "wine_list_etl_transform_section_label"),
+)
+def wine_etl_transform_section_labels():
+    """
+    organise document sections labelling by line.
+    """
+    duckdb_conn_id = "wine_list_etl_transform"
+    # insert section labels
+    (
+        SQLExecuteQueryOperator(
+            task_id="insert_section_label",
+            conn_id=duckdb_conn_id,
+            sql="insert_section_label.sql",
+            autocommit=True,
+        )
+        >> SQLExecuteQueryOperator(
+            task_id="insert_section_label_wide",
+            conn_id=duckdb_conn_id,
+            sql="create_insert_sectionLabelWide.sql",
+            autocommit=True,
+        )
+        >> SQLExecuteQueryOperator(
+            task_id="create_insert_allLinesWithSections",
+            conn_id=duckdb_conn_id,
+            sql="create_insert_allLinesWithSections.sql",
+            autocommit=True,
+        )
+        >> SQLExecuteQueryOperator(
+            task_id="create_insert_sectionSubsectionFilled",
+            conn_id=duckdb_conn_id,
+            sql="create_insert_sectionSubsectionFilled.sql",
+            autocommit=True,
+        )
+        >> SQLExecuteQueryOperator(
+            task_id="create_insert_sectionLabelsByLine",
+            conn_id=duckdb_conn_id,
+            sql="create_insert_sectionLabelsByLine.sql",
+            autocommit=True,
+        )
+    )
+
+
+@dag(
+    dag_id="wine_list_etl_create_insert_section_path",
+    template_searchpath=str(INCLUDE / "wine_list_etl_transform_section_label"),
+)
+def wine_etl_transform_section_path():
+    """
+    create section path and add to pageline
+    """
+    duckdb_conn_id = "wine_list_etl_transform"
+    (
+        SQLExecuteQueryOperator(
+            task_id="create_sectionPath_dim_tbl",
+            conn_id=duckdb_conn_id,
+            sql="create_insert_section_path.sql",
+            autocommit=True,
+        )
     )
 
     # aggregate_lines = SQLExecuteQueryOperator(
@@ -216,7 +265,8 @@ def dag_wine_list_etl_transform():
 
 
 wine_list_etl_extract()
-dag_wine_list_etl_transform()
+wine_list_etl_transform()
+wine_etl_transform_section_labels()
 
 if __name__ == "__main__":
-    dr = dag_wine_list_etl_transform().test()  # a single DagRun object
+    dr = wine_list_etl_transform().test()  # a single DagRun object
