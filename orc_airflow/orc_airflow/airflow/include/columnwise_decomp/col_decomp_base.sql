@@ -3,129 +3,128 @@ Using the content lines identified in wineListLines backtrack to get the raw pdf
 then start identifying the columns.
 */
 
-create temp table extractedWords as (
-select 
-  a.line_num_tot,
-  a.page_num,
-  b.line_num,
-  a.merged_text,
-  b.text,
-  b.x0,
-  b.x1,
-  b.width, 
-  from WINELISTLINES A
-join LINE_NUMBERED_PAGES B
-    on
-        A.LINE_NUM = B.LINE_NUM
-        and A.PAGE_NUM = B.PAGE_NUM
-where 
-A.PAGE_NUM not in (6,7,9, 27)
-OR
-  A.PAGE_NUM = 9 AND subsection <> 'Riesling'
-OR
-  a.page_num = 27 and subsection != 'Sherry, Spain'
-OR
-  a.page_num = 27 and subsection = 'Sherry, Spain' and subsubsection  = 'Sweet'
-order by A.LINE_NUM, b.x0)
-;
-
--- add price column and fill through self-join
-create or replace table columnDecomp (
-line_num_tot int primary key,
-vintage varchar,
-prod_wine_name varchar,
-geo_int varchar,
-vol varchar default '750',
-price int
+create temp table EXTRACTEDWORDS as (
+    select
+        A.LINE_NUM_TOT,
+        A.PAGE_NUM,
+        B.LINE_NUM,
+        A.MERGED_TEXT,
+        B.TEXT,
+        B.X0,
+        B.X1,
+        B.WIDTH
+    from WINELISTLINES as A
+    inner join LINE_NUMBERED_PAGES as B
+        on
+            A.LINE_NUM = B.LINE_NUM
+            and A.PAGE_NUM = B.PAGE_NUM
+    where
+        A.PAGE_NUM not in (6, 7, 9, 27)
+        or
+        A.PAGE_NUM = 9 and SUBSECTION <> 'Riesling'
+        or
+        A.PAGE_NUM = 27 and SUBSECTION <> 'Sherry, Spain'
+        or
+        A.PAGE_NUM = 27
+        and SUBSECTION = 'Sherry, Spain'
+        and SUBSUBSECTION = 'Sweet'
+    order by A.LINE_NUM, B.X0
 );
 
-insert into columnDecomp (line_num_tot) select distinct line_num_tot from extractedWords order by line_num_tot;
+-- add price column and fill through self-join
+create or replace table COLUMNDECOMP (
+    LINE_NUM_TOT int primary key,
+    VINTAGE varchar,
+    PROD_WINE_NAME varchar,
+    GEO_INT varchar,
+    VOL varchar default '750',
+    PRICE int
+);
+
+insert into COLUMNDECOMP (LINE_NUM_TOT)
+select distinct LINE_NUM_TOT
+from EXTRACTEDWORDS
+order by LINE_NUM_TOT;
 
 
 -- vintage.
-update columnDecomp a set
-  vintage = text
- from
- extractedWords b
- where
- a.line_num_tot = b.line_num_tot
-and
-b.x1 < 105
-;
-
-
+update COLUMNDECOMP A set
+    VINTAGE = TEXT
+from
+    EXTRACTEDWORDS as B
+where
+    A.LINE_NUM_TOT = B.LINE_NUM_TOT
+    and
+    B.X1 < 105;
 
 
 -- producer_winename. Appears to start after 121.
-update columnDecomp a set
-prod_wine_name = b.prod_wine_name
+update COLUMNDECOMP A set
+    PROD_WINE_NAME = B.PROD_WINE_NAME
 from (
-select
-  line_num_tot,
-  string_agg(text, ' ') as prod_wine_name 
-from
-  (
     select
-        line_num_tot,
-        text
+        LINE_NUM_TOT,
+        string_agg(TEXT, ' ') as PROD_WINE_NAME
     from
-        extractedWords
-    where
-        x0 > 105  and x1 < 369)
-group by
-  line_num_tot
-) b
+        (
+            select
+                LINE_NUM_TOT,
+                TEXT
+            from
+                EXTRACTEDWORDS
+            where
+                X0 > 105 and X1 < 369
+        )
+    group by
+        LINE_NUM_TOT
+) as B
 where
-a.line_num_tot = b.line_num_tot;
+    A.LINE_NUM_TOT = B.LINE_NUM_TOT;
 
 --geo int
-update columnDecomp a set
-geo_int = b.geo_int
+update COLUMNDECOMP A set
+    GEO_INT = B.GEO_INT
 from (
-select
-  line_num_tot,
-  string_agg(text, ' ') as geo_int
-from
-  (
     select
-        line_num_tot,
-        merged_text,
-        text
+        LINE_NUM_TOT,
+        string_agg(TEXT, ' ') as GEO_INT
     from
-        extractedWords
-    where
-        x0 > 360 and x1 < 550)
-group by
-  line_num_tot
-) b
+        (
+            select
+                LINE_NUM_TOT,
+                MERGED_TEXT,
+                TEXT
+            from
+                EXTRACTEDWORDS
+            where
+                X0 > 360 and X1 < 550
+        )
+    group by
+        LINE_NUM_TOT
+) as B
 where
-a.line_num_tot = b.line_num_tot;
+    A.LINE_NUM_TOT = B.LINE_NUM_TOT;
 
 
 --volume
-update columnDecomp a set
-vol = b.text
+update COLUMNDECOMP A set
+    VOL = B.TEXT
 from
-   extractedWords  b
+    EXTRACTEDWORDS as B
 where
-  a.line_num_tot = b.line_num_tot
-and 
- (x0 > 550 and x1 < 630)
-;
+    A.LINE_NUM_TOT = B.LINE_NUM_TOT
+    and
+    (X0 > 550 and X1 < 630);
 
 -- price
-update columnDecomp a set
-price = text.replace(',','')
-   from extractedWords b 
+update COLUMNDECOMP A set
+    PRICE = text.replace(',', '')
+from EXTRACTEDWORDS as B
 where
-  a.line_num_tot = b.line_num_tot
-and
-  x0 > 630;
+    A.LINE_NUM_TOT = B.LINE_NUM_TOT
+    and
+    X0 > 630;
 
-select 
-  * 
-from 
-columnDecomp
-;
-
-
+select *
+from
+    COLUMNDECOMP;

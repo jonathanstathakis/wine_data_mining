@@ -12,8 +12,8 @@ create temp table EXTRACTEDWORDS as (
         B.X0,
         B.X1,
         B.WIDTH
-    from WINELISTLINES A
-    join LINE_NUMBERED_PAGES B
+    from WINELISTLINES as A
+    inner join LINE_NUMBERED_PAGES as B
         on
             A.LINE_NUM = B.LINE_NUM
             and A.PAGE_NUM = B.PAGE_NUM
@@ -22,8 +22,7 @@ create temp table EXTRACTEDWORDS as (
         and A.SUBSECTION = 'Sherry, Spain'
         and SUBSUBSECTION = 'Dry'
     order by A.LINE_NUM, B.X0
-)
-;
+);
 
 create or replace table DRYSHERRY (
     LINE_NUM_TOT int primary key,
@@ -57,7 +56,7 @@ from (
         )
     group by
         LINE_NUM_TOT
-) B
+) as B
 where
     A.LINE_NUM_TOT = B.LINE_NUM_TOT;
 --
@@ -81,7 +80,7 @@ from (
         )
     group by
         LINE_NUM_TOT
-) B
+) as B
 where
     A.LINE_NUM_TOT = B.LINE_NUM_TOT;
 --
@@ -90,17 +89,16 @@ where
 update DRYSHERRY A set
     VOL = B.TEXT
 from
-    EXTRACTEDWORDS B
+    EXTRACTEDWORDS as B
 where
     A.LINE_NUM_TOT = B.LINE_NUM_TOT
     and
-    (X0 > 550 and X1 < 630)
-;
+    (X0 > 550 and X1 < 630);
 --
 -- price
 update DRYSHERRY A set
     PRICE = text.replace(',', '')
-from EXTRACTEDWORDS B
+from EXTRACTEDWORDS as B
 where
     A.LINE_NUM_TOT = B.LINE_NUM_TOT
     and
@@ -108,5 +106,4 @@ where
 --
 -- select *
 from
-    DRYSHERRY
-;
+    DRYSHERRY;

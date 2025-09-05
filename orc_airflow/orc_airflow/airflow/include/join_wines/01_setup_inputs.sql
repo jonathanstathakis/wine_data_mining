@@ -18,20 +18,19 @@
 -- describe wine_list;
 -- describe bp_items;
 
-create or replace table wine_list_inp as 
+create or replace table wine_list_inp as
 select
     pk,
     array_to_string([
-    vintage,
-    merged_text_ext.lower(),
-    base_year::varchar,
-    cuvee_name,
-    disgorg_year::varchar
-  ],
-  ' ') as wine_list_inp
+        vintage,
+        merged_text_ext.lower(),
+        base_year::varchar,
+        cuvee_name,
+        disgorg_year::varchar
+    ],
+    ' ') as wine_list_inp
 from
-    wine_list
-;
+    wine_list;
 
 create or replace table bp_inp as
 select
@@ -40,12 +39,12 @@ select
     variety,
     product_id,
     array_to_string([
-    vintage,
-    cuvee_producer,
-    array_to_string(variety,' ')],' ') as bp_inp
+        vintage,
+        cuvee_producer,
+        array_to_string(variety, ' ')
+    ], ' ') as bp_inp
 from
-    bp_items
-;
+    bp_items;
 
 /*
 * so..
@@ -54,4 +53,3 @@ from
 * then use the distance clause as a final requirement.
 */
 -- show tables;
-

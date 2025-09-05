@@ -1,29 +1,32 @@
+create or replace temp table SUBSUBSECTIONSTAGING as
+with LISTSUBSUBSECTION as (
+    select distinct
+        SUBSUBSECTION,
+        SECTION,
+        SUBSECTION,
+        LINE_NUM_TOT
+    from
+        WINE_LIST
+    order by
+        LINE_NUM_TOT
+)
 
- create or replace temp table SUBSUBSECTIONSTAGING as
- with LISTSUBSUBSECTION as (
-select 
-    distinct subsubsection, 
-    section, 
-    subsection,
-    line_num_tot
-  from 
-    wine_list 
-  order by 
-    line_num_tot
- )
+select * from LISTSUBSUBSECTION;
 
- select * from LISTSUBSUBSECTION;
+insert into SUBSUBSECTION (
+    SECTION, SUBSECTION, SUBSUBSECTION, SUBSUBSECTION_ORDER
+)
+select
 
- insert into SubSubSection (section, subsection, subsubsection, subsubsection_order)
- select 
-      
-     section,
-     subsection,
-     subsubsection,
-     row_number() over (order by line_num_tot) as subsubsection_order,
-     from SubSubSectionStaging
- on conflict (subsubsection_id) do update set
-     subsubsection_order = EXCLUDED.subsubsection_order
- ;
+    SECTION,
+    SUBSECTION,
+    SUBSUBSECTION,
+    row_number() over (
+        order by LINE_NUM_TOT
+    ) as SUBSUBSECTION_ORDER
+from SUBSUBSECTIONSTAGING
+on conflict (SUBSUBSECTION_ID) do update
+    set
+        SUBSUBSECTION_ORDER = EXCLUDED.SUBSUBSECTION_ORDER;
 
- -- rollback;
+-- rollback;

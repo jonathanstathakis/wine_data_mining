@@ -1,11 +1,3 @@
-create or replace table aggregated (
-    line_num int,
-    page_num int,
-    line_num_tot int primary key,
-    merged_text varchar,
-    word_json json
-);
-
 insert into aggregated (
     line_num,
     page_num,
@@ -22,12 +14,11 @@ select
         )
         as line_num_tot,
     STRING_AGG(text, ' ') as merged_text,
-    ARRAY_AGG(TO_JSON(line_numbered_pages)) as word_json
+    ARRAY_AGG(TO_JSON(pagelines)) as word_json
 from
-    line_numbered_pages
+    pagelines
 group by
     line_num,
     page_num
 order by
-    line_num_tot
-;
+    line_num_tot;

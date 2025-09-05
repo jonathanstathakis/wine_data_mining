@@ -6,19 +6,8 @@ After installation activate venv and use Airflow. Dags are `wine_list_etl`, `bep
 
 Includes an example website scraping tool for gathering wine product data.
 
-## TODO
+## Notes
 
-- [ ] populate database with wines:
-  - [x] fix join problem with section labelling
-  - [x] load a wine_list table with parsed text as primary key, set line numbers starting from 0:
-    - [x] write loading script
-    - [x] add to dag
-    - [x] test
-  - [x] load bepoz parsed table into same database as wine_list:
-    - [x] write loading script
-    - [x] add to dag
-    - [x] test
-  - [ ] add rest-api to webapp
-  - [ ] test uploading of data through api
-  - [ ] upload to prod.
-  - [ ] join wine_list, bepoz using fuzzy join see [Ingesting Bepoz/Wine List Join](./devlog.md#ingesting-bepoz/wine-list-join)
+### Design
+
+ETL transformation tables should not have foreign key tables and should not track information over multiple runs i.e. run_id. that is for the load tables, not transformation. This simplifies the ETL and saves any error checking for Load. Of course the result is that mid-pipeline errors are not caught.

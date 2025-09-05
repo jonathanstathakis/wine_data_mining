@@ -1,3 +1,3 @@
-COPY Section to '/Users/jonathan/jonathan/projects/wine_wiki/wine_list_db/section.csv';
-COPY SubSection to '/Users/jonathan/jonathan/projects/wine_wiki/wine_list_db/subsection.csv';
-copy wine_list to '/Users/jonathan/jonathan/projects/wine_wiki/wine_list_db/wine.csv';
+COPY Section TO '/Users/jonathan/jonathan/projects/wine_wiki/wine_list_db/section.csv';
+COPY Subsection TO '/Users/jonathan/jonathan/projects/wine_wiki/wine_list_db/subsection.csv';
+COPY Wine_list TO '/Users/jonathan/jonathan/projects/wine_wiki/wine_list_db/wine.csv';
