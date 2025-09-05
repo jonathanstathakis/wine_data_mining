@@ -12,19 +12,25 @@ import logging
 
 logging.disable(logging.WARNING)
 # airflow doesnt give option to set path in config or rel to proj root
-TEMPLATE_SEARCHPATH = Path(os.environ.get("AIRFLOW_HOME")) / "include" / "wine_list_etl"
+INCLUDE = Path(os.environ.get("AIRFLOW_HOME")) / "include"
 
 logger = logging.getLogger(__name__)
 
+pages_outpath = INCLUDE / "pages_df.csv"
+rect_outpath = INCLUDE / "rect_df.csv"
+pdf_path = RESOURCES / "bennelong_wine_list.pdf"
 
-@dag(dag_id="wine_list_etl", template_searchpath=str(TEMPLATE_SEARCHPATH))
-def dag_wine_list_etl():
-    """ """
+
+@dag(
+    dag_id="wine_list_etl_extract",
+    template_searchpath=str(INCLUDE / "wine_list_etl_extract"),
+)
+def wine_list_etl_extract():
+    """
+    extract the document data from the pdf, outputting as 2 csv files.
+    """
+
     duckdb_conn_id = "data_mining_db_test"
-
-    pdf_path = RESOURCES / "bennelong_wine_list.pdf"
-    pages_outpath = TEMPLATE_SEARCHPATH / "pages_df.csv"
-    rect_outpath = TEMPLATE_SEARCHPATH / "rect_df.csv"
 
     @task
     def extract_doc_data():
@@ -50,12 +56,23 @@ def dag_wine_list_etl():
         page_df.to_csv(pages_outpath)
         rect_df.to_csv(rect_outpath)
 
+    extract_doc_data()
+
+
+@dag(
+    dag_id="wine_list_etl_transform",
+    template_searchpath=str(INCLUDE / "wine_list_etl_transform"),
+)
+def dag_wine_list_etl_transform():
+    """ """
+    duckdb_conn_id = "wine_list_etl_transform"
+
     (
         SQLExecuteQueryOperator(
             task_id="setup_env",
             conn_id=duckdb_conn_id,
             sql="setup_env.sql",
-            params={"TEMPLATE_SEARCHPATH": str(TEMPLATE_SEARCHPATH)},
+            params={"TEMPLATE_SEARCHPATH": str(INCLUDE / "wine_list_etl_transform")},
         )
         >> SQLExecuteQueryOperator(
             task_id="create_schema", conn_id=duckdb_conn_id, sql="create_schema.sql"
@@ -72,7 +89,6 @@ def dag_wine_list_etl():
             sql="insert_document.sql",
             params={"pdf_path": str(pdf_path)},
         )
-        >> extract_doc_data()
         # load page text csv into database
         >> SQLExecuteQueryOperator(
             task_id="insert_page_csv",
@@ -204,7 +220,8 @@ def dag_wine_list_etl():
     # )  # type: ignore
 
 
-dag_wine_list_etl()
+wine_list_etl_extract()
+dag_wine_list_etl_transform()
 
 if __name__ == "__main__":
-    dr = dag_wine_list_etl().test()  # a single DagRun object
+    dr = dag_wine_list_etl_transform().test()  # a single DagRun object

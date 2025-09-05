@@ -5,6 +5,13 @@ document -> lines
 lines -> rawText
  */
 
+/*
+* TODO:
+* - [ ] create transformation tables without foreign keys.
+* - [ ] migrate existing queries to use transformation tables.
+* - [ ] remove run_id from transformation quries.
+* - [ ] migrate dag to 3 diff dags: extract, transform, load.
+*/
 create sequence if not exists runid_seq;
 
 create table if not exists run (
