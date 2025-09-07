@@ -9,13 +9,16 @@ from pathlib import Path
 
 # airflow doesnt give option to set path in config or rel to proj root
 TEMPLATE_SEARCHPATH = (
-    Path(os.environ.get("AIRFLOW_HOME")) / "include" / "columnwise_decomp"
+    Path(os.environ.get("AIRFLOW_HOME")) / "include" / "wine_list_etl_tform_col_decomp"
 )
 
 logger = logging.getLogger(__name__)
 
 
-@dag(dag_id="columnwise_decomp", template_searchpath=str(TEMPLATE_SEARCHPATH))
+@dag(
+    dag_id="wine_list_etl_tform_col_decomp",
+    template_searchpath=str(TEMPLATE_SEARCHPATH),
+)
 def columwise_decomp_etl():
     """ """
     duckdb_conn_id = "wine_list_etl_transform"

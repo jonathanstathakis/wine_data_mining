@@ -55,7 +55,6 @@ where
 s.line_id = q.line_id
 ;
 
--- select * from sectionPathLoading;
 update pageline p
 set
     sectionpath_id = l.path_id

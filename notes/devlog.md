@@ -109,7 +109,65 @@ A lesson I learned long ago is to never, ever EVER modify old code, especially s
 
 Anyway, on that topic, the result of the ETL as it stands is a denormalised, duplicated mess with a ton of manually created \*Ref tables used in the fine grained extraction, a wine list staging table, text decomposition tables, and more. That's fine though. The problem is that somewhere along the way we deleted the pdf data such as x and y coordinates. The simplest solution will be to modify that deletion, instead storing in a table. I believe the reason for this was difficulty in identifying an appropriate primary key considering that the section lines are turned into fields. Should have just kept the natural primary key from the line ordering and be damned with monotonicity.
 
-So, TODO:
+## Refactoring Dags - Complete
 
-- [ ] identify where word data deleted
-- [ ] move to own table.
+2025-09-06 09:18
+
+I don't know where my last entries are, it may be the ones prior in this document, but I don't recognise them. Anyway. After foolishly breaking the wine_list_etl dag I have painstakingly reconstructed everything and re-interfaced it with the columnwise decomposition dag. lessons learnt:
+
+- You CANNOT use a relational model in an ETL with evolving schemas. It is gross and pointless. At least you can, but give up on DRY.
+- You CANNOT avoid polluting a database with intermediate tables that should by all rights be temporary as the alternative is OBF (One Big File) which is gross.
+- Atomised DAGs and Tasks is key. One SQL statement per task. One complete action per DAG.
+- Don't use DuckDB if you can avoid it (?)
+- Python is probably better for ETLs. State, debugging, object inspection. All infinitely better in Python.
+
+Anyway, its done now.
+
+TODO:
+
+- [ ] extract information from headers - country, region, variety, etc.
+
+## Next Steps
+
+2025-09-07 10:12
+
+I have planned out the next phase - induction into wine app database. After completing the load phase of the ETL pipeline, which simply adds document publication date, filepath and runtime to the table of wines, we will proceed with the construction of a form to accept and verify the result of the ETL. Specifically, the data will be input into a wine_list Model with fields reflecting those of the wine list. Another model will track which publication date/run is current. The induction process will automatically match existing lines to the previous list, leaving us with a selection of wines that are not matched. These not matched items will be used to ask the user to either match manually or create a new wine item from the input fields. We will begin by completing the load phase, manually outputting a csv that is loaded into the wine app, build the wine_list model and currentList tracker, build the linkage tool and finally display the current wine list. Further functionality can be built out from this but this is the core structure.
+
+The problem currently is that I am designing a process for the n_0+1 iteration of ingestion, but I have no method of linking n_0 wine list. So we will need to deal with that first. What is the method? To avoid manually linking every wine we need to construct a method of searching. Back to fuzzy joins.
+
+A method of fuzzy join is to use levenstein distance for each join field and join where above threshold. You can give more weighting to a field by increasing the required distance score. Ok. So we need to make sure that the wine database wines have the same fields as the wine_list entri That may require some finangling.
+
+Finally we want to implement a REST API on the webapp to enable automatic upload of ETL results to staging table.
+
+TODO:
+
+- [ ] complete Load phase:
+  - [ ] load results of column decomp DAG to a table 'wine_list_wine'
+  - [ ] add section_path_id to section_label_wine
+  - [ ] add publication date to wine_list_wine
+  - [ ] add run_datetime to wine_list_wine
+  - [ ] identify if any other FK need to be added to wine_list_wine
+  - [ ] create output csv query that joins wine_list_wine with all FK tables and outputs values to a csv file name is input filename, run date
+  - [ ] add output to csv Task.
+- [ ] n_0 wine_list to wine join:
+  - [ ] download prod database
+  - [ ] create a interface table from wine that mimics the fields of wine_list
+  - [ ] define a fuzzy join from the join table to the interface table
+  - [ ] perfect.
+- [ ] n +1 ingestion process:
+  - [ ] load wine_list from csv file
+  - [ ] create wine_list_staging model instances from csv file data
+  - [ ] join wine_list_staging to n wine_list updating wine_id to link already linked rows to wine.
+  - [ ] build form to display unlinked wines for user linkage:
+    - [ ] create view
+    - [ ] create url
+    - [ ] create form:
+      - [ ] table output
+      - [ ] add wine field columns
+      - [ ] manual search column: add column to enable search
+      - [ ] add new wine from input wine list button
+      - [ ] manual entry button to create new wine
+- [ ] test
+- [ ] REST API:
+  - [ ] create API
+  - [ ] add upload task to ETL.

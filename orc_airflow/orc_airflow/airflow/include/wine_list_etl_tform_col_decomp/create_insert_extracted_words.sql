@@ -1,4 +1,3 @@
-drop table EXTRACTEDWORDS;
 create or replace table EXTRACTEDWORDS (
     PAGE_NUM int not null,
     LINE_NUM_TOT int not null,
@@ -63,22 +62,4 @@ order by
     L.LINE_NUM_TOT asc,
     T.X0
 ;
--- select * from EXTRACTEDWORDS;
--- create table EXTRACTEDWORDS as (
---     select
---         A.LINE_NUM_TOT,
---         A.PAGE_NUM,
---         B.LINE_NUM,
---         A.MERGED_TEXT,
---         B.TEXT,
---         B.X0,
---         B.X1,
---         B.WIDTH
---     from WINELISTLINES as A
---     inner join LINE_NUMBERED_PAGES as B
---         on
---             A.LINE_NUM = B.LINE_NUM
---             and A.PAGE_NUM = B.PAGE_NUM
---     order by A.LINE_NUM, B.X0
--- );
 select * from EXTRACTEDWORDS;
