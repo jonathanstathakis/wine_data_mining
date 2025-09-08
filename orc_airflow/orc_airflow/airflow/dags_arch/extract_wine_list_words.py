@@ -3,7 +3,7 @@ from airflow.sdk import task, dag
 from orc_airflow.definitions import RESOURCES
 from duckdb_provider.hooks.duckdb_hook import DuckDBHook
 from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
-from textwrap import dedent
+from orc_airflow.airflow.dags import defs
 import logging
 import os
 from pathlib import Path
@@ -32,9 +32,6 @@ def extract_line_list_words():
         sql="create_insert_runid",
     )
 
-    page_df_outpath = Path(TEMPLATE_SEARCHPATH) / "page_df.csv"
-    rect_df_outpath = Path(TEMPLATE_SEARCHPATH) / "rect_df.csv"
-
     @task
     def extract_doc_data():
         from orc_airflow.pdf_parser import tabulate_pages, tabulate_rects
@@ -59,8 +56,8 @@ def extract_line_list_words():
         page_df = tabulate_pages(pages=pages)
         rect_df = tabulate_rects(rects=rects)
 
-        page_df.to_csv(page_df_outpath)
-        rect_df.to_csv(rect_df_outpath)
+        page_df.to_csv(defs.page_df_outpath)
+        rect_df.to_csv(defs.rect_df_outpath)
 
         # execute the query within this scope to take advantage of
         # duckdb's ability to read in-memory dfs.

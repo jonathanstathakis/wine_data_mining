@@ -3,7 +3,17 @@ from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 import logging
 from orc_airflow.airflow.dags import defs
 
-# TODO: check that dags work now have refactored.
+# TODO: add pub date to database.
+#
+"""
+Pub date is the document identifier.
+one pub date can have many run dates.
+each run has many pages.
+therefore first get the pub date. then link run to pub then link page to run.
+
+to get pub date need to read ALL pages into db.
+should already be? """
+
 # airflow doesnt give option to set path in config or rel to proj root
 logger = logging.getLogger(__name__)
 
@@ -98,6 +108,18 @@ def wine_list_etl_transform():
             conn_id=duckdb_conn_id,
             sql="insert_pageline_full_text.sql",
             autocommit=True,
+        )
+        # remove everything after page 5 as pipeline not
+        # currently designed to handle the differnce.
+        # The main problem is dependency management in downstream
+        # queries. As I removed foreign keys theres no direct
+        # method of filtering by page number without modifying
+        # each table manually.
+        # TODO: fix this. Pretty glaring problem.
+        >> SQLExecuteQueryOperator(
+            task_id="delete_less_page_5",
+            conn_id=duckdb_conn_id,
+            sql="delete_page_less_5.sql",
         )
     )
 

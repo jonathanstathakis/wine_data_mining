@@ -20,6 +20,7 @@ select distinct LINE_NUM_TOT
 from EXTRACTEDWORDS
 where
         PAGE_NUM not in (6, 7, 9, 27)
+        or PAGE_NUM > 5 -- restrict to bottles.
         or
         PAGE_NUM = 9 and SUBSECTION <> 'Riesling'
         or

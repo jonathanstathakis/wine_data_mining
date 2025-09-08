@@ -4,10 +4,10 @@ from orc_airflow.airflow.dags import defs
 
 
 @dag(
-    dag_id="wine_list_etl_tform_section_labels",
+    dag_id="wine_list_etl_tform_section_label",
     template_searchpath=str(defs.INCLUDE / "wine_list_etl_tform_section_label"),
 )
-def wine_etl_transform_section_labels():
+def wine_etl_transform_section_label():
     """
     organise document sections labelling by line.
     """
@@ -53,4 +53,4 @@ def wine_etl_transform_section_labels():
     )
 
 
-wine_etl_transform_section_labels()
+wine_etl_transform_section_label()

@@ -1,3 +1,8 @@
+/*
+* creates a denormalised table with the wine text and section headers
+* for use in decomposing the pages into their component columnar fields
+* on a page by page basis in downstream queries.
+*/
 create or replace table EXTRACTEDWORDS (
     PAGE_NUM int not null,
     LINE_NUM_TOT int not null,

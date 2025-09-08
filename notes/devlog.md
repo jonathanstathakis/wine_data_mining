@@ -171,3 +171,11 @@ TODO:
 - [ ] REST API:
   - [ ] create API
   - [ ] add upload task to ETL.
+
+## Adding Publication Date
+
+2025-09-08 11:46
+
+Adding publication date has not been easy. In fact, its revealed a glaring hole in the ETL design methodology, namely dependency management. Each of the DAGs has both a dependency on upstream DAGs, that is natural. However they do need some form of encapsulation. The problem really lies in how unreadable SQL actually is. Without the ability to encapsulate, environmental observation is time dependent. What has already been run, etc. You cannot drop in a breakpoint and observe what a line is doing, and what is available to it.
+
+So we're going to need to fix this. The main solution I can see is to not refer to the store tables such as rawText, pageLine, page etc. throughout an ETL but instead create a temporary table for the process that acts as a bridge. That way you can modify the bridge to propagate filters through to the downstream statements. This is a form of encapsulation.

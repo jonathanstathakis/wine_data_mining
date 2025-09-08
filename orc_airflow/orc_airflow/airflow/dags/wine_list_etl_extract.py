@@ -25,7 +25,7 @@ def wine_list_etl_extract():
         logger.info(f"parsing pdf at {defs.pdf_path}..")
 
         pdf = pdfplumber.open(defs.pdf_path)
-        page_range = (5, -1)
+        page_range = (0, -1)
 
         page_slice = slice(page_range[0], page_range[1])
 

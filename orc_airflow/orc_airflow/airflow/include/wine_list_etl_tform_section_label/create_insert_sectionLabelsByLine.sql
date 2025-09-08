@@ -96,7 +96,7 @@ insert into sectionLabelsByLine (
   )
 select line_id,
   line_num_tot,
-  section,
+  ifnull(section,''),
   ifnull(subsection, ''),
   ifnull(subsubsection, '')
 from subsection_masked;

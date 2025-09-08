@@ -1,7 +1,9 @@
 /*
-1. create word0
-2. create subsection
+creates a tabel sectionLabel with the section headers from pages 6 and onwards,
+i.e. by the bottle.
 */
+
+
 create temp table word0 as 
 select
     first(t.id) as rawtext_id,
@@ -115,7 +117,7 @@ from
      a.line_id = b.line_id;
 
 
-create table sectionLabel as 
+create or replace table sectionLabel as 
 with sectionLabel_ as (
     select
         word0_id,
