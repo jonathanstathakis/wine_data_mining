@@ -1,0 +1,2 @@
+airflow tasks test wine_list_etl_tform_section_label create_insert_word0 &&
+  airflow tasks test wine_list_etl_tform_section_label insert_section_label

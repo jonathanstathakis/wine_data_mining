@@ -62,6 +62,7 @@ where
     and
     LINE_NUM_TOT <> 264 -- PTO emoji line
     and merged_text.regexp_matches('\d{4}|NV')
+    and P.PAGE_NUMBER > 5 -- btb only
 order by
     P.PAGE_NUMBER asc,
     L.LINE_NUM_TOT asc,

@@ -15,7 +15,7 @@ select
     S.SUBSECTION,
     S.SUBSUBSECTION
 from
-    PAGELINE L
+    PAGELINE_BTB L
 left join
     SECTIONLABELWIDE S
     on

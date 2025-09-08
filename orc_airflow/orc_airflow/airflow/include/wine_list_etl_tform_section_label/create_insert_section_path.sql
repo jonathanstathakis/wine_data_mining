@@ -1,3 +1,8 @@
+/*
+* creates a table sectionPath that contains a stringified heirarchy 
+* path of the sections contained within the pages and links it to
+* pageLine via a fk column sectionpath_id on pageLine.
+* */
 create or replace sequence SECTIONPATH_SEQ;
 
 create or replace table SECTIONPATH (

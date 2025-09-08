@@ -115,12 +115,23 @@ def wine_list_etl_transform():
         # queries. As I removed foreign keys theres no direct
         # method of filtering by page number without modifying
         # each table manually.
-        # TODO: fix this. Pretty glaring problem.
         >> SQLExecuteQueryOperator(
-            task_id="delete_less_page_5",
+            task_id="create_insert_view_pageLine_btb",
             conn_id=duckdb_conn_id,
-            sql="delete_page_less_5.sql",
+            sql="wine_list_etl_tform_btb_views/create_insert_view_pageLine_btb.sql",
         )
+        >> SQLExecuteQueryOperator(
+            task_id="create_insert_view_rawText_btb",
+            conn_id=duckdb_conn_id,
+            sql="wine_list_etl_tform_btb_views/create_insert_view_rawText_btb.sql",
+        )
+        # TODO: fix this. Pretty glaring problem.
+        # TODO: change all downstream dags to reference btb views.
+        # >> SQLExecuteQueryOperator(
+        #     task_id="delete_less_page_5",
+        #     conn_id=duckdb_conn_id,
+        #     sql="delete_page_less_5.sql",
+        # )
     )
 
 

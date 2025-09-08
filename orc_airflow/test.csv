@@ -1,0 +1,692 @@
+id,page_id,anchor_top,page_line_num,line_num_tot,sectionpath_id,full_line_text,LINE_TYPE,ID_1,PATH,id_2,page_number
+143,6,74.75052000000005,1,143,37,Sparkling Wine,header,37,Wine Sparkling/,6,6
+144,6,95.53052000000002,2,144,50,Champagne,header,50,Wine Sparkling/Champagne/,6,6
+145,6,117.85051999999996,3,145,82,Côte des Bar (Aube),header,82,Wine Sparkling/Champagne/(Aube) Bar des Côte,6,6
+146,6,138.73051999999996,4,146,82,NV (19) Vouette et Sorbée ‘Blanc d’Argile’ Extra-Brut (disg 2022) Barséquanais 550,body,82,Wine Sparkling/Champagne/(Aube) Bar des Côte,6,6
+147,6,159.49051999999995,5,147,82,NV (19) Vouette et Sorbée ‘ Fidèle ’ Brut Nature (disg 2022) Barséquanais 465,body,82,Wine Sparkling/Champagne/(Aube) Bar des Côte,6,6
+148,6,180.25052000000005,6,148,82,"2020 Cedric Bouchard ‘Les Ursules’ Extra-Brut (disg 2024) Celles-sur-Ource 1,200",body,82,Wine Sparkling/Champagne/(Aube) Bar des Côte,6,6
+149,6,201.13052000000005,7,149,82,2022 Cedric Bouchard ‘Val Vilaine’ Extra-Brut (disg 2024) Celles-sur-Ource 980,body,82,Wine Sparkling/Champagne/(Aube) Bar des Côte,6,6
+150,6,242.65052000000003,8,150,83,Côte des Blancs,header,83,Wine Sparkling/Champagne/Blancs des Côte,6,6
+151,6,263.53052,9,151,83,"2012 Pascal Agrapart ‘Expérience’ Brut Nature (disg 2018) Avize 1,300",body,83,Wine Sparkling/Champagne/Blancs des Côte,6,6
+152,6,284.29052,10,152,83,NV (21) Agrapart & Fils ‘Terroirs’ Extra-Brut (disg 2024) Avize 580,body,83,Wine Sparkling/Champagne/Blancs des Côte,6,6
+153,6,305.05052,11,153,83,"NV Jacques Selosse ‘Substance’ Brut (disg 2017) Avize 1,850",body,83,Wine Sparkling/Champagne/Blancs des Côte,6,6
+154,6,325.96052,12,154,83,"NV Jacques Selosse ‘Substance’ Brut (disg 2020) Avize 1,650",body,83,Wine Sparkling/Champagne/Blancs des Côte,6,6
+155,6,346.72051999999996,13,155,83,"NV Jacques Selosse ‘Rose’ Brut (disg 2024) Avize/Ambonnay 1,320",body,83,Wine Sparkling/Champagne/Blancs des Côte,6,6
+156,6,367.48051999999996,14,156,83,2016 Pascal Agrapart ‘L’Avizoise’ Extra-Brut (disg 2021) Avize 915,body,83,Wine Sparkling/Champagne/Blancs des Côte,6,6
+157,6,388.36051999999995,15,157,83,2016 Pascal Agrapart ‘Minéral’ Extra-Brut (disg 2021) Avize 720,body,83,Wine Sparkling/Champagne/Blancs des Côte,6,6
+158,6,409.12052000000006,16,158,83,NV (19) Ulysse Collin ‘Les Pierrières’ Extra-Brut (disg 2024) Congy 800,body,83,Wine Sparkling/Champagne/Blancs des Côte,6,6
+159,6,429.88052000000005,17,159,83,"2008 Krug Vintage ‘Clos du Mesnil’ Brut (disg 2019) Le Mesnil-sur-Oger 4,620",body,83,Wine Sparkling/Champagne/Blancs des Côte,6,6
+160,6,450.76052000000004,18,160,83,NV (20) Pertois- Moriset ‘Les Quatre Terroirs’ Brut (disg 2023) Le Mesnil-sur-Oger 400,body,83,Wine Sparkling/Champagne/Blancs des Côte,6,6
+161,6,471.52052000000003,19,161,83,"NV (21) Jérôme Prévost ‘Grand Cru’ Extra-Brut (disg 2023) Mesnil/Puisieulx 1,300",body,83,Wine Sparkling/Champagne/Blancs des Côte,6,6
+162,6,492.28052,20,162,83,NV (21) Larmandier- Bernier ‘Latitude’ Extra-Brut (disg 2024) Vertus 380,body,83,Wine Sparkling/Champagne/Blancs des Côte,6,6
+163,6,533.92052,21,163,23,Côte de Sézanne,header,23,Wine Sparkling/Champagne/Sézanne de Côte,6,6
+164,6,554.70052,22,164,23,NV (18) Ulysse Collin ‘Les Maillons’ Extra-Brut (disg 2022) Barbonne-Fayel 720,body,23,Wine Sparkling/Champagne/Sézanne de Côte,6,6
+165,6,596.34052,23,165,63,Montagne de Reims,header,63,Wine Sparkling/Champagne/Reims de Montagne,6,6
+166,6,617.10052,24,166,63,"NV (11) Egly-Ouriet ‘Les Crayères’, VV, BdN Brut (disg 2017) Ambonnay 1,170",body,63,Wine Sparkling/Champagne/Reims de Montagne,6,6
+167,6,637.9805200000001,25,167,63,NV (14) Egly- Ouriet ‘VP’ Grand Cru Extra Brut (disg 2022) Ambonnay 860,body,63,Wine Sparkling/Champagne/Reims de Montagne,6,6
+168,6,658.7405200000001,26,168,63,"2012 Egly- Ouriet ‘Grand Cru Millésime’ Brut (disg 2021) Ambonnay 1,300",body,63,Wine Sparkling/Champagne/Reims de Montagne,6,6
+169,6,679.50052,27,169,63,NV (16) Egly- Ouriet ‘Grand Cru Rosé’ Brut Rosé (disg 2021) Ambonnay 830,body,63,Wine Sparkling/Champagne/Reims de Montagne,6,6
+170,6,700.3805199999999,28,170,63,"2020 Frédéric Savart ‘Le Mont Des Chrétiens’ Extra-Brut (disg 2024) Ecueil 1,080",body,63,Wine Sparkling/Champagne/Reims de Montagne,6,6
+171,6,721.1405199999999,29,171,63,NV (20) Jérôme Prévost La Closerie ‘Béguines’ Extra-Brut (disg 2022) Gueux 700,body,63,Wine Sparkling/Champagne/Reims de Montagne,6,6
+172,6,741.90052,30,172,63,NV (21) Jérôme Prévost La Closerie ‘LC 21’ Extra-Brut (disg 2023) Gueux 590,body,63,Wine Sparkling/Champagne/Reims de Montagne,6,6
+173,6,762.78052,31,173,63,NV (21) Bérêche et Fils ‘Réserve’ Brut (disg 2023) Grande Montagne 370,body,63,Wine Sparkling/Champagne/Reims de Montagne,6,6
+174,6,783.57052,32,174,63,NV (19) Charles Heidsieck ‘Réserve’ Brut (disg 2024) Reims 220,body,63,Wine Sparkling/Champagne/Reims de Montagne,6,6
+175,6,804.33052,33,175,63,NV (18) Charles Heidsieck ‘Rosé Réserve’ Brut Rosé (disg 2022) Reims 380,body,63,Wine Sparkling/Champagne/Reims de Montagne,6,6
+176,6,825.2105200000001,34,176,63,2004 Charles Heidsieck ‘Blanc des Millénaires’ Brut (disg 2016) Reims 870,body,63,Wine Sparkling/Champagne/Reims de Montagne,6,6
+177,6,845.9705200000001,35,177,63,"1981 Charles Heidsieck ‘Collection Crayères’ Brut (disg 1988) Reims 1,750",body,63,Wine Sparkling/Champagne/Reims de Montagne,6,6
+178,6,866.7305200000001,36,178,63,"1996 Charles Heidsieck ‘Collection Crayères’ Brut (disg 2021) Reims 1,600",body,63,Wine Sparkling/Champagne/Reims de Montagne,6,6
+179,6,887.6105200000001,37,179,63,"1981 Charles Heidsieck ‘Collection Crayères’ Brut Blanc de Blancs Reims 2,900",body,63,Wine Sparkling/Champagne/Reims de Montagne,6,6
+180,6,908.37052,38,180,63,2008 Charles Heidsieck ‘ Millésime ’ Brut Rosé (disg 2019) Reims 620,body,63,Wine Sparkling/Champagne/Reims de Montagne,6,6
+181,6,984.936,39,181,63,- 6 -,body,63,Wine Sparkling/Champagne/Reims de Montagne,6,6
+182,7,74.75052000000005,1,182,63,Montagne de Reims (continued),body,63,Wine Sparkling/Champagne/Reims de Montagne,7,7
+183,7,116.41052000000002,2,183,63,"1996 Henriot ‘Cuvée des Enchanteleurs’ Brut (disg 2008) Reims 1,545",body,63,Wine Sparkling/Champagne/Reims de Montagne,7,7
+184,7,137.17052,3,184,63,NV (13) Henriot Brut Rosé (disg 2017) Reims 340,body,63,Wine Sparkling/Champagne/Reims de Montagne,7,7
+185,7,157.93052,4,185,63,NV Krug ‘Grande Cuvée 172eme’ Brut (disg 2023) Reims 695,body,63,Wine Sparkling/Champagne/Reims de Montagne,7,7
+186,7,178.81052,5,186,63,"2000 Krug Vintage ‘Late Disgorged Collection’ Brut (disg 2010) Reims 1,985",body,63,Wine Sparkling/Champagne/Reims de Montagne,7,7
+187,7,199.57052,6,187,63,"2008 Krug Vintage Brut (disg 2019) Reims 1,400",body,63,Wine Sparkling/Champagne/Reims de Montagne,7,7
+188,7,220.33051999999998,7,188,63,"1971 Piper- Heidsieck ‘Hors - Série’ Brut (disg 2021) Reims 1,245",body,63,Wine Sparkling/Champagne/Reims de Montagne,7,7
+189,7,241.21051999999997,8,189,63,2008 Piper- Heidsieck ‘Rare’ Brut (disg 2020) Reims 825,body,63,Wine Sparkling/Champagne/Reims de Montagne,7,7
+190,7,261.97051999999996,9,190,63,"2007 Taittinger ‘Comtes de Champagne’ Brut Rosé (disg 2018) Reims 1,185",body,63,Wine Sparkling/Champagne/Reims de Montagne,7,7
+191,7,282.73051999999996,10,191,63,"2009 Taittinger ‘Comtes de Champagne’ Brut Rosé (disg 2022) Reims 1,350",body,63,Wine Sparkling/Champagne/Reims de Montagne,7,7
+192,7,303.61051999999995,11,192,63,NV (17) Taittinger ‘Prélude’ Brut (disg 2022) Reims 370,body,63,Wine Sparkling/Champagne/Reims de Montagne,7,7
+193,7,324.40052000000003,12,193,63,2018 R.Pouillon ‘Les Terres Froides’ Brut (disg 2022) Tauxières 465,body,63,Wine Sparkling/Champagne/Reims de Montagne,7,7
+194,7,345.16052,13,194,63,NV (19) Egly- Ouriet ‘Les Vignes de Vrigny’ Brut (disg 2023) Vrigny 495,body,63,Wine Sparkling/Champagne/Reims de Montagne,7,7
+195,7,386.80052,14,195,11,Vallée de la Marne,header,11,Wine Sparkling/Champagne/Marne la de Vallée,7,7
+196,7,407.56052,15,196,11,NV (19) R.Pouillon Brut Rosé (disg 2022) Aÿ 445,body,11,Wine Sparkling/Champagne/Marne la de Vallée,7,7
+197,7,428.44052,16,197,11,2011 Deutz ‘Amour de Deutz’ Brut (disg 2021) Aÿ 890,body,11,Wine Sparkling/Champagne/Marne la de Vallée,7,7
+198,7,449.20052,17,198,11,NV (18) Egly- Ouriet ‘Les Vignes de Bisseuil’ Extra Brut (disg 2023) Bisseuil 720,body,11,Wine Sparkling/Champagne/Marne la de Vallée,7,7
+199,7,469.96052,18,199,11,NV (20) Jean Michel ‘Carte Blanche’ Extra-Brut (disg 2023) Coteaux d’Epernay 290,body,11,Wine Sparkling/Champagne/Marne la de Vallée,7,7
+200,7,490.84051999999997,19,200,11,NV (16) Françoise Bedel ‘Vin Secret’ Extra-Brut (disg 2021) Crouttes-sur-Marne 520,body,11,Wine Sparkling/Champagne/Marne la de Vallée,7,7
+201,7,511.60052,20,201,11,2002 Jacquesson ‘D é gorgement Tardif’ Brut (disg 2017) Dizy 815,body,11,Wine Sparkling/Champagne/Marne la de Vallée,7,7
+202,7,532.36052,21,202,11,NV (18) Jacquesson ‘Cuvée No. 746’ Extra-Brut (disg 2022) Dizy 460,body,11,Wine Sparkling/Champagne/Marne la de Vallée,7,7
+203,7,553.26052,22,203,11,NV (19) Egly- Ouriet ‘Les Prémices’ Brut (disg 2023) Trigny 450,body,11,Wine Sparkling/Champagne/Marne la de Vallée,7,7
+204,7,615.66052,23,204,84,Australia,header,84,Wine Sparkling/Australia/,7,7
+205,7,637.9805200000001,24,205,84,"2016 Gibert ‘Brut Rose’ (disg 2024) Orange, NSW 195",body,84,Wine Sparkling/Australia/,7,7
+206,7,658.7405200000001,25,206,84,"NV Nadeson Collis ‘Coda’ (disg 2023) Henty, Vic 420",body,84,Wine Sparkling/Australia/,7,7
+207,7,679.50052,26,207,84,"2015 Ocean Aged ‘Vintage Cuvée’ (disg 2020) King Valley, Vic 360",body,84,Wine Sparkling/Australia/,7,7
+208,7,700.3805199999999,27,208,84,"2018 Oakridge ‘Local Vineyard Series’ (disg 2024) Yarra Valley, Vic 140",body,84,Wine Sparkling/Australia/,7,7
+209,7,721.1405199999999,28,209,84,NV (20) Arras ‘ Blanc de Blancs ’ (disg 2023) Tasmania 105,body,84,Wine Sparkling/Australia/,7,7
+210,7,741.90052,29,210,84,"2007 Arras ‘E.J. Carr’ Late Disgorged (disg 2022) Pipers River, Tas 520",body,84,Wine Sparkling/Australia/,7,7
+211,7,762.78052,30,211,84,2015 Arras ‘Vintage Rose’ (disg 2021) Tasmania 340,body,84,Wine Sparkling/Australia/,7,7
+212,7,783.57052,31,212,84,"NV (22) DAOSA ‘Natural Reserve 7 th Release’ (disg 2024) Adelaide Hills, SA 120",body,84,Wine Sparkling/Australia/,7,7
+213,7,804.33052,32,213,84,"2021 Deviation Road ‘Loftia’ (disg 2024) Adelaide Hills, SA 140",body,84,Wine Sparkling/Australia/,7,7
+214,7,825.2105200000001,33,214,84,"2023 Voyager Estate (disg 2024) Margaret River, WA 90",body,84,Wine Sparkling/Australia/,7,7
+215,7,984.936,34,215,84,- 7 -,body,84,Wine Sparkling/Australia/,7,7
+216,8,74.75052000000005,1,216,38,White Wine,header,38,Wine White/Australia/,8,8
+217,8,95.53052000000002,2,217,39,Riesling,header,39,Wine White/Riesling/,8,8
+218,8,117.85051999999996,3,218,1,Australia,header,1,Wine White/Riesling/Australia,8,8
+219,8,138.73051999999996,4,219,1,"2023 Clonakilla Canberra District, NSW 95",body,1,Wine White/Riesling/Australia,8,8
+220,8,159.49051999999995,5,220,1,"2023 Eden Road Canberra District, NSW 125",body,1,Wine White/Riesling/Australia,8,8
+221,8,180.25052000000005,6,221,1,"2024 Mount Majura Canberra District, NSW 100",body,1,Wine White/Riesling/Australia,8,8
+222,8,221.89052000000004,7,222,1,"2024 Best’s ‘Great Western’ Grampians, Vic 80",body,1,Wine White/Riesling/Australia,8,8
+223,8,242.65052000000003,8,223,1,"2024 Crawford River Henty, Vic 165",body,1,Wine White/Riesling/Australia,8,8
+224,8,263.53052,9,224,1,"2023 Crawford River ‘Strata’ Henty, Vic 105",body,1,Wine White/Riesling/Australia,8,8
+225,8,284.29052,10,225,1,"2021 Mac Forbes ‘RS7’ Yarra Valley, Vic 120",body,1,Wine White/Riesling/Australia,8,8
+226,8,325.96052,11,226,1,"2024 Domaine Simha ‘Rani’ Coal River Valley, Tas 195",body,1,Wine White/Riesling/Australia,8,8
+227,8,346.72051999999996,12,227,1,"2024 Frogmore Creek Coal River Valley, Tas 80",body,1,Wine White/Riesling/Australia,8,8
+228,8,367.48051999999996,13,228,1,2023 Glaetzer- Dixon ‘Überblanc’ Tasmania blend 85,body,1,Wine White/Riesling/Australia,8,8
+229,8,409.12052000000006,14,229,1,"2023 DC Shaw ‘Ten Miles East’ Adelaide Hills, SA 125",body,1,Wine White/Riesling/Australia,8,8
+230,8,429.88052000000005,15,230,1,"2024 Grosset ‘Polish Hill’ Clare Valley, SA 220",body,1,Wine White/Riesling/Australia,8,8
+231,8,450.76052000000004,16,231,1,"2023 Ministry of Clouds Clare Valley, SA 95",body,1,Wine White/Riesling/Australia,8,8
+232,8,471.52052000000003,17,232,1,"2024 Mount Horrocks ‘Watervale’ Clare Valley, SA 115",body,1,Wine White/Riesling/Australia,8,8
+233,8,492.28052,18,233,1,"2023 Wines by KT ‘Peglidis’ Clare Valley, SA 130",body,1,Wine White/Riesling/Australia,8,8
+234,8,513.16052,19,234,1,"2006 Henschke ‘Julius’ Eden Valley, SA 265",body,1,Wine White/Riesling/Australia,8,8
+235,8,533.92052,20,235,1,"2014 Pewsey Vale ‘The Contours’ Eden Valley, SA 160",body,1,Wine White/Riesling/Australia,8,8
+236,8,554.70052,21,236,1,"2023 Woods Crampton Eden Valley, SA 75",body,1,Wine White/Riesling/Australia,8,8
+237,8,596.34052,22,237,1,"2023 Frankland Estate ‘Isolation Ridge’ Frankland River, WA 140",body,1,Wine White/Riesling/Australia,8,8
+238,8,617.10052,23,238,1,"2016 Frankland Estate ‘Poison Hill’ Frankland River, WA 155",body,1,Wine White/Riesling/Australia,8,8
+239,8,658.7405200000001,24,239,73,New Zealand,header,73,Wine White/Riesling/Zealand New,8,8
+240,8,679.50052,25,240,73,2019 Greywacke Marlborough 115,body,73,Wine White/Riesling/Zealand New,8,8
+241,8,700.3805199999999,26,241,73,2014 Pegasus Bay North Canterbury 185,body,73,Wine White/Riesling/Zealand New,8,8
+242,8,741.90052,27,242,51,France,header,51,Wine White/Riesling/France,8,8
+243,8,762.78052,28,243,51,2022 Jintaro Yura ‘ Le Silence et la Résonance’ Alsace 320,body,51,Wine White/Riesling/France,8,8
+244,8,783.57052,29,244,51,2014 Trimbach ‘Cuv ée Frédé ric Emile’ Alsace 1.5L 775,body,51,Wine White/Riesling/France,8,8
+245,8,804.33052,30,245,51,2022 Marcel Deiss Alsace 195,body,51,Wine White/Riesling/France,8,8
+246,8,845.9705200000001,31,246,12,Austria,header,12,Wine White/Riesling/Austria,8,8
+247,8,866.7305200000001,32,247,12,2019 Brü ndlmayer ‘ Ried Heiligenstein Lyra ’ Kamptal OTW Erste Lage 280,body,12,Wine White/Riesling/Austria,8,8
+248,8,887.6105200000001,33,248,12,2016 Nikolaihof ‘Steiner Hund’ Wachau 465,body,12,Wine White/Riesling/Austria,8,8
+249,8,908.37052,34,249,12,2016 Veyder-Malberg ‘2B’ Wachau 350,body,12,Wine White/Riesling/Austria,8,8
+250,8,984.936,35,250,12,- 8 -,body,12,Wine White/Riesling/Austria,8,8
+251,9,74.75052000000005,1,251,12,Riesling (continued),body,12,Wine White/Riesling/Austria,9,9
+252,9,95.53052000000002,2,252,85,Germany,header,85,Wine White/Riesling/Germany,9,9
+253,9,116.41052000000002,3,253,85,2016 Heymann- Löwenstein ‘Uhlen Roth Lay’ Mosel GG 1.5L 672,body,85,Wine White/Riesling/Germany,9,9
+254,9,137.17052,4,254,85,2017 Dr. Loosen ‘Ürziger Würzgarten’ Mosel GG 595,body,85,Wine White/Riesling/Germany,9,9
+255,9,157.93052,5,255,85,2021 A.Christmann ‘Olberg - Hart’ Pfalz GG 525,body,85,Wine White/Riesling/Germany,9,9
+256,9,178.81052,6,256,85,2021 A.Christmann ‘IDIG’ Pfalz GG 565,body,85,Wine White/Riesling/Germany,9,9
+257,9,199.57052,7,257,85,2021 A.Christmann ‘Vogelsang’ Pfalz GG 565,body,85,Wine White/Riesling/Germany,9,9
+258,9,220.33051999999998,8,258,85,2021 Dr Bürklin-Wolf ‘Reiterpfad GC’ Pfalz GC 420,body,85,Wine White/Riesling/Germany,9,9
+259,9,241.21051999999997,9,259,85,2021 Jülg ‘Sonnenberg’ Pfalz GG 360,body,85,Wine White/Riesling/Germany,9,9
+260,9,261.97051999999996,10,260,85,2021 Weingut Rebholz ‘Vo m Muschelkalk’ Pfalz Trocken 310,body,85,Wine White/Riesling/Germany,9,9
+261,9,282.73051999999996,11,261,85,2021 Müller-Cat oir ‘M - C’ Pfalz Trocken 120,body,85,Wine White/Riesling/Germany,9,9
+262,9,303.61051999999995,12,262,85,2021 Gunderloch ‘Hipping’ Rheinhessen GG 310,body,85,Wine White/Riesling/Germany,9,9
+263,9,324.40052000000003,13,263,85,2020 Keller ‘Hubacker’ Rheinhessen GG 980,body,85,Wine White/Riesling/Germany,9,9
+264,9,345.16052,14,264,85,2023 Keller “Kirchspiel’ Rheinhessen GG 850,body,85,Wine White/Riesling/Germany,9,9
+265,9,366.04052,15,265,85,2023 Keller ‘Von der Fels’ Rheinhessen Trocken 290,body,85,Wine White/Riesling/Germany,9,9
+266,9,386.80052,16,266,85,2021 Wittmann ‘Aulerde’ Rheinhessen GG 365,body,85,Wine White/Riesling/Germany,9,9
+267,9,407.56052,17,267,85,2021 Wittmann ‘Brunnenhäuschen’ Rheinhessen GG 525,body,85,Wine White/Riesling/Germany,9,9
+268,9,428.44052,18,268,85,2021 Schloss Johannisberg ‘Rotlack’ Rheingau Kabinett 295,body,85,Wine White/Riesling/Germany,9,9
+269,9,449.20052,19,269,85,2022 Hofgut Falkenstein ‘ Ober Schäfershaus ’ Mosel Spätlese Trocken 280,body,85,Wine White/Riesling/Germany,9,9
+270,9,469.96052,20,270,85,2020 Joh. Jos . Prüm ‘Wehlener Sonnenuhr’ Mosel Spätlese 1.5L 660,body,85,Wine White/Riesling/Germany,9,9
+271,9,490.84051999999997,21,271,85,2018 Selbach Oster ‘Wehlener Sonnenuhr’ Mosel Spätlese 210,body,85,Wine White/Riesling/Germany,9,9
+272,9,553.26052,22,272,64,Semillon and Blends,header,64,Wine White/Blends and Semillon/,9,9
+273,9,571.50052,23,273,13,Australia,header,13,Wine White/Blends and Semillon/Australia,9,9
+274,9,592.3805199999999,24,274,13,"2024 Thomas Wines ‘Braemore’ Hunter Valley, NSW 95",body,13,Wine White/Blends and Semillon/Australia,9,9
+275,9,613.1405199999999,25,275,13,"2009 Tyrrell’s ‘Belford Vineyard ’ Hunter Valley, NSW 240",body,13,Wine White/Blends and Semillon/Australia,9,9
+276,9,633.90052,26,276,13,"2021 Tyrrell’s ‘Johnno’s’ Hunter Valley, NSW 190",body,13,Wine White/Blends and Semillon/Australia,9,9
+277,9,654.78052,27,277,13,"2013 Tyrrell’s ‘Vat 1’ Hunter Valley, NSW 330",body,13,Wine White/Blends and Semillon/Australia,9,9
+278,9,675.54052,28,278,13,"2017 Tyrrell ’s ‘Vat 1’ Hunter Valley, NSW 1.5L 515",body,13,Wine White/Blends and Semillon/Australia,9,9
+279,9,717.18052,29,279,13,"2024 Sp inifex ‘Lola blend’ Barossa Valley, SA 80",body,13,Wine White/Blends and Semillon/Australia,9,9
+280,9,758.7005200000001,30,280,52,Pinot Gris,header,52,Wine White/Gris Pinot/,9,9
+281,9,781.05052,31,281,14,Australia,header,14,Wine White/Gris Pinot/Australia,9,9
+282,9,801.81052,32,282,14,"2024 Ocean Eight Mornington Peninsula, Vic 110",body,14,Wine White/Gris Pinot/Australia,9,9
+283,9,822.69052,33,283,14,"2024 Hoddles Creek ‘Estate’ Yarra Valley, Vic 90",body,14,Wine White/Gris Pinot/Australia,9,9
+284,9,843.4505200000001,34,284,14,"2023 Haddow + Dineen ‘Grain of Truth ’ Tamar River, Tas 140",body,14,Wine White/Gris Pinot/Australia,9,9
+285,9,885.09052,35,285,65,France,header,65,Wine White/Gris Pinot/France,9,9
+286,9,905.85052,36,286,65,2021 Domaine de l’Envol Alsace 100,body,65,Wine White/Gris Pinot/France,9,9
+287,9,984.936,37,287,65,- 9 -,body,65,Wine White/Gris Pinot/France,9,9
+288,10,74.75052000000005,1,288,2,Sauvignon Blanc and Blends,header,2,Wine White/Blends and Blanc Sauvignon/,10,10
+289,10,97.09051999999997,2,289,15,Australia,header,15,Wine White/Blends and Blanc Sauvignon/Australia,10,10
+290,10,117.85051999999996,3,290,15,"2023 De Salis ‘Wild Fume Blanc’ Orange, NSW 95",body,15,Wine White/Blends and Blanc Sauvignon/Australia,10,10
+291,10,159.49051999999995,4,291,15,"2023 Josh Cooper ‘Pyren Vineyard ’ Pyrenees, Vic 210",body,15,Wine White/Blends and Blanc Sauvignon/Australia,10,10
+292,10,180.25052000000005,5,292,15,"2014 Mount Mary ‘Triolet’ , Sauvignon blend Yarra Valley, Vic 385",body,15,Wine White/Blends and Blanc Sauvignon/Australia,10,10
+293,10,201.13052000000005,6,293,15,"2018 Mount Mary ‘Triolet’, Sauvignon blend Yarra Valley, Vic 360",body,15,Wine White/Blends and Blanc Sauvignon/Australia,10,10
+294,10,221.89052000000004,7,294,15,"2022 Mount Mary ‘Triolet’ , Sauvignon blend Yarra Valley, Vic 280",body,15,Wine White/Blends and Blanc Sauvignon/Australia,10,10
+295,10,242.65052000000003,8,295,15,"2015 Mount Mary ‘ Réflexion Fumé Blanc’ Yarra Valley, Vic 150",body,15,Wine White/Blends and Blanc Sauvignon/Australia,10,10
+296,10,284.29052,9,296,15,"2013 Terre à Terre ‘ Crayères ’ Wrattonbully, SA 120",body,15,Wine White/Blends and Blanc Sauvignon/Australia,10,10
+297,10,325.96052,10,297,15,"2023 Voyager Estate, Sauvignon/Semillon Margaret River, WA 80",body,15,Wine White/Blends and Blanc Sauvignon/Australia,10,10
+298,10,367.48051999999996,11,298,24,France,header,24,Wine White/Blends and Blanc Sauvignon/France,10,10
+299,10,388.36051999999995,12,299,24,"2020 Domaine Didier Dagueneau ‘Silex’ Pouilly-Fumé, Loire Valley 960",body,24,Wine White/Blends and Blanc Sauvignon/France,10,10
+300,10,409.12052000000006,13,300,24,"2023 Claude Riffault ‘Mosaĩque Calcaire’ Sancerre, Loire Valley 240",body,24,Wine White/Blends and Blanc Sauvignon/France,10,10
+301,10,429.88052000000005,14,301,24,"2023 Domaine Gérard Boulay ‘Chavignol’ Sancerre, Loire Valley 260",body,24,Wine White/Blends and Blanc Sauvignon/France,10,10
+302,10,450.76052000000004,15,302,24,"2023 Pascal Cotat ‘Les Monts Damn é s’ Sancerre, Loire Valley 690",body,24,Wine White/Blends and Blanc Sauvignon/France,10,10
+303,10,492.28052,16,303,66,USA,header,66,Wine White/Blends and Blanc Sauvignon/USA,10,10
+304,10,513.16052,17,304,66,"2019 Ashes & Diamonds Blanc blend No.5 Napa Valley, California 380",body,66,Wine White/Blends and Blanc Sauvignon/USA,10,10
+305,10,575.58052,18,305,67,Pinot Blanc,header,67,Wine White/Blanc Pinot/,10,10
+306,10,597.78052,19,306,25,Australia,header,25,Wine White/Blanc Pinot/Australia,10,10
+307,10,618.66052,20,307,25,"2019 Vinea Marson ‘Grazia blend ’ Alpine Valleys, Vic 95",body,25,Wine White/Blanc Pinot/Australia,10,10
+308,10,639.42052,21,308,25,"2024 Clarence House Coal River Valley, Tas 83",body,25,Wine White/Blanc Pinot/Australia,10,10
+309,10,660.18052,22,309,25,"2024 Domaine Simha ‘ F ield blend blanc’ Derwent Valley, Tas 90",body,25,Wine White/Blanc Pinot/Australia,10,10
+310,10,701.82052,23,310,74,Rest of the World,header,74,Wine White/Blanc Pinot/World the of Rest,10,10
+311,10,722.58052,24,311,74,"2022 Jint aro Yura ‘ La Partie et le Tout’ Alsace, FR 370",body,74,Wine White/Blanc Pinot/World the of Rest,10,10
+312,10,743.46052,25,312,74,"2021 Weingut Rebholz Pfalz, GER 180",body,74,Wine White/Blanc Pinot/World the of Rest,10,10
+313,10,764.2205200000001,26,313,74,"2023 Keller ‘Pinot Blanc blend’ Rheinhessen, GER 260",body,74,Wine White/Blanc Pinot/World the of Rest,10,10
+314,10,984.936,27,314,74,- 10 -,body,74,Wine White/Blanc Pinot/World the of Rest,10,10
+315,11,74.75052000000005,1,315,26,Chenin Blanc,header,26,Wine White/Blanc Chenin/,11,11
+316,11,97.09051999999997,2,316,68,Australia,header,68,Wine White/Blanc Chenin/Australia,11,11
+317,11,117.85051999999996,3,317,68,"2022 Poppelvej ‘Blue Rose Case’ Adelaide Hills, SA 120",body,68,Wine White/Blanc Chenin/Australia,11,11
+318,11,138.73051999999996,4,318,68,"2023 MMAD McLaren Vale, SA 135",body,68,Wine White/Blanc Chenin/Australia,11,11
+319,11,180.25052000000005,5,319,68,"2023 L.A.S. Vino ‘CBDB’ Margaret River, WA 200",body,68,Wine White/Blanc Chenin/Australia,11,11
+320,11,201.13052000000005,6,320,68,"2023 Wines of Merritt ‘Single Vineyard’ Margaret River, WA 108",body,68,Wine White/Blanc Chenin/Australia,11,11
+321,11,221.89052000000004,7,321,68,"2023 NOW Swan Valley, WA 190",body,68,Wine White/Blanc Chenin/Australia,11,11
+322,11,263.53052,8,322,27,New Zealand,header,27,Wine White/Blanc Chenin/Zealand New,11,11
+323,11,284.29052,9,323,27,2021 Millton ‘Te Arai Vineyard ’ Gisborne 85,body,27,Wine White/Blanc Chenin/Zealand New,11,11
+324,11,305.05052,10,324,27,2021 Millton ‘Libiamo Amphora’ Gisborne 135,body,27,Wine White/Blanc Chenin/Zealand New,11,11
+325,11,346.72051999999996,11,325,53,France,header,53,Wine White/Blanc Chenin/France,11,11
+326,11,367.48051999999996,12,326,53,"2020 Domaine Belargus ‘Rou ères ’ Anjou, Loire Valley 580",body,53,Wine White/Blanc Chenin/France,11,11
+327,11,388.36051999999995,13,327,53,"2022 Domaine Guiberteau Saumur, Loire Valley 190",body,53,Wine White/Blanc Chenin/France,11,11
+328,11,409.12052000000006,14,328,53,"2022 F. Duveau ‘Poyeux’ Saumur, Loire Valley 1.5L 390",body,53,Wine White/Blanc Chenin/France,11,11
+329,11,429.88052000000005,15,329,53,"2016 Nicolas Joly, ‘ Coulée de Serrant ’ (Dry) Savennières, Loire Valley 620",body,53,Wine White/Blanc Chenin/France,11,11
+330,11,450.76052000000004,16,330,53,"2022 Nicolas Joly,‘Coulée de Serrant’ (Off-dry) Savennières, Loire Valley 800",body,53,Wine White/Blanc Chenin/France,11,11
+331,11,471.52052000000003,17,331,53,"2020 François Chidaine ‘Les Tuffeaux’ Montlouis Sur Loire, Loire Valley 230",body,53,Wine White/Blanc Chenin/France,11,11
+332,11,492.28052,18,332,53,"2022 Domaine Taille Aux Loups ‘Bretonniére’ Vin de France (Vouvray), Loire Valley 340",body,53,Wine White/Blanc Chenin/France,11,11
+333,11,513.16052,19,333,53,"1981 Huet ‘Clos du Bourg’, Demi-Sec Vouvray, Loire Valley 375ml 590",body,53,Wine White/Blanc Chenin/France,11,11
+334,11,550.7405200000001,20,334,16,South Africa,header,16,Wine White/Blanc Chenin/Africa South,11,11
+335,11,571.50052,21,335,16,"2021 Naudé Stellenbosch, Western Cape 190",body,16,Wine White/Blanc Chenin/Africa South,11,11
+336,11,592.3805199999999,22,336,16,"2022 Gabriëlskloof ‘The Landscape Elodie ’ Swartland, Western Cape 160",body,16,Wine White/Blanc Chenin/Africa South,11,11
+337,11,613.1405199999999,23,337,16,"2022 The Sadie Family ‘Palladius’ blend Swartland, Western Cape 760",body,16,Wine White/Blanc Chenin/Africa South,11,11
+338,11,633.90052,24,338,16,"2023 The Sadie Family ‘Skerpioen’ Swartland, Western Cape 490",body,16,Wine White/Blanc Chenin/Africa South,11,11
+339,11,671.58052,25,339,28,Fiano,header,28,Wine White/Fiano/,11,11
+340,11,689.82052,26,340,54,Australia,header,54,Wine White/Fiano/Australia,11,11
+341,11,710.58052,27,341,54,"2022 Vinden Hunter Valley, NSW 95",body,54,Wine White/Fiano/Australia,11,11
+342,11,731.46052,28,342,54,"2024 Sherrah McLaren Vale, SA 74",body,54,Wine White/Fiano/Australia,11,11
+343,11,769.02052,29,343,29,Viognier,header,29,Wine White/Viognier/,11,11
+344,11,787.41052,30,344,86,Australia,header,86,Wine White/Viognier/Australia,11,11
+345,11,804.2105200000001,31,345,86,"2021 By Farr Geelong, Vic 245",body,86,Wine White/Viognier/Australia,11,11
+346,11,824.9705200000001,32,346,86,"2019 Inkwell ‘Blonde on Blonde’ McLaren Vale, SA 75",body,86,Wine White/Viognier/Australia,11,11
+347,11,866.6105200000001,33,347,87,France,header,87,Wine White/Viognier/France,11,11
+348,11,887.37052,34,348,87,"2022 Andr é Perret ‘Coteau de Chéry’ Condrieu, Rhône Valley 620",body,87,Wine White/Viognier/France,11,11
+349,11,908.13052,35,349,87,"2022 David Duclaux ‘Les Caillets’ Condrieu, Rhône Valley 360",body,87,Wine White/Viognier/France,11,11
+350,11,929.00652,36,350,87,"2013 R. Rostaing ‘La Bonnette’ Condrieu, Rhône Valley 345",body,87,Wine White/Viognier/France,11,11
+351,11,984.936,37,351,87,- 11 -,body,87,Wine White/Viognier/France,11,11
+352,12,74.75052000000005,1,352,40,White Varietals,header,40,Wine White/Varietals White/,12,12
+353,12,93.11051999999995,2,353,17,Everywhere and Anywhere,header,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+354,12,113.89052000000004,3,354,17,"2023 Aligoté, Domaine Collotte Bourgogne, FR 130",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+355,12,155.53052000000002,4,355,17,"2024 Arneis, Thick as Thieves ‘Aloof Alpaca’ Yarra Valley, Vic 80",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+356,12,197.05052,5,356,17,"2022 Colombard , Naudé ‘Langpad Old Vine s ’ Western Cape, South Africa 190",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+357,12,238.69052,6,357,17,"2022 Gewürztraminer blend, La Violetta Great Southern, WA 85",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+358,12,280.33052,7,358,17,"2011 Godello, Valdesil ‘Pedrouzos’ Valdeorras, ESP 1.5L 885",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+359,12,321.88052000000005,8,359,17,"2022 Greco , Benito Ferrara, Terra D’Uva Greco Di Tufo, IT 115",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+360,12,363.52052000000003,9,360,17,"2024 Grüner Veltliner, CRFT ‘ Arranmore ’ Adelaide Hills, SA 90",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+361,12,384.28052,10,361,17,"2021 Grüner Veltliner, Nikolaihof, Federspiel Wachau, Austria 240",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+362,12,425.92052,11,362,17,"2022 Marsanne blend, Place of Changing Winds, Macedon Ranges, Vic 210",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+363,12,446.68052,12,363,17,"2021 Marsanne/Roussanne, Yeringberg Yarra Valley, Vic 180",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+364,12,467.56052,13,364,17,"2016 Marsanne, Marc Sorrel Hermitage Blanc, Rhône Valley, FR 720",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+365,12,509.08052,14,365,17,"2023 Malagousia, Ktima Zafeirakis Tyrnavos, Larissa, GR 115",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+366,12,550.7405200000001,15,366,17,"2020 Pierre Luneau-Papin, La Grange Muscadet Sèvre et Maine, FR 80",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+367,12,592.3805199999999,16,367,17,"2023 Rebula, Iggy Adelaide Hills, SA 170",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+368,12,633.90052,17,368,17,"2022 Roussanne, Michael Hall Barossa Valley, SA 110",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+369,12,654.78052,18,369,17,"2022 Roussanne/Marsanne, Iggy ‘Deda’ Barossa Valley, SA 170",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+370,12,675.54052,19,370,17,"2019 Roussanne, Claude Quenard et Fils Chignin-Bergeron, Savoie, FR 220",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+371,12,717.18052,20,371,17,"2021 Rhône blend, Domaine de Beaurenard Châteauneuf-du-Pape, FR 280",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+372,12,758.7005200000001,21,372,17,"NV Savagnin, Soumah ‘Muse No 3’ Yarra Valley, Vic 280",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+373,12,779.6105200000001,22,373,17,"2022 S avagnin, Domaine du Pélican ‘ Ouillè ’ Jura, FR 295",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+374,12,821.13052,23,374,17,"2020 Tokaji Furmint, Szepsy Tokaji, Hungary 180",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+375,12,862.77052,24,375,17,"2023 Vermentino, Seppeltsfield Barossa Valley, SA 80",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+376,12,883.53052,25,376,17,"2023 Vermentino, Gullyview Estate ‘Albert’s’ Clare Valley, SA 90",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+377,12,925.16652,26,377,17,"2014 Viura, Ló pez de Heredia ‘Viňa Gravonia’ Rioja Alta, ESP 340",body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+378,12,984.936,27,378,17,- 12 -,body,17,Wine White/Varietals White/Anywhere and Everywhere,12,12
+379,13,74.75052000000005,1,379,41,Chardonnay,header,41,Wine White/Chardonnay/,13,13
+380,13,97.09051999999997,2,380,3,Australia,header,3,Wine White/Chardonnay/Australia,13,13
+381,13,117.85051999999996,3,381,3,"2022 Renzaglia Wines ‘Bella Luna’ Bathurst, NSW 180",body,3,Wine White/Chardonnay/Australia,13,13
+382,13,159.49051999999995,4,382,3,"2023 Tyrrell ’s ‘HVD Vineyard’ Hunter Valley, NSW 195",body,3,Wine White/Chardonnay/Australia,13,13
+383,13,180.25052000000005,5,383,3,"2018 Tyrrell’s ‘HVD Vineyard’ Hunter Valley, NSW 280",body,3,Wine White/Chardonnay/Australia,13,13
+384,13,221.89052000000004,6,384,3,"2023 De Salis ‘Estate’ Orange, NSW 120",body,3,Wine White/Chardonnay/Australia,13,13
+385,13,242.65052000000003,7,385,3,"2022 Mathe w Atallah ‘Block a2’ Orange, NSW 135",body,3,Wine White/Chardonnay/Australia,13,13
+386,13,284.29052,8,386,3,"2022 Nick O’leary Tumbarumba, NSW 80",body,3,Wine White/Chardonnay/Australia,13,13
+387,13,325.96052,9,387,3,"2002 Eastern Peake Ballarat, Vic 210",body,3,Wine White/Chardonnay/Australia,13,13
+388,13,367.48051999999996,10,388,3,"2024 Bannockburn Geelong, Vic 225",body,3,Wine White/Chardonnay/Australia,13,13
+389,13,388.36051999999995,11,389,3,"2023 Bannockburn Geelong, Vic 1.5L 430",body,3,Wine White/Chardonnay/Australia,13,13
+390,13,409.12052000000006,12,390,3,"2023 Bannockburn S.R.H. Geelong, Vic 295",body,3,Wine White/Chardonnay/Australia,13,13
+391,13,429.88052000000005,13,391,3,"2023 By Farr Geelong, Vic 375",body,3,Wine White/Chardonnay/Australia,13,13
+392,13,450.76052000000004,14,392,3,"2023 Irrewarra Geelong, Vic 180",body,3,Wine White/Chardonnay/Australia,13,13
+393,13,492.28052,15,393,3,"2024 Wickhams Road Gippsland, Vic 85",body,3,Wine White/Chardonnay/Australia,13,13
+394,13,533.92052,16,394,3,"2022 Latta ‘Jurassique Blanc O u illé’ Henty, Vic 120",body,3,Wine White/Chardonnay/Australia,13,13
+395,13,554.70052,17,395,3,"2022 Tarrington Henty, Vic 200",body,3,Wine White/Chardonnay/Australia,13,13
+396,13,596.34052,18,396,3,"2024 Bindi ‘Glenhope Vineyard’ Macedon Ranges, Vic 120",body,3,Wine White/Chardonnay/Australia,13,13
+397,13,617.10052,19,397,3,"2023 Bindi ‘ Quartz ’ Macedon Ranges, Vic 340",body,3,Wine White/Chardonnay/Australia,13,13
+398,13,637.9805200000001,20,398,3,"2023 Cobaw Ridge Macedon Ranges, Vic 270",body,3,Wine White/Chardonnay/Australia,13,13
+399,13,658.7405200000001,21,399,3,"2024 Josh Cooper Macedon Ranges, Vic 140",body,3,Wine White/Chardonnay/Australia,13,13
+400,13,679.50052,22,400,3,"2023 Josh Cooper ‘Dash Farms’ Macedon Ranges, Vic 225",body,3,Wine White/Chardonnay/Australia,13,13
+401,13,700.3805199999999,23,401,3,"2022 Place of Changing Winds ‘La r derdark’ Macedon Ranges, Vic 460",body,3,Wine White/Chardonnay/Australia,13,13
+402,13,741.90052,24,402,3,"2023 Elanto Vineyard Mornington Peninsula, Vic 210",body,3,Wine White/Chardonnay/Australia,13,13
+403,13,762.78052,25,403,3,"2023 Montalto ‘Pennon Hill’ Mornington Peninsula, Vic 100",body,3,Wine White/Chardonnay/Australia,13,13
+404,13,783.57052,26,404,3,"2022 Moorooduc Estate Mornington Peninsula, Vic 120",body,3,Wine White/Chardonnay/Australia,13,13
+405,13,804.33052,27,405,3,"2023 Ocean Eight ‘Verve’ Mornington Peninsula, Vic 150",body,3,Wine White/Chardonnay/Australia,13,13
+406,13,930.5244,28,406,3,PTO 😊,body,3,Wine White/Chardonnay/Australia,13,13
+407,13,984.936,29,407,3,- 13 -,body,3,Wine White/Chardonnay/Australia,13,13
+408,14,74.75052000000005,1,408,3,Chardonnay (Continued),body,3,Wine White/Chardonnay/Australia,14,14
+409,14,116.41052000000002,2,409,3,"2023 Ben Haines ‘Flowers’ Yarra Valley, Vic 120",body,3,Wine White/Chardonnay/Australia,14,14
+410,14,137.17052,3,410,3,"2023 Giant Steps ‘Bastard Hill’ Yarra Valley, Vic 240",body,3,Wine White/Chardonnay/Australia,14,14
+411,14,157.93052,4,411,3,"2022 Giant Steps ‘Equate’ Yarra Valley, Vic 325",body,3,Wine White/Chardonnay/Australia,14,14
+412,14,178.81052,5,412,3,"2021 Mac Forbes ‘Yarra Junction’ Yarra Valley, Vic 110",body,3,Wine White/Chardonnay/Australia,14,14
+413,14,199.57052,6,413,3,"2021 Mount Mary Yarra Valley, Vic 395",body,3,Wine White/Chardonnay/Australia,14,14
+414,14,220.33051999999998,7,414,3,"2019 Oakridge ‘ 864 Vi neyard’ Yarra Valley, Vic 1.5L 615",body,3,Wine White/Chardonnay/Australia,14,14
+415,14,241.21051999999997,8,415,3,"2023 Oakridge ‘Local Vineyard Series’ Yarra Valley, Vic 100",body,3,Wine White/Chardonnay/Australia,14,14
+416,14,261.97051999999996,9,416,3,"2024 Soumah ‘SV Hexham’ Yarra Valley, Vic 120",body,3,Wine White/Chardonnay/Australia,14,14
+417,14,282.73051999999996,10,417,3,"2024 Timo Mayer Yarra Valley, Vic 160",body,3,Wine White/Chardonnay/Australia,14,14
+418,14,303.61051999999995,11,418,3,"2020 Wantirna Estate ‘Isabella’ Yarra Valley, Vic 270",body,3,Wine White/Chardonnay/Australia,14,14
+419,14,324.40052000000003,12,419,3,"2022 Yeringberg Yarra Valley, Vic 200",body,3,Wine White/Chardonnay/Australia,14,14
+420,14,366.04052,13,420,3,"2021 Lowestoft ‘La Meil l eure’ Coal River Valley, Tas 280",body,3,Wine White/Chardonnay/Australia,14,14
+421,14,386.80052,14,421,3,"2023 Tolpuddle Coal River Valley, Tas 285",body,3,Wine White/Chardonnay/Australia,14,14
+422,14,407.56052,15,422,3,"2023 Tolpuddle Coal River Valley, Tas 1.5L 620",body,3,Wine White/Chardonnay/Australia,14,14
+423,14,428.44052,16,423,3,"2023 Pooley ‘ Cooinda Vale Vineyard ’ Coal River Valley, Tas 240",body,3,Wine White/Chardonnay/Australia,14,14
+424,14,449.20052,17,424,3,"2024 Pooley ‘Elizabeth Anne’ Coal River Valley, Tas ` 415",body,3,Wine White/Chardonnay/Australia,14,14
+425,14,469.96052,18,425,3,"2023 Sailor Seeks Horse Huon Valley, Tas 190",body,3,Wine White/Chardonnay/Australia,14,14
+426,14,511.60052,19,426,3,"2021 Les Fruits ‘Cassie’ Adelaide Hills, SA 125",body,3,Wine White/Chardonnay/Australia,14,14
+427,14,532.36052,20,427,3,"2022 Moorak ‘Carey Gully’ ` Adelaide Hills, SA 110",body,3,Wine White/Chardonnay/Australia,14,14
+428,14,553.26052,21,428,3,"2023 Shaw + Smith ‘Lenswood Vineyard’ Adelaide Hills, SA 250",body,3,Wine White/Chardonnay/Australia,14,14
+429,14,574.02052,22,429,3,"2021 Shaw + Smith ‘Lenswood Vineyard’ Adelaide Hills, SA 1.5L 500",body,3,Wine White/Chardonnay/Australia,14,14
+430,14,594.78052,23,430,3,"2024 Shaw + Smith ‘M3’ Adelaide Hills, SA 140",body,3,Wine White/Chardonnay/Australia,14,14
+431,14,615.66052,24,431,3,"2023 Tapanappa ‘Piccadilly Valley’ Adelaide Hills, SA 170",body,3,Wine White/Chardonnay/Australia,14,14
+432,14,636.42052,25,432,3,"2024 Tapanappa ‘Tiers’ Adelaide Hills, SA 260",body,3,Wine White/Chardonnay/Australia,14,14
+433,14,678.06052,26,433,3,"2011 Cullen ‘Kevin John’ Margaret River, WA 920",body,3,Wine White/Chardonnay/Australia,14,14
+434,14,698.82052,27,434,3,"2023 Cullen ‘Kevin John’ Margaret River, WA 500",body,3,Wine White/Chardonnay/Australia,14,14
+435,14,719.58052,28,435,3,"2020 Cullen ‘Kevin John Fruit Day’ Margaret River, WA 790",body,3,Wine White/Chardonnay/Australia,14,14
+436,14,740.46052,29,436,3,"2023 Deep Woods Estate ‘Single Vineyard’ Margaret River, WA 130",body,3,Wine White/Chardonnay/Australia,14,14
+437,14,761.2205200000001,30,437,3,"2023 Domaine Naturaliste ‘Floris’ Margaret River, WA 100",body,3,Wine White/Chardonnay/Australia,14,14
+438,14,782.01052,31,438,3,"2022 Leeuwin Estate ‘Art Series’ Margaret River, WA 450",body,3,Wine White/Chardonnay/Australia,14,14
+439,14,802.89052,32,439,3,"2023 Moss Wood ‘ Wilyabrup ’ Margaret River, WA 280",body,3,Wine White/Chardonnay/Australia,14,14
+440,14,984.936,33,440,3,- 14 -,body,3,Wine White/Chardonnay/Australia,14,14
+441,15,74.75052000000005,1,441,3,Chardonnay (Continued),body,3,Wine White/Chardonnay/Australia,15,15
+442,15,95.53052000000002,2,442,55,New Zealand,header,55,Wine White/Chardonnay/Zealand New,15,15
+443,15,116.41052000000002,3,443,55,2021 Millton Clos de Ste. Anne ‘Naboth’s’ Gisborne 260,body,55,Wine White/Chardonnay/Zealand New,15,15
+444,15,137.17052,4,444,55,2020 Pyramid Valle y ‘Lion’s Tooth’ North Canterbury 430,body,55,Wine White/Chardonnay/Zealand New,15,15
+445,15,157.93052,5,445,55,2020 Pyramid Valley ‘Field of Fire’ North Canterbury 430,body,55,Wine White/Chardonnay/Zealand New,15,15
+446,15,199.57052,6,446,56,France,header,56,Wine White/Chardonnay/France,15,15
+447,15,220.33051999999998,7,447,56,2023 Domaine Collotte Bourgogne Blanc 200,body,56,Wine White/Chardonnay/France,15,15
+448,15,241.21051999999997,8,448,56,2022 Hubert Lamy ‘Les Chataigners’ Bourgogne Blanc 430,body,56,Wine White/Chardonnay/France,15,15
+449,15,261.97051999999996,9,449,56,2021 Fabien Coche Bourgogne Blanc 240,body,56,Wine White/Chardonnay/France,15,15
+450,15,282.73051999999996,10,450,56,2022 Jane Eyre Bourgogne Blanc 280,body,56,Wine White/Chardonnay/France,15,15
+451,15,324.40052000000003,11,451,56,2021 Billaud- Simon ‘Tête D’or’ Chablis 330,body,56,Wine White/Chardonnay/France,15,15
+452,15,345.16052,12,452,56,2023 Séguinot-Bordet ‘Vieilles Vignes’ Chablis 230,body,56,Wine White/Chardonnay/France,15,15
+453,15,366.04052,13,453,56,2018 Vincent Dauvissat Chablis 510,body,56,Wine White/Chardonnay/France,15,15
+454,15,385.7270000000001,14,454,56,2023 Christian Moreau ‘Vaillon’ Chablis 1 er Cru 390,body,56,Wine White/Chardonnay/France,15,15
+455,15,406.4870000000001,15,455,56,2022 Vincent Dauvissat ‘La Forest’ Chablis 1 er Cru 840,body,56,Wine White/Chardonnay/France,15,15
+456,15,428.44052,16,456,56,"2022 Albert Bichot ‘Moutonne’ Chablis, Grand Cru 980",body,56,Wine White/Chardonnay/France,15,15
+457,15,449.20052,17,457,56,"2022 Samuel Billaud ‘Les Preuses’ Chablis, Grand Cru 900",body,56,Wine White/Chardonnay/France,15,15
+458,15,490.84051999999997,18,458,56,2022 Fabien Coche Auxey-Duresses 385,body,56,Wine White/Chardonnay/France,15,15
+459,15,510.527,19,459,56,"2022 Pierre Girardin ‘Grand es Épenot es’ Beaune 1 er Cru 1.5L 1,350",body,56,Wine White/Chardonnay/France,15,15
+460,15,532.36052,20,460,56,2022 Pierre-Yves Colin-Morey Hautes-Côtes-De-Beaune 380,body,56,Wine White/Chardonnay/France,15,15
+461,15,553.26052,21,461,56,2022 Antoine Jobard Meursault 820,body,56,Wine White/Chardonnay/France,15,15
+462,15,572.947,22,462,56,"2021 Benjamin Leroux ‘Les Charmes - Dessus’ Meursault, 1 er Cru 1,100",body,56,Wine White/Chardonnay/France,15,15
+463,15,594.78052,23,463,56,2022 Caroline Morey ‘Chambrees’ Chassagne-Montrachet 840,body,56,Wine White/Chardonnay/France,15,15
+464,15,615.66052,24,464,56,2021 Pierre-Yves Colin-Morey Chassagne-Montrachet ‘Vieilles Vignes’ 720,body,56,Wine White/Chardonnay/France,15,15
+465,15,636.42052,25,465,56,2022 Hubert Lamy ‘La Princée’ Saint-Aubin 580,body,56,Wine White/Chardonnay/France,15,15
+466,15,678.06052,26,466,56,2023 Mee Godard Beaujolais Blanc 195,body,56,Wine White/Chardonnay/France,15,15
+467,15,698.82052,27,467,56,2019 Domaine Thibert ‘En Chailloux’ Mâcon-Prissé 180,body,56,Wine White/Chardonnay/France,15,15
+468,15,719.58052,28,468,56,2022 Domaine du Pélican ‘Arbois’ Jura 295,body,56,Wine White/Chardonnay/France,15,15
+469,15,740.46052,29,469,56,2020 Jérôme Arnoux ‘Initial’ Jura 190,body,56,Wine White/Chardonnay/France,15,15
+470,15,782.01052,30,470,88,Rest of the World,header,88,Wine White/Chardonnay/World the of Rest,15,15
+471,15,802.89052,31,471,88,"2021 Mayacamas Mount Veeder, Napa Valley, USA 520",body,88,Wine White/Chardonnay/World the of Rest,15,15
+472,15,823.65052,32,472,88,"2022 Keller ‘Alte Reben Réserve blend ’ Rheinhessen, GER 490",body,88,Wine White/Chardonnay/World the of Rest,15,15
+473,15,844.41052,33,473,88,"2021 Franchetti ‘Passopisciaro, Contrada PC’ Terre Siciliane, Sicily, I T 440",body,88,Wine White/Chardonnay/World the of Rest,15,15
+474,15,984.936,34,474,88,- 15 -,body,88,Wine White/Chardonnay/World the of Rest,15,15
+475,16,74.75052000000005,1,475,89,"Orange, Rosé and Chilled Red Wine",header,89,"Wine Red Chilled and Rosé Orange,/Chardonnay/World the of Rest",16,16
+476,16,108.37052000000006,2,476,89,"Skin contact aka, orange wine, is made from white grapes vinified in a similar manner to red wine. Skin",body,89,"Wine Red Chilled and Rosé Orange,/Chardonnay/World the of Rest",16,16
+477,16,125.17052000000001,3,477,89,"contact can turn up the volume of the varietal. Adding texture, tannin and unique varietal aromatics.",body,89,"Wine Red Chilled and Rosé Orange,/Chardonnay/World the of Rest",16,16
+478,16,179.53052000000002,4,478,30,Skin Contact and Amphora,header,30,"Wine Red Chilled and Rosé Orange,/Amphora and Contact Skin/",16,16
+479,16,201.85051999999996,5,479,69,Australia,header,69,"Wine Red Chilled and Rosé Orange,/Amphora and Contact Skin/Australia",16,16
+480,16,222.73051999999996,6,480,69,"2023 Vinden ‘Experimental Range ’ Hunter Valley, NSW 90",body,69,"Wine Red Chilled and Rosé Orange,/Amphora and Contact Skin/Australia",16,16
+481,16,243.49051999999995,7,481,69,"2022 Renzaglia Wines ‘ Murnang ’ Bathurst, NSW 95",body,69,"Wine Red Chilled and Rosé Orange,/Amphora and Contact Skin/Australia",16,16
+482,16,264.25052000000005,8,482,69,"2023 Latta ‘Rattlesnake’ Pyrenees, Vic 105",body,69,"Wine Red Chilled and Rosé Orange,/Amphora and Contact Skin/Australia",16,16
+483,16,285.13052000000005,9,483,69,"2022 La Petite Mort ‘Qvevri’ Granite Belt, Qld 110",body,69,"Wine Red Chilled and Rosé Orange,/Amphora and Contact Skin/Australia",16,16
+484,16,326.68052,10,484,31,Rest of the world,header,31,"Wine Red Chilled and Rosé Orange,/Amphora and Contact Skin/world the of Rest",16,16
+485,16,347.56052,11,485,31,"2021 Millton ‘Libiamo Amphora’ Gisborne, NZ 135",body,31,"Wine Red Chilled and Rosé Orange,/Amphora and Contact Skin/world the of Rest",16,16
+486,16,368.32052,12,486,31,"2022 Les Arches de Belliviè re ‘Caragouille’ VDF Blanc, Loire Valley, FR 110",body,31,"Wine Red Chilled and Rosé Orange,/Amphora and Contact Skin/world the of Rest",16,16
+487,16,431.08052,13,487,70,Rosé,header,70,"Wine Red Chilled and Rosé Orange,/Rosé/",16,16
+488,16,453.40052000000003,14,488,71,Australia,header,71,"Wine Red Chilled and Rosé Orange,/Rosé/Australia",16,16
+489,16,474.16052,15,489,71,"2023 Vinden ‘The Headcase’ Hunter Valley, NSW 90",body,71,"Wine Red Chilled and Rosé Orange,/Rosé/Australia",16,16
+490,16,495.04052,16,490,71,"2024 Joshua Cooper Macedon Ranges, Vic 120",body,71,"Wine Red Chilled and Rosé Orange,/Rosé/Australia",16,16
+491,16,515.80052,17,491,71,"2023 Marli Russell by Mount Mary Yarra Valley, Vic 115",body,71,"Wine Red Chilled and Rosé Orange,/Rosé/Australia",16,16
+492,16,536.56052,18,492,71,"2023 Praeter ‘Stolen Moments’ Adelaide Hills, SA 105",body,71,"Wine Red Chilled and Rosé Orange,/Rosé/Australia",16,16
+493,16,557.46052,19,493,71,"2024 Spinifex Barossa Valley, SA 74",body,71,"Wine Red Chilled and Rosé Orange,/Rosé/Australia",16,16
+494,16,578.2205200000001,20,494,71,"2024 MMAD McLaren Vale, SA 110",body,71,"Wine Red Chilled and Rosé Orange,/Rosé/Australia",16,16
+495,16,640.6205199999999,21,495,42,France,header,42,"Wine Red Chilled and Rosé Orange,/Rosé/France",16,16
+496,16,661.3805199999999,22,496,42,2023 Pierre-Yves Colin-Morey Bourgogne 260,body,42,"Wine Red Chilled and Rosé Orange,/Rosé/France",16,16
+497,16,682.26052,23,497,42,2023 Domaine Tempier Bandol 240,body,42,"Wine Red Chilled and Rosé Orange,/Rosé/France",16,16
+498,16,703.02052,24,498,42,2022 Tour du Bon Bandol 1.5L 525,body,42,"Wine Red Chilled and Rosé Orange,/Rosé/France",16,16
+499,16,723.78052,25,499,42,2023 By. Ott Provence 120,body,42,"Wine Red Chilled and Rosé Orange,/Rosé/France",16,16
+500,16,744.66052,26,500,42,2023 Maison Saint AIX Provence 110,body,42,"Wine Red Chilled and Rosé Orange,/Rosé/France",16,16
+501,16,765.42052,27,501,42,2021 Domaine de la Mordorée Tavel 180,body,42,"Wine Red Chilled and Rosé Orange,/Rosé/France",16,16
+502,16,827.85052,28,502,32,Chilled Red Wine,header,32,"Wine Red Chilled and Rosé Orange,/Wine Red Chilled/",16,16
+503,16,850.17052,29,503,32,"2024 Dhillon by Bindi ‘Accidental Red’ Macedon Ranges, Vic 75",body,32,"Wine Red Chilled and Rosé Orange,/Wine Red Chilled/",16,16
+504,16,870.93052,30,504,32,"2022 Moorak ‘Oakbank’ Adelaide Hills, SA 95",body,32,"Wine Red Chilled and Rosé Orange,/Wine Red Chilled/",16,16
+505,16,891.81052,31,505,32,"2024 Ochota Barrels ‘Texture like Sun ’ Adelaide Hills, SA 115",body,32,"Wine Red Chilled and Rosé Orange,/Wine Red Chilled/",16,16
+506,16,912.56652,32,506,32,"2021 Windy View ‘Purple Slurple’ Adelaide Hills, SA 110",body,32,"Wine Red Chilled and Rosé Orange,/Wine Red Chilled/",16,16
+507,16,933.3265200000001,33,507,32,"2023 Poppelvej ‘Blue Rose Case ’ McLaren Vale, SA 95",body,32,"Wine Red Chilled and Rosé Orange,/Wine Red Chilled/",16,16
+508,16,984.936,34,508,32,- 16 -,body,32,"Wine Red Chilled and Rosé Orange,/Wine Red Chilled/",16,16
+509,17,74.75052000000005,1,509,90,Red Wine,header,90,Wine Red/Wine Red Chilled/,17,17
+510,17,95.53052000000002,2,510,33,Pinot Noir,header,33,Wine Red/Noir Pinot/,17,17
+511,17,117.85051999999996,3,511,43,Australia,header,43,Wine Red/Noir Pinot/Australia,17,17
+512,17,138.73051999999996,4,512,43,"2023 Lark Hill ‘Regional’ Canberra District, NSW 80",body,43,Wine Red/Noir Pinot/Australia,17,17
+513,17,180.25052000000005,5,513,43,"2023 De Salis ‘Estate’ Orange, NSW 120",body,43,Wine Red/Noir Pinot/Australia,17,17
+514,17,221.89052000000004,6,514,43,"2024 Bannockburn Geelong, Vic 220",body,43,Wine Red/Noir Pinot/Australia,17,17
+515,17,242.65052000000003,7,515,43,"2021 By Farr ‘ Tout Prés ’ Geelong, Vic 380",body,43,Wine Red/Noir Pinot/Australia,17,17
+516,17,263.53052,8,516,43,"2022 Irrewarra Geelong, Vic 180",body,43,Wine Red/Noir Pinot/Australia,17,17
+517,17,305.05052,9,517,43,"2018 Bass Phillip ‘Estate’ Gippsland, Vic 345",body,43,Wine Red/Noir Pinot/Australia,17,17
+518,17,325.96052,10,518,43,"2024 Wickhams Road Gippsland, Vic 85",body,43,Wine Red/Noir Pinot/Australia,17,17
+519,17,367.48051999999996,11,519,43,"2022 Bindi ‘Block 5’ Macedon Ranges, Vic 460",body,43,Wine Red/Noir Pinot/Australia,17,17
+520,17,388.36051999999995,12,520,43,"2019 Bindi ‘Block 8’ Macedon Ranges, Vic 480",body,43,Wine Red/Noir Pinot/Australia,17,17
+521,17,409.12052000000006,13,521,43,"2022 Bindi ‘Block 8’ Macedon Ranges, Vic 445",body,43,Wine Red/Noir Pinot/Australia,17,17
+522,17,429.88052000000005,14,522,43,"2018 Bindi ‘Darshan’ Macedon Ranges, Vic 390",body,43,Wine Red/Noir Pinot/Australia,17,17
+523,17,450.76052000000004,15,523,43,"2021 Bindi ‘Kaye’ Macedon Ranges, Vic 265",body,43,Wine Red/Noir Pinot/Australia,17,17
+524,17,471.52052000000003,16,524,43,"2023 Cobaw Ridge ‘Original Block’ Macedon Ranges, Vic 270",body,43,Wine Red/Noir Pinot/Australia,17,17
+525,17,492.28052,17,525,43,"2021 Garden of Earthly delights Macedon Ranges, Vic 160",body,43,Wine Red/Noir Pinot/Australia,17,17
+526,17,513.16052,18,526,43,"2023 Josh Cooper ‘Doug’s Vineyard’ Macedon Ranges, Vic 220",body,43,Wine Red/Noir Pinot/Australia,17,17
+527,17,533.92052,19,527,43,"2022 Place of Changing Winds ‘2 Mountains’ Macedon Ranges, Vic 360",body,43,Wine Red/Noir Pinot/Australia,17,17
+528,17,554.70052,20,528,43,"2022 Shadowfax Macedon Ranges, Vic 105",body,43,Wine Red/Noir Pinot/Australia,17,17
+529,17,596.34052,21,529,43,"2024 William Downie ‘Cathedral’ Mornington and King Valley, Vic 80",body,43,Wine Red/Noir Pinot/Australia,17,17
+530,17,617.10052,22,530,43,"2023 Elanto Vineyard Mornington Peninsula, Vic 210",body,43,Wine Red/Noir Pinot/Australia,17,17
+531,17,637.9805200000001,23,531,43,"2005 Kooyong ‘Ferrous’ Mornington Peninsula, Vic 372",body,43,Wine Red/Noir Pinot/Australia,17,17
+532,17,658.7405200000001,24,532,43,"2024 Onannon Mornington Peninsula, Vic 95",body,43,Wine Red/Noir Pinot/Australia,17,17
+533,17,679.50052,25,533,43,"2021 Paradigm Hill ‘ Les Cinq ’ Mornington Peninsula, Vic 285",body,43,Wine Red/Noir Pinot/Australia,17,17
+534,17,700.3805199999999,26,534,43,"2022 Yabby Lake ‘Block 2’ Mornington Peninsula, Vic 320",body,43,Wine Red/Noir Pinot/Australia,17,17
+535,17,721.1405199999999,27,535,43,"2021 Yal Yal Estate Mornington Peninsula, Vic 110",body,43,Wine Red/Noir Pinot/Australia,17,17
+536,17,754.7405200000001,28,536,43,"2023 Jane Eyre Yarra Valley, Vic 240",body,43,Wine Red/Noir Pinot/Australia,17,17
+537,17,775.53052,29,537,43,"2022 Mount Mary Yarra Valley, Vic 480",body,43,Wine Red/Noir Pinot/Australia,17,17
+538,17,796.41052,30,538,43,"2018 Yeringberg Yarra Valley, Vic 320",body,43,Wine Red/Noir Pinot/Australia,17,17
+539,17,984.936,31,539,43,- 17 -,body,43,Wine Red/Noir Pinot/Australia,17,17
+540,18,74.75052000000005,1,540,43,Pinot Noir (Continued),body,43,Wine Red/Noir Pinot/Australia,18,18
+541,18,116.41052000000002,2,541,43,2022 Jane Eyre Tasmania 260,body,43,Wine Red/Noir Pinot/Australia,18,18
+542,18,137.17052,3,542,43,"2023 Pooley ‘ Butcher ’s Hill Vineyard ’ Coal River Valley, Tas 230",body,43,Wine Red/Noir Pinot/Australia,18,18
+543,18,157.93052,4,543,43,"2023 Tolpuddle Coal River Valley, Tas 285",body,43,Wine Red/Noir Pinot/Australia,18,18
+544,18,178.81052,5,544,43,"2023 Sailor Seeks Horse Coal River Valley, Tas 190",body,43,Wine Red/Noir Pinot/Australia,18,18
+545,18,220.33051999999998,6,545,43,"2023 Michael Hall ‘Sang de Pigeon’ Adelaide Hills, SA 85",body,43,Wine Red/Noir Pinot/Australia,18,18
+546,18,261.97051999999996,7,546,43,"2023 Tapanappa ‘Foggy Hill Vineyard ’ Fleurieu Peninsula, SA 150",body,43,Wine Red/Noir Pinot/Australia,18,18
+547,18,303.61051999999995,8,547,43,"2022 Picardy Pemberton, WA 190",body,43,Wine Red/Noir Pinot/Australia,18,18
+548,18,366.04052,9,548,72,New Zealand,header,72,Wine Red/Noir Pinot/Zealand New,18,18
+549,18,386.80052,10,549,72,2022 Kumeu River ‘Village’ Auckland 85,body,72,Wine Red/Noir Pinot/Zealand New,18,18
+550,18,407.56052,11,550,72,2020 Pyramid Valley ‘Earth Smoke’ North Canterbury 395,body,72,Wine Red/Noir Pinot/Zealand New,18,18
+551,18,428.44052,12,551,72,"2016 Pyramid Valley ‘Angel Flower’ Waipara Valley, North Canterbury 520",body,72,Wine Red/Noir Pinot/Zealand New,18,18
+552,18,449.20052,13,552,72,2021 Pegasus Bay North Canterbury 225,body,72,Wine Red/Noir Pinot/Zealand New,18,18
+553,18,469.96052,14,553,72,2006 Felton Road ‘ Bannockburn ’ Central Otago 565,body,72,Wine Red/Noir Pinot/Zealand New,18,18
+554,18,532.36052,15,554,91,France,header,91,Wine Red/Noir Pinot/France,18,18
+555,18,553.26052,16,555,91,2022 Jintaro Yura ‘La Partie et le Tout’ Alsace 395,body,91,Wine Red/Noir Pinot/France,18,18
+556,18,574.02052,17,556,91,"2019 Charles Heidsieck, Coteaux Champenois Ambonnay, Champagne 530",body,91,Wine Red/Noir Pinot/France,18,18
+557,18,615.66052,18,557,91,2022 Benjamin Leroux Bourgogne Rouge 295,body,91,Wine Red/Noir Pinot/France,18,18
+558,18,636.42052,19,558,91,2022 Jean- Marie Fourrier ‘Comte de Chapelle’ Bourgogne Rouge 320,body,91,Wine Red/Noir Pinot/France,18,18
+559,18,657.18052,20,559,91,2022 Domaine Collotte ‘Les Grasses Têtes’ Marsannay 220,body,91,Wine Red/Noir Pinot/France,18,18
+560,18,676.987,21,560,91,"2018 Joseph Drouhin ‘Amoureuses’ Chambolle-Musigny, 1 er Cru 1,800",body,91,Wine Red/Noir Pinot/France,18,18
+561,18,698.82052,22,561,91,"2015 Domaine de la Romanée-Conti La Tache, Grand Cru 12,100",body,91,Wine Red/Noir Pinot/France,18,18
+562,18,719.58052,23,562,91,"2020 Domaine de la Romanée-Conti Romanée-St-Vivant, Grand Cru 6,400",body,91,Wine Red/Noir Pinot/France,18,18
+563,18,740.46052,24,563,91,2021 Benjamin Leroux Vosne-Romanée 790,body,91,Wine Red/Noir Pinot/France,18,18
+564,18,761.2205200000001,25,564,91,2019 Domaine Génot-Boulanger Pommard ‘Vieilles Vignes’ 460,body,91,Wine Red/Noir Pinot/France,18,18
+565,18,782.01052,26,565,91,2021 Benjamin Leroux Volnay 575,body,91,Wine Red/Noir Pinot/France,18,18
+566,18,802.89052,27,566,91,2022 Pierre-Yves-Colin-Morey Monthélie 350,body,91,Wine Red/Noir Pinot/France,18,18
+567,18,823.65052,28,567,91,2022 Fabien Coche Meursault 390,body,91,Wine Red/Noir Pinot/France,18,18
+568,18,844.41052,29,568,91,2022 Caroline Morey Santenay 340,body,91,Wine Red/Noir Pinot/France,18,18
+569,18,984.936,30,569,91,- 18 -,body,91,Wine Red/Noir Pinot/France,18,18
+661,22,74.75052000000005,1,570,18,Nebbiolo,header,18,Wine Red/Nebbiolo/,22,19
+662,22,97.09051999999997,2,571,19,Australia,header,19,Wine Red/Nebbiolo/Australia,22,19
+663,22,117.85051999999996,3,572,19,"2022 Traviarti Beechworth, Vic 200",body,19,Wine Red/Nebbiolo/Australia,22,19
+664,22,138.73051999999996,4,573,19,"2023 Jasper Hill ‘Georgia’s Paddock’ Heathcote, Vic 195",body,19,Wine Red/Nebbiolo/Australia,22,19
+665,22,159.49051999999995,5,574,19,"2020 Lethbridge ‘ Il Regalo di Compleanno’ Pyrenees, Vic 150",body,19,Wine Red/Nebbiolo/Australia,22,19
+666,22,180.25052000000005,6,575,19,"2022 Thick as Thieves ‘Pocco Rosso’ Yarra Valley, Vic 95",body,19,Wine Red/Nebbiolo/Australia,22,19
+667,22,242.65052000000003,7,576,4,Italy,header,4,Wine Red/Nebbiolo/Italy,22,19
+668,22,263.53052,8,577,4,"2020 Cascina delle Rose ‘ Rio Sordo ’ Barbaresco, Piemonte 440",body,4,Wine Red/Nebbiolo/Italy,22,19
+669,22,284.29052,9,578,4,"2020 Ceretto Barbaresco, Piemonte 410",body,4,Wine Red/Nebbiolo/Italy,22,19
+670,22,305.05052,10,579,4,"2020 Gaja Barbaresco, Piemonte 1,300",body,4,Wine Red/Nebbiolo/Italy,22,19
+671,22,325.96052,11,580,4,"2016 La Spinetta ‘Gallina’ Barbaresco, Piemonte 772",body,4,Wine Red/Nebbiolo/Italy,22,19
+672,22,346.72051999999996,12,581,4,"2021 Massolino Barbaresco, Piemonte 320",body,4,Wine Red/Nebbiolo/Italy,22,19
+673,22,388.36051999999995,13,582,4,"2019 Gaja ‘Dagro mis ’ Barolo, Piemonte 720",body,4,Wine Red/Nebbiolo/Italy,22,19
+674,22,409.12052000000006,14,583,4,"2020 Giacomo Conterno ‘Vigna Francia’ Barolo, Piemonte 1,350",body,4,Wine Red/Nebbiolo/Italy,22,19
+675,22,429.88052000000005,15,584,4,"2020 Giulia Negri ‘ Serradenari ’ Barolo, Piemonte 385",body,4,Wine Red/Nebbiolo/Italy,22,19
+676,22,450.76052000000004,16,585,4,"2020 Luigi Pira ‘Serralunga d ’Alba’ Barolo, Piemonte 330",body,4,Wine Red/Nebbiolo/Italy,22,19
+677,22,471.52052000000003,17,586,4,"2018 Mascarello ‘Monprivato’ Barolo, Piemonte 1,450",body,4,Wine Red/Nebbiolo/Italy,22,19
+678,22,492.28052,18,587,4,"2017 Paolo Scavino ‘Cannubi’ Barolo, Piemonte 1.5L 1,300",body,4,Wine Red/Nebbiolo/Italy,22,19
+679,22,513.16052,19,588,4,"2016 Sandrone ‘Vite Talin’ Barolo, Piemonte 1,700",body,4,Wine Red/Nebbiolo/Italy,22,19
+680,22,533.92052,20,589,4,"2018 Sandrone ‘Le Vigne’ Barolo, Piemonte 515",body,4,Wine Red/Nebbiolo/Italy,22,19
+681,22,554.70052,21,590,4,"2017 Sandrone ‘Aleste’ Barolo, Piemonte 558",body,4,Wine Red/Nebbiolo/Italy,22,19
+682,22,596.34052,22,591,4,"2022 Cascina delle Rose Langhe, Piemonte 200",body,4,Wine Red/Nebbiolo/Italy,22,19
+683,22,617.10052,23,592,4,"2022 Cascina delle Rose Langhe, Piemonte 1.5L 425",body,4,Wine Red/Nebbiolo/Italy,22,19
+684,22,637.9805200000001,24,593,4,"2022 Sottimano Langhe, Piemonte 185",body,4,Wine Red/Nebbiolo/Italy,22,19
+685,22,984.936,25,594,4,- 19 -,body,4,Wine Red/Nebbiolo/Italy,22,19
+686,23,74.75052000000005,1,595,57,Sangiovese,header,57,Wine Red/Sangiovese/,23,20
+687,23,97.09051999999997,2,596,75,Australia,header,75,Wine Red/Sangiovese/Australia,23,20
+688,23,117.85051999999996,3,597,75,"2023 Renzaglia Bathurst, NSW 100",body,75,Wine Red/Sangiovese/Australia,23,20
+689,23,159.49051999999995,4,598,75,"2022 Garden of Earthly Delights Heathcote, Vic 110",body,75,Wine Red/Sangiovese/Australia,23,20
+690,23,180.25052000000005,5,599,75,"2019 Vinea Marson Heathcote, Vic 95",body,75,Wine Red/Sangiovese/Australia,23,20
+691,23,201.13052000000005,6,600,75,"2023 Dal Zotto King Valley, Vic 70",body,75,Wine Red/Sangiovese/Australia,23,20
+692,23,221.89052000000004,7,601,75,"2024 Timo Mayer Yarra Valley, Vic 165",body,75,Wine Red/Sangiovese/Australia,23,20
+693,23,263.53052,8,602,75,"2024 The Other Wine Co Adelaide Hills, SA 75",body,75,Wine Red/Sangiovese/Australia,23,20
+694,23,305.05052,9,603,5,Italy,header,5,Wine Red/Sangiovese/Italy,23,20
+695,23,325.96052,10,604,5,"2020 Il Marroneto Brunello di Montalcino, Toscana 800",body,5,Wine Red/Sangiovese/Italy,23,20
+696,23,346.72051999999996,11,605,5,"2017 Pian Dell’Orino Brunello di Montalcino ‘Riserva’, T oscana 1,165",body,5,Wine Red/Sangiovese/Italy,23,20
+697,23,367.48051999999996,12,606,5,"2019 Uccelliera Brunello di Montalcino, Toscana 540",body,5,Wine Red/Sangiovese/Italy,23,20
+698,23,409.12052000000006,13,607,5,"2015 Isole e Olena ‘Gran Selezione’ Chianti Classico, Toscana 1.5L 1,620",body,5,Wine Red/Sangiovese/Italy,23,20
+699,23,429.88052000000005,14,608,5,"2022 Le Corti Chianti Classico, Toscana 95",body,5,Wine Red/Sangiovese/Italy,23,20
+700,23,467.56052,15,609,5,"2020 Il Marroneto ‘Jacopo’ Rosso di Montalcino, Toscana 480",body,5,Wine Red/Sangiovese/Italy,23,20
+701,23,484.36051999999995,16,610,5,"2021 Le Ragnaie Rosso di Montalcino, Toscana 220",body,5,Wine Red/Sangiovese/Italy,23,20
+702,23,525.8805199999999,17,611,5,2022 Il Poggione Toscana Rosso 95,body,5,Wine Red/Sangiovese/Italy,23,20
+703,23,588.30052,18,612,44,Gamay,header,44,Wine Red/Gamay/,23,20
+704,23,610.6205199999999,19,613,76,Australia,header,76,Wine Red/Gamay/Australia,23,20
+705,23,631.3805199999999,20,614,76,"2023 Sinapius ‘Esm é ’ Pipers River, Tas 105",body,76,Wine Red/Gamay/Australia,23,20
+706,23,652.26052,21,615,76,"2024 Empire of Dirt ‘Ink’ Geelong, Vic 120",body,76,Wine Red/Gamay/Australia,23,20
+707,23,673.02052,22,616,76,"2024 Farr Rising Geelong, Vic 165",body,76,Wine Red/Gamay/Australia,23,20
+708,23,735.42052,23,617,92,France,header,92,Wine Red/Gamay/France,23,20
+709,23,756.18052,24,618,92,2023 Mee Godard Beaujolais 185,body,92,Wine Red/Gamay/France,23,20
+710,23,777.09052,25,619,92,2020 Louis Boillot Moulin-à-Vent 190,body,92,Wine Red/Gamay/France,23,20
+711,23,797.85052,26,620,92,"2021 Camille Mélinand Fleurie, Beaujolais 160",body,92,Wine Red/Gamay/France,23,20
+712,23,818.6105200000001,27,621,92,"2022 Domaine de la Grand ’ Cour ‘ VV Le Clos ’ Fleurie, Beaujolais 355",body,92,Wine Red/Gamay/France,23,20
+713,23,839.4905200000001,28,622,92,"2023 Thé venet ‘En Voiture Simone’ Régnié, Beaujolais 160",body,92,Wine Red/Gamay/France,23,20
+714,23,984.936,29,623,92,- 20 -,body,92,Wine Red/Gamay/France,23,20
+715,24,74.75052000000005,1,624,58,Red Varietals,header,58,Wine Red/Varietals Red/,24,21
+716,24,97.09051999999997,2,625,34,Everywhere and Anywhere,header,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+717,24,117.85051999999996,3,626,34,"2019 Aglianico, Chalmers Heathcote, Vic 115",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+718,24,159.49051999999995,4,627,34,"2024 Barbera, Breaking Ground Hunter Valley, NSW 80",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+719,24,180.25052000000005,5,628,34,"2022 Barbera, Vinea Marson Heathcote, Vic 95",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+720,24,201.13052000000005,6,629,34,"2022 Barbera, Giacomo Conterno ‘Francia’ Barbera d ’ Alba, Piemonte, IT 480",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+721,24,242.65052000000003,7,630,34,"2023 Cinsault/Grenache, Les Fruits Adelaide Hills, SA 95",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+722,24,263.53052,8,631,34,"2017 Cinsault, Naudé ‘Old Vine Werfdans’ Darling, Western Cape, South Africa 190",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+723,24,305.05052,9,632,34,"2015 Corvina blend, Quintarelli Valpolicella Superiore, Veneto, IT 585",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+724,24,325.96052,10,633,34,"2015 Corvina blend, Quintarelli ‘Ca’ del Merlo’ Veneto, IT 585",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+725,24,346.72051999999996,11,634,34,"2015 Corvina blend, Quintarelli Amarone della Valpolicella, Veneto, IT 1,500",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+726,24,388.36051999999995,12,635,34,"2022 Dolcetto, Cascina Delle Rose Dolcetto d’Alba, IT 120",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+727,24,429.88052000000005,13,636,34,"2022 Malb ec blend, Bacchus ‘Family Wine’ Margaret River, WA 160",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+728,24,450.76052000000004,14,637,34,"2021 Malbec blend, McHenry Hohnen Margaret River, WA 125",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+729,24,492.28052,15,638,34,"2021 Mencia, Swinney Frankland River, WA 108",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+730,24,533.92052,16,639,34,"2022 Mondeuse, Mount Majura Canberra District, NSW 85",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+731,24,575.58052,17,640,34,"2021 Mourvèdre, Hewitson ‘Old Garden Vineyard’ , Barossa Valley, SA 240",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+732,24,596.34052,18,641,34,"2022 Mourvèdre Blend, Tim Smith Barossa Valley, SA 90",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+733,24,617.10052,19,642,34,"2023 Mourvèdre, Swinney Frankland River, WA 115",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+734,24,637.9805200000001,20,643,34,"2023 Mourvè dre, Swinney ‘Farvie’ Frankland River, WA 350",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+735,24,658.7405200000001,21,644,34,"2015 Mourvèdre, Yangarra McLaren Vale, SA 125",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+736,24,700.3805199999999,22,645,34,"2022 Nerello Mascalese, Tenuta Terre Nere ‘Bellacolona’ Etna, Sicily, IT 270",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+737,24,721.1405199999999,23,646,34,"2022 Ne rello Mascalese, Tenuta Terre Nere ‘San Lorenzo’, Etna, Sicily , IT 460",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+738,24,762.78052,24,647,34,"2022 Nero d’Avola bl end, Eldorado Road Beechworth, Vic 85",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+739,24,804.33052,25,648,34,"2013 Cullen ‘Mangan East Block’ Margaret River, WA 325",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+740,24,845.9705200000001,26,649,34,"2020 Pinot Meunier, Best’s ‘Old Vine’ Great Western, Vic 285",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+741,24,887.6105200000001,27,650,34,"2017 Sagrantino, Sassafras Canberra District, NSW 85",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+742,24,929.12652,28,651,34,"2021 Xin omavro, Thymiopoulos ‘Alta’ Naoussa, Macedonia, GR 115",body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+743,24,984.936,29,652,34,- 21 -,body,34,Wine Red/Varietals Red/Anywhere and Everywhere,24,21
+744,25,74.75052000000005,1,653,93,Cabernet Franc,header,93,Wine Red/Franc Cabernet/,25,22
+745,25,97.09051999999997,2,654,45,Australia,header,45,Wine Red/Franc Cabernet/Australia,25,22
+746,25,117.85051999999996,3,655,45,"2021 Matthew Atallah ‘Block 1’ Orange, NSW 135",body,45,Wine Red/Franc Cabernet/Australia,25,22
+747,25,159.49051999999995,4,656,45,"2019 Wantirna Estate ‘Hannah’ Yarra Valley, Vic 400",body,45,Wine Red/Franc Cabernet/Australia,25,22
+748,25,180.25052000000005,5,657,45,"2020 Wantirna Estate ‘Hannah’ Yarra Valley, Vic 390",body,45,Wine Red/Franc Cabernet/Australia,25,22
+749,25,221.89052000000004,6,658,45,2023 Gertie Clare Valley. SA 85,body,45,Wine Red/Franc Cabernet/Australia,25,22
+750,25,242.65052000000003,7,659,45,"2022 Parley ‘Fever’ Langhorne Creek, SA 90",body,45,Wine Red/Franc Cabernet/Australia,25,22
+751,25,263.53052,8,660,45,"2021 Terre à Terre ‘ Crayères Vineyard ’ Wrattonbully, SA 120",body,45,Wine Red/Franc Cabernet/Australia,25,22
+752,25,284.29052,9,661,45,"2014 Terre à Terre ‘ Crayères Vineyard ’ Wrattonbully, SA 160",body,45,Wine Red/Franc Cabernet/Australia,25,22
+753,25,325.96052,10,662,45,"2015 Frankland Estate ‘Olmo’s Reward’ Frankland River, WA 260",body,45,Wine Red/Franc Cabernet/Australia,25,22
+754,25,346.72051999999996,11,663,45,"2022 NOW Margaret River, WA 190",body,45,Wine Red/Franc Cabernet/Australia,25,22
+755,25,409.12052000000006,12,664,35,France,header,35,Wine Red/Franc Cabernet/France,25,22
+756,25,429.88052000000005,13,665,35,"2019 A rnaud Lambert ‘ Brézé, Clos Tue- Loup’ Saumur, Loire Valley 220",body,35,Wine Red/Franc Cabernet/France,25,22
+757,25,450.76052000000004,14,666,35,"2022 Antoine Sanzay ‘La Paterne’ Saumur-Champigny, Loire Valley 200",body,35,Wine Red/Franc Cabernet/France,25,22
+758,25,513.16052,15,667,94,Cabernet Sauvignon and Blends,header,94,Wine Red/Blends and Sauvignon Cabernet/,25,22
+759,25,535.36052,16,668,46,Australia,header,46,Wine Red/Blends and Sauvignon Cabernet/Australia,25,22
+760,25,556.26052,17,669,46,"2021 Robert Stein ‘Reserve’ Mudgee, NSW 220",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,25,22
+761,25,577.02052,18,670,46,"2019 Bloodwood Wines Orange, NSW 135",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,25,22
+762,25,618.66052,19,671,46,"2015 Mount Mary ‘JWDM’ Yarra Valley, Vic 1,250",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,25,22
+763,25,639.42052,20,672,46,"2016 Mount Mary ‘Quintet’ Yarra Valley, Vic 740",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,25,22
+764,25,660.18052,21,673,46,"2021 Mount Mary ‘Quintet’ Yarra Valley, Vic 540",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,25,22
+765,25,681.06052,22,674,46,"2022 Yarra Yering ‘Agincourt blend’ Yarra Valley, Vic 290",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,25,22
+766,25,701.82052,23,675,46,"2018 Yarra Yering ‘Agincourt blend ’ Yarra Valley, Vic 320",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,25,22
+767,25,722.58052,24,676,46,"2022 Yarra Yering ‘Dry Red No 1 blend’ Yarra Valley, Vic 395",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,25,22
+768,25,743.46052,25,677,46,"2022 Yeringberg Yarra Valley, Vic 280",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,25,22
+769,25,764.2205200000001,26,678,46,"2022 Yeringberg ‘Yeringberg blend’ Yarra Valley, Vic 280",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,25,22
+770,25,785.01052,27,679,46,"2020 Wantirna Estate ‘Amelia’ Yarra Valley, Vic 300",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,25,22
+771,25,826.65052,28,680,46,"2023 Joshua Cooper ‘Cabernet b lend’ Macedon/Pyrenees, Vic 150",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,25,22
+772,25,847.41052,29,681,46,"2023 Joshua Cooper ‘Dash Farms’ Macedon Ranges, Vic 175",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,25,22
+773,25,889.05052,30,682,46,"2022 Yalumba ‘The Signature’ Barossa, SA 210",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,25,22
+774,25,984.936,31,683,46,- 22 -,body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,25,22
+775,26,74.75052000000005,1,684,46,Cabernet Sauvignon and Blends (continued),body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,26,23
+776,26,116.41052000000002,2,685,46,"2023 Gullyview Estate ‘Courtside’ Clare Valley, SA 90",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,26,23
+777,26,157.93052,3,686,46,"2021 Henschke ‘Cyril Henschke’ Eden Valley, SA 490",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,26,23
+778,26,199.57052,4,687,46,"2015 Hickinbotham ‘The Peake’ McLaren Vale, SA 448",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,26,23
+779,26,220.33051999999998,5,688,46,"2016 Hickinbotham ‘Trueman’ McLaren Vale, SA 310",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,26,23
+780,26,261.97051999999996,6,689,46,"2014 Terre à Terre ‘Crayères Vineyard’ Wrattonbully, SA 180",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,26,23
+781,26,303.61051999999995,7,690,46,"2014 Yalumba ‘The Caley’ Multi-Regional, SA 940",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,26,23
+782,26,345.16052,8,691,46,"2020 Ashbrook Estate Margaret River, WA 90",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,26,23
+783,26,366.04052,9,692,46,"2021 Cullen ‘Diana Madeline’ Margaret River, WA 460",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,26,23
+784,26,386.80052,10,693,46,"2016 Cullen ‘Vanya’ Margaret River, WA 924",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,26,23
+785,26,407.56052,11,694,46,"2017 Cullen ‘Vanya Flower Day’ Margaret River, WA 980",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,26,23
+786,26,428.44052,12,695,46,"2023 Moss Wood ‘Amy’s’ Margaret River, WA 125",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,26,23
+787,26,449.20052,13,696,46,"2021 Moss Wood Margaret River, WA 410",body,46,Wine Red/Blends and Sauvignon Cabernet/Australia,26,23
+788,26,511.60052,14,697,6,France,header,6,Wine Red/Blends and Sauvignon Cabernet/France,26,23
+789,26,532.36052,15,698,6,"2012 Domaine de Trévallon Alpilles, Les Baux-de-Provence 900",body,6,Wine Red/Blends and Sauvignon Cabernet/France,26,23
+790,26,553.26052,16,699,6,"2021 Domaine de Trévallon Alpilles, Les Baux-de-Provence 690",body,6,Wine Red/Blends and Sauvignon Cabernet/France,26,23
+791,26,594.78052,17,700,6,"2018 Carruades de Lafite Pauillac, Bordeaux 1,320",body,6,Wine Red/Blends and Sauvignon Cabernet/France,26,23
+792,26,615.66052,18,701,6,"2018 Le Petit Mouton de Mouton Rothschild Pauillac, Bordeaux 1,400",body,6,Wine Red/Blends and Sauvignon Cabernet/France,26,23
+793,26,678.06052,19,702,59,Italy,header,59,Wine Red/Blends and Sauvignon Cabernet/Italy,26,23
+794,26,698.82052,20,703,59,"2018 Tenuta dell’ Ornellaia Bolgheri Superiore, Toscana 1.5L 2,800",body,59,Wine Red/Blends and Sauvignon Cabernet/Italy,26,23
+795,26,719.58052,21,704,59,"2014 Quintarelli ‘Alzero’ Veneto, IT 1,600",body,59,Wine Red/Blends and Sauvignon Cabernet/Italy,26,23
+796,26,782.01052,22,705,7,Merlot and Blends,header,7,Wine Red/Blends and Merlot/,26,23
+797,26,804.33052,23,706,60,Australia,header,60,Wine Red/Blends and Merlot/Australia,26,23
+798,26,825.2105200000001,24,707,60,"2023 Thick as Thieves ‘Levings’ Yarra Valley, Vic 155",body,60,Wine Red/Blends and Merlot/Australia,26,23
+799,26,845.9705200000001,25,708,60,"2024 Timo Mayer Yarra Valley, Vic 165",body,60,Wine Red/Blends and Merlot/Australia,26,23
+800,26,984.936,26,709,60,- 23 -,body,60,Wine Red/Blends and Merlot/Australia,26,23
+801,27,74.75052000000005,1,710,36,Grenache and Blends,header,36,Wine Red/Blends and Grenache/,27,24
+802,27,97.09051999999997,2,711,20,Australia,header,20,Wine Red/Blends and Grenache/Australia,27,24
+803,27,117.85051999999996,3,712,20,"2023 Dhillon by Bindi ‘Col Mountain’ Heathcote, Vic 120",body,20,Wine Red/Blends and Grenache/Australia,27,24
+804,27,138.73051999999996,4,713,20,"2022 Marli Russel ‘RP2 blend’ Yarra Valley, Vic 145",body,20,Wine Red/Blends and Grenache/Australia,27,24
+805,27,159.49051999999995,5,714,20,"2017 Marli Russel ‘RP2 blend’ Yarra Valley, Vic 170",body,20,Wine Red/Blends and Grenache/Australia,27,24
+806,27,201.13052000000005,6,715,20,"2023 Kin by Alkina Barossa Valley, SA 110",body,20,Wine Red/Blends and Grenache/Australia,27,24
+807,27,221.89052000000004,7,716,20,"2020 Alkina ‘Polygon 3’ - Schist/Limestone Barossa Valley, SA 690",body,20,Wine Red/Blends and Grenache/Australia,27,24
+808,27,242.65052000000003,8,717,20,"2022 Alkina ‘Polygon 3’ - Schist/Limestone Barossa Valley, SA 650",body,20,Wine Red/Blends and Grenache/Australia,27,24
+809,27,263.53052,9,718,20,"2020 Alkina ‘Polygon 5’ - Clay/Schist Barossa Valley, SA 690",body,20,Wine Red/Blends and Grenache/Australia,27,24
+810,27,284.29052,10,719,20,"2022 Alkina ‘Polygon 5’ - Clay/Schist Barossa Valley, SA 650",body,20,Wine Red/Blends and Grenache/Australia,27,24
+811,27,305.05052,11,720,20,"2019 Charles Melton ‘Nine Popes GSM ’ Barossa Valley, SA 295",body,20,Wine Red/Blends and Grenache/Australia,27,24
+812,27,325.96052,12,721,20,"2023 Sp inifex ‘Papillon’ Barossa Valley, SA 80",body,20,Wine Red/Blends and Grenache/Australia,27,24
+813,27,346.72051999999996,13,722,20,"2022 Seppeltsfield Barossa Valley, SA 75",body,20,Wine Red/Blends and Grenache/Australia,27,24
+814,27,367.48051999999996,14,723,20,"2021 Rusden ‘Christine’s Vineyard’ Barossa Valley, SA 120",body,20,Wine Red/Blends and Grenache/Australia,27,24
+815,27,388.36051999999995,15,724,20,"2022 Tscharke ‘Stone Well’ Barossa Valley, SA 130",body,20,Wine Red/Blends and Grenache/Australia,27,24
+816,27,409.12052000000006,16,725,20,2023 Munda Ngadjuri and Peramangk Country 110,body,20,Wine Red/Blends and Grenache/Australia,27,24
+817,27,450.76052000000004,17,726,20,"2022 Bourke & Travers ‘GSM’ Clare Valley, SA 95",body,20,Wine Red/Blends and Grenache/Australia,27,24
+818,27,492.28052,18,727,20,"2023 Bulman ‘Glen’s Vineyard’ Eden Valley, SA 195",body,20,Wine Red/Blends and Grenache/Australia,27,24
+819,27,533.92052,19,728,20,"2023 Ochota Barrels ‘ The Green Room’ McLaren Vale, SA 100",body,20,Wine Red/Blends and Grenache/Australia,27,24
+820,27,554.70052,20,729,20,"2022 Serafino McLaren Vale, SA 85",body,20,Wine Red/Blends and Grenache/Australia,27,24
+821,27,575.58052,21,730,20,"2022 Willunga 100 ‘Trott Vineyard’ McLaren Vale, SA 165",body,20,Wine Red/Blends and Grenache/Australia,27,24
+822,27,617.10052,22,731,20,"2023 Swinney Frankland River, WA 120",body,20,Wine Red/Blends and Grenache/Australia,27,24
+823,27,637.9805200000001,23,732,20,"2022 Swinney ‘Farvie’ Frankland River, WA 320",body,20,Wine Red/Blends and Grenache/Australia,27,24
+824,27,679.50052,24,733,47,Rest of the World,header,47,Wine Red/Blends and Grenache/World the of Rest,27,24
+825,27,700.3805199999999,25,734,47,"1972 Xavier Vignon Châteauneuf-du-Pape, Rhône Valley, FR 965",body,47,Wine Red/Blends and Grenache/World the of Rest,27,24
+826,27,721.1405199999999,26,735,47,"2021 Domaine La Bouîssiere Gigondas, Rhône Valley, FR 260",body,47,Wine Red/Blends and Grenache/World the of Rest,27,24
+827,27,741.90052,27,736,47,"2019 Clos Mogador ‘Priorat Tinto’ Priorat, ESP 520",body,47,Wine Red/Blends and Grenache/World the of Rest,27,24
+828,27,804.33052,28,737,21,"Tempranillo, Touriga Nacional and Blends",header,21,"Wine Red/Blends and Nacional Touriga Tempranillo,/",27,24
+829,27,826.65052,29,738,8,Australia,header,8,"Wine Red/Blends and Nacional Touriga Tempranillo,/Australia",27,24
+830,27,847.41052,30,739,8,"2022 Tempranillo, Mount Majura Canberra District, NSW 155",body,8,"Wine Red/Blends and Nacional Touriga Tempranillo,/Australia",27,24
+831,27,889.05052,31,740,8,"2020 Yarra Yering ‘Dry Red No.3 blend ’ Yarra Valley, Vic 235",body,8,"Wine Red/Blends and Nacional Touriga Tempranillo,/Australia",27,24
+832,27,909.80652,32,741,8,"2022 Seppeltsfield ‘EC3 blend’ Barossa, SA 110",body,8,"Wine Red/Blends and Nacional Touriga Tempranillo,/Australia",27,24
+833,27,984.936,33,742,8,- 24 -,body,8,"Wine Red/Blends and Nacional Touriga Tempranillo,/Australia",27,24
+570,19,74.75052000000005,1,743,61,Shiraz and Blends,header,61,Wine Red/Blends and Shiraz/,19,25
+571,19,97.09051999999997,2,744,95,Australia,header,95,Wine Red/Blends and Shiraz/Australia,19,25
+572,19,117.85051999999996,3,745,95,"2019 Cullarin ‘Block 71’ Canberra District, NSW 120",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+573,19,159.49051999999995,4,746,95,"2014 Mount Pleasant ‘Maurice O'Shea’ Hunter Valley, NSW 610",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+574,19,180.25052000000005,5,747,95,"2022 Thomas ‘Sweetwater Ridge’ Hunter Valley, NSW 95",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+575,19,201.13052000000005,6,748,95,"1996 Tyrrell’s ‘Vat 9’ Hunter Valley, NSW 540",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+576,19,221.89052000000004,7,749,95,"2011 Tyrrell’s ‘Johnno’s Vineyard’ Hunter Valley, NSW 460",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+577,19,242.65052000000003,8,750,95,"2019 Tyrrell’s ‘Johnno’s Vineyard’ Hunter Valley, NSW 390",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+578,19,263.53052,9,751,95,"2013 Tyrrell’s ‘Old Patch’ Hunter Valley, NSW 460",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+579,19,284.29052,10,752,95,"2021 Tyrrell’s ‘Old Patch’ Hunter Valley, NSW 390",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+580,19,305.05052,11,753,95,"2022 Tyrrell’s ‘8 Acres’ Hunter Valley, NSW 440",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+581,19,346.72051999999996,12,754,95,"2018 Dhillon by Bindi ‘Col Mountain’ Heathcote, Vic 210",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+582,19,367.48051999999996,13,755,95,"2023 Demi By Syrahmi Heathcote, Vic 90",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+583,19,388.36051999999995,14,756,95,"2000 Jasper Hill ‘Georgia's Paddock’ Heathcote, Vic 524",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+584,19,409.12052000000006,15,757,95,"2002 Jasper Hill ‘Georgia's Paddock’ Heathcote, Vic 508",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+585,19,450.76052000000004,16,758,95,"2020 Best’s ‘Hamill Hill’ Grampians, Vic 175",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+586,19,471.52052000000003,17,759,95,"2022 Mount Langi Ghiran ‘Talus’ Grampians, Vic 190",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+587,19,513.16052,18,760,95,"2022 Place of Changing Winds ‘Shiraz Pinot’ Macedon Ranges, Vic 240",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+588,19,554.70052,19,761,95,"2020 Dalwhinnie ‘ The Eagle’ Pyrenees , Vic 440",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+589,19,596.34052,20,762,95,"2024 Bloody Hill Villages ‘Coldstream’ Yarra Valley, Vic 90",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+590,19,617.10052,21,763,95,"2015 Levantine Hill ‘Melissa’s Paddock’ Yarra Valley, Vic 410",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+591,19,637.9805200000001,22,764,95,"2022 Mount Mary ‘Reflexion’ Yarra Valley, Vic 175",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+592,19,658.7405200000001,23,765,95,"2024 Timo Mayer Yarra Valley, Vic 165",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+593,19,679.50052,24,766,95,"2008 Yarra Yering ‘Dry Red Wine No.2’ Yarra Valley, Vic 650",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+594,19,700.3805199999999,25,767,95,"2019 Yarra Yering ‘Dry Red Wine No.2’ Yarra Valley, Vic 375mL 180",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+595,19,721.1405199999999,26,768,95,"2022 Yarra Yering ‘Dry Red Wine No.2’ Yarra Valley, Vic 420",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+596,19,741.90052,27,769,95,"2023 Yarra Yering ‘Light Dry Red’ Yarra Valley, Vic 220",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+597,19,762.78052,28,770,95,"2022 Yarra Yering ‘Underhill’ Yarra Valley, Vic 320",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+598,19,783.57052,29,771,95,"2019 Yeringberg Yarra Valley, Vic 310",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+599,19,804.33052,30,772,95,"2022 Yeringberg Yarra Valley, Vic 280",body,95,Wine Red/Blends and Shiraz/Australia,19,25
+600,19,984.936,31,773,95,- 25 -,body,95,Wine Red/Blends and Shiraz/Australia,19,25
+601,20,74.75052000000005,1,774,95,Shiraz and Blends (Continued),body,95,Wine Red/Blends and Shiraz/Australia,20,26
+602,20,116.41052000000002,2,775,95,"2021 Glaetzer- Dixon ‘Mon Pére’ Coal River/Derwent Valley, Tas 180",body,95,Wine Red/Blends and Shiraz/Australia,20,26
+603,20,137.17052,3,776,95,"2022 Pooley ‘J.R.D. Single Vineyard’ Coal River Valley, Tas 370",body,95,Wine Red/Blends and Shiraz/Australia,20,26
+604,20,178.81052,4,777,95,"2022 Shaw + Smith ‘Balhannah’ Adelaide Hills, SA 250",body,95,Wine Red/Blends and Shiraz/Australia,20,26
+605,20,199.57052,5,778,95,"2018 Shaw + Smith ‘Balhannah’ Adelaide Hills, SA 1.5L 560",body,95,Wine Red/Blends and Shiraz/Australia,20,26
+606,20,241.21051999999997,6,779,95,"2022 Hentley Farm ‘The Beast’ Barossa Valley, SA 295",body,95,Wine Red/Blends and Shiraz/Australia,20,26
+607,20,261.97051999999996,7,780,95,"2017 Hentley Farm ‘The Beast’ Barossa Valley, SA 350",body,95,Wine Red/Blends and Shiraz/Australia,20,26
+608,20,282.73051999999996,8,781,95,"2022 Spinifex ‘Bete Noir’ Barossa Valley, SA 100",body,95,Wine Red/Blends and Shiraz/Australia,20,26
+609,20,303.61051999999995,9,782,95,"2023 Torbreck ‘Hillside Vineyard’ Barossa Valley, SA 95",body,95,Wine Red/Blends and Shiraz/Australia,20,26
+610,20,345.16052,10,783,95,"2018 Henschke ‘Hill of Grace’ Eden Valley, SA 1,600",body,95,Wine Red/Blends and Shiraz/Australia,20,26
+611,20,366.04052,11,784,95,"2021 Henschke ‘Mount Edelstone’ Eden Valley, SA 690",body,95,Wine Red/Blends and Shiraz/Australia,20,26
+612,20,386.80052,12,785,95,"2021 Iggy ‘H&C’ Eden Valley, SA 215",body,95,Wine Red/Blends and Shiraz/Australia,20,26
+613,20,428.44052,13,786,95,"2014 Clarendon Hills ‘Domaine’ McLaren Vale, SA 130",body,95,Wine Red/Blends and Shiraz/Australia,20,26
+614,20,449.20052,14,787,95,"2022 Mathew Atallah ‘Denton’s Block’ McLaren Vale, SA 135",body,95,Wine Red/Blends and Shiraz/Australia,20,26
+615,20,490.84051999999997,15,788,95,"2020 Swinney ‘Farvie’, Frankland River Great Southern, WA 345",body,95,Wine Red/Blends and Shiraz/Australia,20,26
+616,20,532.36052,16,789,95,"2022 Deep Woods Estate ‘Reserve’ Margaret River, WA 225",body,95,Wine Red/Blends and Shiraz/Australia,20,26
+617,20,590.82052,17,790,77,France,header,77,Wine Red/Blends and Shiraz/France,20,26
+618,20,611.58052,18,791,77,"2017 Domaine Rostaing ‘Ampodium’ Côte-Rôtie, Rhône Valley 495",body,77,Wine Red/Blends and Shiraz/France,20,26
+619,20,632.46052,19,792,77,"2019 Jean- Luc Jamet ‘Les Terrasses’ Côte-Rôtie, Rhône Valley 690",body,77,Wine Red/Blends and Shiraz/France,20,26
+620,20,653.2205200000001,20,793,77,"2022 Alain Graillot Crozes Hermitage, Rhône Valley 320",body,77,Wine Red/Blends and Shiraz/France,20,26
+621,20,673.9805200000001,21,794,77,"2020 Paul Jaboulet Aîné ‘La Chapelle’ Hermitage, Rhône Valley 980",body,77,Wine Red/Blends and Shiraz/France,20,26
+622,20,715.6205199999999,22,795,77,"2019 Domaine de la Grange des Pères, VDP de l’Hérault, Languedoc 795",body,77,Wine Red/Blends and Shiraz/France,20,26
+623,20,757.26052,23,796,9,Italy,header,9,Wine Red/Blends and Shiraz/Italy,20,26
+624,20,778.05052,24,797,9,"2021 Praeter ‘Vino Rosso blend’ Langhe, Piemonte 130",body,9,Wine Red/Blends and Shiraz/Italy,20,26
+625,20,819.69052,25,798,48,USA,header,48,Wine Red/Blends and Shiraz/USA,20,26
+626,20,840.4505200000001,26,799,48,"2019 Jonata ‘Todos’ Ballard Canyon Santa Ynez Valley, California 310",body,48,Wine Red/Blends and Shiraz/USA,20,26
+627,20,984.936,27,800,48,- 26 -,body,48,Wine Red/Blends and Shiraz/USA,20,26
+628,21,74.75052000000005,1,801,62,Dessert Wine,header,62,Wine Dessert/Blends and Shiraz/USA,21,27
+629,21,91.55052,2,802,10,Sweet Wine,header,10,Wine Dessert/Wine Sweet/,21,27
+630,21,109.93052,3,803,78,Australia,header,78,Wine Dessert/Wine Sweet/Australia,21,27
+631,21,130.69052,4,804,78,"2022 Thomas Wines ‘Elevage’ , Semillon Hunter Valley, NSW 500ml 90",body,78,Wine Dessert/Wine Sweet/Australia,21,27
+632,21,151.45051999999998,5,805,78,"2023 Margan ‘Botrytis’ Semillon Hunter Valley, NSW 375ml 105",body,78,Wine Dessert/Wine Sweet/Australia,21,27
+633,21,172.33051999999998,6,806,78,"2022 Bloodwood Wines ‘Silk Purse’ Orange, NSW 375ml 90",body,78,Wine Dessert/Wine Sweet/Australia,21,27
+634,21,193.09051999999997,7,807,78,"2024 Moun t Horrocks ‘Cordon Cut’ , Riesling Clare Valley, SA 375ml 95",body,78,Wine Dessert/Wine Sweet/Australia,21,27
+635,21,213.85051999999996,8,808,78,"2024 Cullen ‘Late Harvest’, Chenin Blanc Margaret River, WA 375ml 110",body,78,Wine Dessert/Wine Sweet/Australia,21,27
+636,21,255.49051999999995,9,809,49,Rest of World,header,49,Wine Dessert/Wine Sweet/World of Rest,21,27
+637,21,276.25052000000005,10,810,49,"2019 Pegasus Bay ‘Finale’ Noble North Canterbury, NZ 375ml 140",body,49,Wine Dessert/Wine Sweet/World of Rest,21,27
+638,21,297.13052000000005,11,811,49,"2007 Château Filhot Sauternes, FR 750ml 350",body,49,Wine Dessert/Wine Sweet/World of Rest,21,27
+639,21,317.89052000000004,12,812,49,"2020 Clos Lapeyre Jurançon, FR 375ml 80",body,49,Wine Dessert/Wine Sweet/World of Rest,21,27
+640,21,338.68052,13,813,49,"2015 Marcel Deiss ‘ Altenberg de Bergheim ’ Grand Cru, Alsace, FR 750ml 635",body,49,Wine Dessert/Wine Sweet/World of Rest,21,27
+641,21,359.56052,14,814,49,"2013 Domaine des Baumard ‘Quarts de Chaume’, Loire Valley, FR 750ml 520",body,49,Wine Dessert/Wine Sweet/World of Rest,21,27
+642,21,380.32052,15,815,49,"2022 J.J. Prüm ‘Graacher Himmelreich’ Mosel, Germany Auslese 750ml 440",body,49,Wine Dessert/Wine Sweet/World of Rest,21,27
+643,21,442.72051999999996,16,816,79,Fortified,header,79,Wine Dessert/Fortified/,21,27
+644,21,465.04052,17,817,96,Sweet,header,96,Wine Dessert/Fortified/Sweet,21,27
+645,21,485.80052,18,818,96,"NV Pfeiffer Muscat Rutherglen, Vic 500ml 61",body,96,Wine Dessert/Fortified/Sweet,21,27
+646,21,506.56052,19,819,96,"NV Stanton & Killeen ‘Classic’ Topaque Rutherglen, Vic 500ml 95",body,96,Wine Dessert/Fortified/Sweet,21,27
+647,21,527.44052,20,820,96,"2002 Stanton & Killeen ‘Vintage Fortified’ Rutherglen, Vic 1500ml 460",body,96,Wine Dessert/Fortified/Sweet,21,27
+648,21,548.2205200000001,21,821,96,"NV Chambers ‘Grand Muscat’ Rutherglen, Vic 375ml 160",body,96,Wine Dessert/Fortified/Sweet,21,27
+649,21,589.86052,22,822,96,"2003 Seppeltsfield ’21yo Tawny’ Barossa, SA 750ml 180",body,96,Wine Dessert/Fortified/Sweet,21,27
+650,21,610.6205199999999,23,823,96,"1980 Lindeman’s ‘Vintage’ Port Multi-Regional, SA 750ml 370",body,96,Wine Dessert/Fortified/Sweet,21,27
+651,21,652.26052,24,824,96,"NV Egly-Ouriet ‘Pinot Noir Ratafia’ Champagne, FR 750ml 340",body,96,Wine Dessert/Fortified/Sweet,21,27
+652,21,714.66052,25,825,80,"Sherry, Spain",header,80,"Wine Dessert/Spain Sherry,/",21,27
+653,21,736.9805200000001,26,826,22,Dry,header,22,"Wine Dessert/Spain Sherry,/Dry",21,27
+654,21,757.7405200000001,27,827,22,Equipo Navazos ‘La Bota 102’ Palo Cortado Florpower MMX 750ml 380,body,22,"Wine Dessert/Spain Sherry,/Dry",21,27
+655,21,778.53052,28,828,22,"Equipo Navazos ‘La Bota 75’ Palo Cortado, Sanlúcar 750ml 380",body,22,"Wine Dessert/Spain Sherry,/Dry",21,27
+656,21,820.17052,29,829,22,Toro Albala Amontillado ‘Viejísimo Solera 1922’ Montilla-Moriles 500ml 225,body,22,"Wine Dessert/Spain Sherry,/Dry",21,27
+657,21,840.93052,30,830,22,Toro Albala Oloroso ‘Marqués de Poley’ NV Montilla-Moriles 500ml 104,body,22,"Wine Dessert/Spain Sherry,/Dry",21,27
+658,21,882.57052,31,831,81,Sweet,header,81,"Wine Dessert/Spain Sherry,/Sweet",21,27
+659,21,903.33052,32,832,81,2017 Equipo Navazos ‘Casa del Inca’ P.X. Montilla-Moriles 750ml 210,body,81,"Wine Dessert/Spain Sherry,/Sweet",21,27
+660,21,984.936,33,833,81,- 27 -,body,81,"Wine Dessert/Spain Sherry,/Sweet",21,27
