@@ -194,3 +194,11 @@ Got page numbers and headers in wine_list_wine.
 2025-09-10 09:59
 
 Turns out my multi-DAG approach was a bad practice, and that utilising several task groups within a DAG is the expected approach. Will need to refactor at a later date.
+
+## Refactor number infinity Done
+
+2025-09-10 14:45
+
+Well that was a lesson learnt. Note for the future - write checks early, dont be afraid of bridging tables, and DO USE RELATIONSHIPS.
+
+Anyway. There's a bunch of parsing errors in the data atm but I want to push forward to the process form. I am bored of working in airflow and pure SQL atm.

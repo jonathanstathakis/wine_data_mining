@@ -152,3 +152,9 @@ A document has one publication date. Duckdb does not permit the update of rows t
 a sperate pubDate table is the simplest method. pubDate.doc_id to link it to the document.
 
 In summary we can add a document identifier by generating it on the filepath then add a doc_id to pubDate and page. For brevity it would be sensible to also add it to Line or discard a Page table at all, but it's already there.
+
+## TODO
+
+- [ ] add table checks throughout ETL for sanity check and validation.
+- [ ] recombine seperate dags into one and use task groups instead (?)
+- [ ] re-evaluate schema.

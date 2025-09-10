@@ -173,7 +173,6 @@ from
   
 select * from whiteVarExtract;
 
--- TODO: complete extraction of red varietals and then joining.
 ;
 
 
