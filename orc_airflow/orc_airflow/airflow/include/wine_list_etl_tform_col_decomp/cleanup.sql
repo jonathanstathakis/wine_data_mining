@@ -4,4 +4,4 @@ drop table if exists coldecochampagne;
 drop table if exists coldecopage7ausspk;
 drop table if exists coldecopage9riz;
 drop table if exists columndecomp;
-show tables;
+drop table if exists ExtractedWords;

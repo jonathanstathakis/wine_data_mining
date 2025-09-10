@@ -34,7 +34,7 @@
 --   as vol,
 --   price,
 -- from
---   extractedWords
+--   extractedWord
 -- order by
 --   line_num_tot,
 --   x0;

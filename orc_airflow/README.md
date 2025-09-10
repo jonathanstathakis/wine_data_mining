@@ -139,3 +139,16 @@ aggregated -> wineListLines through line_num_tot.
 pageLines -> aggregated is a many to one join through page_num + line_num.
 
 A cleanup could have a lineage through pageLines and aggregated to ensure normalization.
+
+## Relationships
+
+### Document to Line
+
+There are two core entitites in this ETL: the input document and the run parameters. If we represent the run parameters as the run datetime, then we simply need a method of identifying the input document and the run datetime. The input document can be represented by the publication date of the document and the input file path. Therefore a Document entity may have a combination input filepath and publication date as its unique identifier.
+
+One document may have many pages, and obtaining the publication date can only be achieved part-way through the pipeline, so starting with the filepath as unique identifer is wise. Addition of the publication date is useful for downstream processess but not for the ETL itself, therefore the filepath should be used to generate the primary key. The relationship should also go Document -> Page -> Line. A document has many Pages and many lines. So add that link.
+
+A document has one publication date. Duckdb does not permit the update of rows that are used as relationship keys so
+a sperate pubDate table is the simplest method. pubDate.doc_id to link it to the document.
+
+In summary we can add a document identifier by generating it on the filepath then add a doc_id to pubDate and page. For brevity it would be sensible to also add it to Line or discard a Page table at all, but it's already there.

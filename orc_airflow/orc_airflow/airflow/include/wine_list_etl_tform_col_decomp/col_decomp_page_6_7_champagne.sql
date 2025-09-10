@@ -16,7 +16,7 @@ create or replace table colDecoChampagne (
 );
 insert into colDecoChampagne (LINE_NUM_TOT)
 select distinct LINE_NUM_TOT
-from EXTRACTEDWORDS
+from extractedWord
     where
         PAGE_NUM = 6
     OR
@@ -35,7 +35,7 @@ order by LINE_NUM_TOT;
 update colDecoChampagne A set
     VINTAGE = TEXT
 from
-    EXTRACTEDWORDS B
+    extractedWord B
 where
     A.LINE_NUM_TOT = B.LINE_NUM_TOT
     and
@@ -47,7 +47,7 @@ where
 update colDecoChampagne A set
     BASE_YEAR = TEXT
 from
-    EXTRACTEDWORDS B
+    extractedWord B
 where
     A.LINE_NUM_TOT = B.LINE_NUM_TOT
     and X0 > 91 and X1 < 107
@@ -67,7 +67,7 @@ from
         line_num_tot,
         text
     from
-        extractedWords
+        extractedWord
     where
         x0 > 115  and x1 < 365)
 group by
@@ -89,7 +89,7 @@ from
         line_num_tot,
         text
     from
-        extractedWords
+        extractedWord
     where
       x0 > 360
     and
@@ -111,7 +111,7 @@ FROM (
     SELECT
         line_num_tot,
         string_agg(text, ' ').replace(')','').trim() AS text
-    FROM extractedWords
+    FROM extractedWord
     WHERE x0 > 390
       AND x1 < 500
 and
@@ -134,7 +134,7 @@ from
         merged_text,
         text
     from
-        extractedWords
+        extractedWord
     where
         x0 > 490 and x1 < 660)
 group by
@@ -147,7 +147,7 @@ a.line_num_tot = b.line_num_tot;
 -- update colDecoChampagne a set
 -- vol = b.text
 -- from
---    extractedWords  b
+--    extractedWord  b
 -- where
 --   a.line_num_tot = b.line_num_tot
 -- and 
@@ -157,7 +157,7 @@ a.line_num_tot = b.line_num_tot;
 -- price
 update colDecoChampagne a set
 price = text.replace(',','')
-   from extractedWords b 
+   from extractedWord b 
 where
   a.line_num_tot = b.line_num_tot
 and

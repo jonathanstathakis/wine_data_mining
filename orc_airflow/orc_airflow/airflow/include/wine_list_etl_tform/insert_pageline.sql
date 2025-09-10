@@ -4,12 +4,12 @@
 * then insert into pageLine, a child of page
 * and make rawtext a child of pageLine through line_id.
 */
-create temp table PAGELINESTAGING as (
+create or replace table PAGELINESTAGING as (
     with recursive UNIQUE_TOPS as (
         select distinct
             PAGE_ID,
             TOP
-        from RAWTEXT
+        from RAWTEXTLOADING
         order by
             PAGE_ID,
             TOP
@@ -64,7 +64,7 @@ create temp table PAGELINESTAGING as (
                 partition by A.PAGE_ID
                 order by B.ANCHOR_TOP
             ) as LINE_NUM
-        from RAWTEXT as A
+        from RAWTEXTLOADING as A
         inner join TOP_TO_ANCHOR as B
             on
                 A.PAGE_ID = B.PAGE_ID
@@ -84,6 +84,9 @@ create temp table PAGELINESTAGING as (
         WORDS_WITH_LINES
 );
 
+
+select case when COUNT(*) > 0 then 'ok' else ERROR('pageLineStaging is empty') end
+from PAGELINESTAGING;
 
 insert into PAGELINE (
     PAGE_ID,
@@ -125,32 +128,6 @@ from (
 where
     PAGELINE.ID = X.ID;
 
--- need to add line_id to text as well.
-
-update RAWTEXT set
-    LINE_ID = X.LINE_ID
-from
-    (
-        select
-            S.PAGE_ID,
-            T.ID as RAWTEXT_ID,
-            L.ID as LINE_ID,
-            S.LINE_NUM as PAGE_LINE_NUM,
-            T.TEXT
-        from
-            RAWTEXT as T
-        inner join
-            PAGELINESTAGING as S
-            on
-                T.ID = S.RAWTEXT_ID
-        inner join
-            PAGELINE as L
-            on
-                S.PAGE_ID = L.PAGE_ID
-                and
-                S.LINE_NUM = L.PAGE_LINE_NUM
-        order by
-            L.LINE_NUM_TOT
-    ) as X
-where
-    X.RAWTEXT_ID = RAWTEXT.ID;
+select case when COUNT(*) > 0 then 'ok' else ERROR('pageLine is empty') end
+from PAGELINE
+;

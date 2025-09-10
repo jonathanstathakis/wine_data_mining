@@ -3,9 +3,12 @@ creates a tabel sectionLabel with the section headers from pages 6 and onwards,
 i.e. by the bottle.
 */
 
-
+create or replace table sectionLabel (
+line_id int references pageline(id),
+section_type varchar not null,
+);
 -- filter to lines directly above rectangles to form a map of line number to rect text line
-create or replace table sectionLabel as (
+create or replace table sectionLabelLoading as (
 with subsection as (
     select
         w.rawtext_id as word0_id,
@@ -14,7 +17,7 @@ with subsection as (
     from
         word0 w
     inner join
-        rawText_btb t
+        rawText t
     on
         w.rawtext_id = t.id
     inner join 
@@ -33,11 +36,11 @@ section as (
     select
         w.line_id as line_id,
         w.rawtext_id as word0_id,
-        'section' as section_type,
+        'section' as section_type
     from
         word0 as w
-    join
-        rawText_btb t
+    left join
+        rawText t
     on
         w.rawtext_id = t.id
     where
@@ -52,7 +55,7 @@ section as (
         w.line_id as line_id,
         'subsubsection' as section_type, from word0 as w
     join 
-    rawText_btb t
+    rawText t
     on
     w.rawtext_id = t.id
     where
@@ -79,8 +82,8 @@ section as (
         string_agg(t.text, ' ') as text
       from
         subsubsection s
-      join
-        rawtext t
+      left join
+        rawText t
       on
         s.line_id = t.line_id
       group by
@@ -96,13 +99,16 @@ section as (
 
 subsubsection_without_skin_contact as (
     select
-        *
+        a.word0_id,
+        a.line_id,
+        a.section_type
     from
         subsubsection a
-    anti join
+    left join
         skin_contact_lines b
     on
         a.line_id = b.line_id
+    where b.line_id IS NULL
     ),
 
 sectionLabel_ as (
@@ -126,21 +132,21 @@ sectionLabel_ as (
           section_type
         from
           subsubsection_without_skin_contact
-  )
+  ),
 
+result as (
 select
-  first(l.line_num_tot) as line_num_tot,
   first(s.line_id) as line_id,
   first(s.section_type) as section_type,
-  string_agg(t.text, ' ') as text
+  string_agg(t.text, ' ' ORDER BY t.x0) as text
 from
   sectionLabel_ s
 left join
-  rawText_btb t
+  rawText t
 on
   s.line_id = t.line_id
 left join
-  pageLine_btb l
+  pageLine l
 on
   s.line_id = l.id
 group by
@@ -149,5 +155,22 @@ group by
 having
   text not ilike '%continued%' -- page-based repeat headers.
 order by
-  first(l.line_num_tot) 
+  first(l.line_num_tot),
+  first(t.x0) asc
+)
+select 
+    line_id,
+    section_type,
+    text
+  from result 
 );
+
+
+create or replace table sectionLabel as
+select 
+    line_id,
+    section_type,
+from
+  sectionLabelLoading;
+
+select * from sectionLabel;

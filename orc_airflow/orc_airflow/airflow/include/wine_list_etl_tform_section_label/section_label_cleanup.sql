@@ -8,3 +8,5 @@ drop table sectionsubsectionfilled;
 drop table sectionlabelsbyline;
 drop table sectionpathloading;
 drop table alllineswithsections_null;
+drop table sectionlabelloading;
+drop table sectionlabelwideloading;

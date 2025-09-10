@@ -123,8 +123,6 @@ def extract_line_list_words():
         >> create_insert_wineListLines_label_sections
     )  # type: ignore
 
-    # TODO: delete currentRunDate at the end of the run.
-
 
 extract_line_list_words()
 

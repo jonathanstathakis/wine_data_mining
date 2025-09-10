@@ -142,13 +142,14 @@ Finally we want to implement a REST API on the webapp to enable automatic upload
 TODO:
 
 - [ ] complete Load phase:
-  - [ ] load results of column decomp DAG to a table 'wine_list_wine'
-  - [ ] add section_path_id to section_label_wine
-  - [ ] add publication date to wine_list_wine
-  - [ ] add run_datetime to wine_list_wine
-  - [ ] identify if any other FK need to be added to wine_list_wine
-  - [ ] create output csv query that joins wine_list_wine with all FK tables and outputs values to a csv file name is input filename, run date
-  - [ ] add output to csv Task.
+  - [x] load results of column decomp DAG to a table 'wine_list_wine'
+  - [x] add section_path_id to wine_list_wine
+  - [x] add publication date to wine_list_wine
+  - [x] add run_datetime to wine_list_wine
+  - [x] identify if any other FK need to be added to wine_list_wine
+  - [x] create output csv query that joins wine_list_wine with all FK tables and outputs values to a csv file name is input filename, run date
+  - [x] add output to csv Task.
+  - [ ] re-establish relationships where possible.
 - [ ] n_0 wine_list to wine join:
   - [ ] download prod database
   - [ ] create a interface table from wine that mimics the fields of wine_list
@@ -183,3 +184,13 @@ So we're going to need to fix this. The main solution I can see is to not refer 
 We will start with section_label. Separate dependency on the core tables.
 
 Section label is done, have wrapped section_path back into section_label for management simplicity. Next is col decomp and load. Same deal, ensure that queries are on the \_btb views not the core store and convert to using some sort of bridging table for ease of later modification.
+
+coldecomp is done, it all goes through extractedWords.
+
+Got page numbers and headers in wine_list_wine.
+
+## Task Groups
+
+2025-09-10 09:59
+
+Turns out my multi-DAG approach was a bad practice, and that utilising several task groups within a DAG is the expected approach. Will need to refactor at a later date.

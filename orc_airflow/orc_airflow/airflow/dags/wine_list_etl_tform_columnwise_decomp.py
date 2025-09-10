@@ -1,7 +1,11 @@
 from airflow.sdk import task, dag
 from orc_airflow.definitions import RESOURCES
 from duckdb_provider.hooks.duckdb_hook import DuckDBHook
-from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
+from airflow.providers.common.sql.operators.sql import (
+    SQLColumnCheckOperator,
+    SQLExecuteQueryOperator,
+    SQLTableCheckOperator,
+)
 from textwrap import dedent
 import logging
 import os
@@ -37,37 +41,43 @@ def columwise_decomp_etl():
             task_id="decompose_base_pages",
             conn_id=duckdb_conn_id,
             sql="col_decomp_base.sql",
-            return_last=True,
         )
         >> SQLExecuteQueryOperator(
             task_id="decompose_page_27_dry_sherry",
             conn_id=duckdb_conn_id,
             sql="col_decomp_page_27_dry_sherry.sql",
-            return_last=True,
         )
         >> SQLExecuteQueryOperator(
             task_id="decomp_page_6_7_champagne",
             conn_id=duckdb_conn_id,
             sql="col_decomp_page_6_7_champagne.sql",
-            return_last=True,
         )
         >> SQLExecuteQueryOperator(
             task_id="col_decomp_page_7_aus_spk",
             conn_id=duckdb_conn_id,
             sql="col_decomp_page_7_australian_spk.sql",
-            return_last=True,
         )
         >> SQLExecuteQueryOperator(
             task_id="col_decomp_page_9_riz",
             conn_id=duckdb_conn_id,
             sql="col_decomp_page_9_riz.sql",
-            return_last=True,
         )
         >> SQLExecuteQueryOperator(
-            task_id="join_decomps",
+            task_id="create_insert_wine",
             conn_id=duckdb_conn_id,
-            sql="join_decompositions.sql",
-            return_last=True,
+            sql="create_insert_wine.sql",
+        )
+        >> SQLTableCheckOperator(
+            task_id="wine_row_count_check",
+            table="wine",
+            checks={"row_count_check": {"check_statement": "COUNT(*) > 0"}},
+            conn_id=duckdb_conn_id,
+        )
+        ## cleanup
+        >> SQLExecuteQueryOperator(
+            task_id="cleanup",
+            conn_id=duckdb_conn_id,
+            sql="cleanup.sql",
         )
     )  # type: ignore
 

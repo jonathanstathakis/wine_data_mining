@@ -4,7 +4,10 @@ tform DAGs and outputs a CSV file (for now).
 """
 
 from airflow.sdk import dag, task
-from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
+from airflow.providers.common.sql.operators.sql import (
+    SQLExecuteQueryOperator,
+    SQLTableCheckOperator,
+)
 import logging
 from orc_airflow.airflow.dags import defs
 
@@ -25,6 +28,12 @@ def wine_list_etl_load():
             task_id="create_insert_wine_list_wine",
             conn_id=duckdb_conn_id,
             sql="create_insert_wine_list_wine.sql",
+        )
+        >> SQLTableCheckOperator(
+            task_id="wine_list_wine_rowcount_check",
+            conn_id=duckdb_conn_id,
+            table="wine_list_wine",
+            checks={"row_count_check": {"check_statement": "count (*) > 0"}},
         )
         >> SQLExecuteQueryOperator(
             task_id="output_wine_list_wine_to_csv",

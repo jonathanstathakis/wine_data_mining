@@ -13,7 +13,7 @@ create or replace table DRYSHERRY (
 
 insert into DRYSHERRY (LINE_NUM_TOT)
 select distinct LINE_NUM_TOT
-from EXTRACTEDWORDS
+from extractedWord
 order by LINE_NUM_TOT;
 --
 -- producer_winename. 
@@ -29,7 +29,7 @@ from (
                 LINE_NUM_TOT,
                 TEXT
             from
-                EXTRACTEDWORDS
+                extractedWord
             where
                 X1 < 369
         )
@@ -53,7 +53,7 @@ from (
                 MERGED_TEXT,
                 TEXT
             from
-                EXTRACTEDWORDS
+                extractedWord
             where
                 X0 > 360 and X1 < 550
         )
@@ -68,7 +68,7 @@ where
 update DRYSHERRY A set
     VOL = B.TEXT
 from
-    EXTRACTEDWORDS as B
+    extractedWord as B
 where
     A.LINE_NUM_TOT = B.LINE_NUM_TOT
     and
@@ -77,7 +77,7 @@ where
 -- price
 update DRYSHERRY A set
     PRICE = text.replace(',', '')
-from EXTRACTEDWORDS as B
+from extractedWord as B
 where
     A.LINE_NUM_TOT = B.LINE_NUM_TOT
     and

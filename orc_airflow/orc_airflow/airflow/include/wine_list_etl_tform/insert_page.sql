@@ -2,13 +2,28 @@
 * get the distinct page number from page text csv and insert into
 * page index table.
 * */
+create temp table PAGELOADING as (
 
-insert into page (
-    page_number
+    select distinct
+        P.PAGE_NUMBER as PAGE_NUMBER,
+        D.ID as DOC_ID
+    from
+        PAGE_CSV P
+    cross join
+        DOC D
+    order by
+        PAGE_NUMBER
+);
+
+
+insert into PAGE (
+    PAGE_NUMBER,
+    DOC_ID
 )
-select distinct page_number as page_number
+select
+    PAGE_NUMBER,
+    DOC_ID
 from
-    page_csv
-order by
-    page_number
-;
+    PAGELOADING;
+
+select * from PAGE;

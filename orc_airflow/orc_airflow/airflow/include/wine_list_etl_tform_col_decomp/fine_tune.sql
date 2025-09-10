@@ -8,7 +8,7 @@ begin;
 
 
 -- base year
-alter table COLDECOWINES add column BASE_YEAR_ varchar;
+alter table WINES add column BASE_YEAR_ varchar;
 update colDecoWines a set
   base_year_ = b.base_year
 from 

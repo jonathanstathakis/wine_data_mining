@@ -15,11 +15,22 @@ select
     S.SUBSECTION,
     S.SUBSUBSECTION
 from
-    PAGELINE_BTB L
+    PAGELINE L
 left join
     SECTIONLABELWIDE S
     on
         L.ID = S.LINE_ID
 order by
     L.LINE_NUM_TOT
+;
+
+select
+    case
+        when count(*) > 0 then 'ok' else
+            error('no values in section, subsection or subsubsection')
+    end
+from ALLLINESWITHSECTIONS_NULL
+where
+    SECTION is not null or SUBSECTION is not null or SUBSUBSECTION is not null;
+select * from ALLLINESWITHSECTIONS_NULL limit 10;
 ;

@@ -3,7 +3,7 @@
 * for use in decomposing the pages into their component columnar fields
 * on a page by page basis in downstream queries.
 */
-create or replace table EXTRACTEDWORDS (
+create or replace table EXTRACTEDWORD (
     PAGE_NUM int not null,
     LINE_NUM_TOT int not null,
     PAGE_LINE_NUM int not null,
@@ -18,7 +18,7 @@ create or replace table EXTRACTEDWORDS (
 );
 
 
-insert into EXTRACTEDWORDS (
+insert into EXTRACTEDWORD (
     PAGE_NUM,
     LINE_NUM_TOT,
     PAGE_LINE_NUM,
@@ -35,7 +35,7 @@ select
     P.PAGE_NUMBER as PAGE_NUM,
     L.LINE_NUM_TOT,
     L.PAGE_LINE_NUM as LINE_NUM,
-    L.FULL_LINE_TEXT as MERGED_TEXT,
+    LTXT.LINE_TEXT as MERGED_TEXT,
     T.TEXT,
     T.X0,
     T.X1,
@@ -54,11 +54,23 @@ left join
     on
         L.ID = T.LINE_ID
 left join
+    SECTIONPATHTOPAGELINE SPP
+    on
+        L.ID = SPP.LINE_ID
+left join
+    PAGELINETYPE LT
+    on
+        L.ID = LT.LINE_ID
+left join
+    LINETEXT LTXT
+    on
+        LTXT.LINE_ID = L.ID
+left join
     SECTIONPATH S
     on
-        L.SECTIONPATH_ID = S.ID
+        SPP.SECTIONPATH_ID = S.ID
 where
-    L.LINE_TYPE = 'body'
+    LT.LINE_TYPE = 'body'
     and
     LINE_NUM_TOT <> 264 -- PTO emoji line
     and merged_text.regexp_matches('\d{4}|NV')
@@ -68,4 +80,10 @@ order by
     L.LINE_NUM_TOT asc,
     T.X0
 ;
-select * from EXTRACTEDWORDS;
+
+select
+    case
+        when COUNT(*) > 0 then 'ok'
+        else ERROR('Expected at least one row in extractedWord')
+    end
+from EXTRACTEDWORD;

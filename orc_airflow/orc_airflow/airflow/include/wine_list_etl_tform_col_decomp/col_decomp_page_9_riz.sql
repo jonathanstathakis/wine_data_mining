@@ -13,7 +13,7 @@ create or replace table colDecoPage9Riz (
 );
 insert into colDecoPage9Riz (LINE_NUM_TOT)
 select distinct LINE_NUM_TOT
-from EXTRACTEDWORDS
+from extractedWord
     where
         PAGE_NUM = 9
     and SUBSECTION = 'Riesling'
@@ -23,7 +23,7 @@ order by LINE_NUM_TOT;
 update colDecoPage9Riz A set
     VINTAGE = TEXT
 from
-    EXTRACTEDWORDS B
+    extractedWord B
 where
     A.LINE_NUM_TOT = B.LINE_NUM_TOT
     and
@@ -45,7 +45,7 @@ where
          line_num_tot,
          text
      from
-         extractedWords
+         extractedWord
      where
          x0 > 115  
       and x1 < 365
@@ -70,7 +70,7 @@ where
          merged_text,
          text
      from
-         extractedWords
+         extractedWord
      where
          x0 > 365 and x1 < 450)
  group by
@@ -92,7 +92,7 @@ from
         line_num_tot,
         text
     from
-        extractedWords
+        extractedWord
     where
         x0 > 450 and x1 < 600)
 group by
@@ -105,7 +105,7 @@ a.line_num_tot = b.line_num_tot;
  update colDecoPage9Riz a set
  vol = b.text
  from
-    extractedWords  b
+    extractedWord  b
  where
    a.line_num_tot = b.line_num_tot
  and 
@@ -115,7 +115,7 @@ a.line_num_tot = b.line_num_tot;
 -- price
 update colDecoPage9Riz a set
 price = text.replace(',','')
-   from extractedWords b 
+   from extractedWord b 
 where
   a.line_num_tot = b.line_num_tot
 and

@@ -1,5 +1,4 @@
-/*
-Using the content lines identified in wineListLines backtrack to get the raw pdf word data
+/* Using the content lines identified in wineListLines backtrack to get the raw pdf word data
 then start identifying the columns.
 */
 
@@ -17,7 +16,7 @@ create or replace table COLUMNDECOMP (
 
 insert into COLUMNDECOMP (LINE_NUM_TOT)
 select distinct LINE_NUM_TOT
-from EXTRACTEDWORDS
+from extractedWord
 where
         PAGE_NUM not in (6, 7, 9, 27)
         or PAGE_NUM > 5 -- restrict to bottles.
@@ -32,9 +31,13 @@ where
 order by LINE_NUM_TOT;
 
 update COLUMNDECOMP A
-set merged_text = l.full_line_text
+set merged_text = ltxt.line_text
 from
     pageLine l
+left join
+    lineText ltxt
+on
+    l.id = ltxt.line_id
 where
     a.line_num_tot = l.line_num_tot;
       
@@ -43,7 +46,7 @@ where
 update COLUMNDECOMP A set
     VINTAGE = TEXT
 from
-    EXTRACTEDWORDS as B
+    extractedWord as B
 where
     A.LINE_NUM_TOT = B.LINE_NUM_TOT
     and
@@ -63,7 +66,7 @@ where
                  LINE_NUM_TOT,
                  TEXT
              from
-                 EXTRACTEDWORDS
+                 extractedWord
              where
                  X0 > 105 and X1 < 369
          )
@@ -87,7 +90,7 @@ from (
                 MERGED_TEXT,
                 TEXT
             from
-                EXTRACTEDWORDS
+                extractedWord
             where
                 X0 > 360 and X1 < 550
         )
@@ -102,7 +105,7 @@ where
  update COLUMNDECOMP A set
      VOL = B.TEXT
  from
-     EXTRACTEDWORDS as B
+     extractedWord as B
  where
      A.LINE_NUM_TOT = B.LINE_NUM_TOT
      and
@@ -111,7 +114,7 @@ where
  -- price
  update COLUMNDECOMP A set
      PRICE = text.replace(',', '')
- from EXTRACTEDWORDS as B
+ from extractedWord as B
  where
      A.LINE_NUM_TOT = B.LINE_NUM_TOT
      and

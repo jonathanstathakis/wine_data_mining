@@ -18,7 +18,6 @@ def wine_list_etl_extract():
     def extract_doc_data():
         """ """
 
-        # TODO: update logging.
         from orc_airflow.pdf_parser import tabulate_pages, tabulate_rects
         import pdfplumber
 

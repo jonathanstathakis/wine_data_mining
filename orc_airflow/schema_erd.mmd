@@ -1,0 +1,170 @@
+erDiagram
+  
+  "wine_list_etl_transform.EXTRACTEDWORD" {
+      INTEGER PAGE_NUM 
+      INTEGER LINE_NUM_TOT 
+      INTEGER PAGE_LINE_NUM 
+      VARCHAR MERGED_TEXT 
+      VARCHAR TEXT 
+      DOUBLE X0 
+      DOUBLE X1 
+      DOUBLE WIDTH 
+      VARCHAR SECTION 
+      VARCHAR SUBSECTION 
+      VARCHAR SUBSUBSECTION 
+    }
+
+    "wine_list_etl_transform.PUB_DATE" {
+      INTEGER ID PK
+      TIMESTAMP PUB_DATE 
+      INTEGER doc_id FK
+    }
+    "wine_list_etl_transform.Doc" ||--o{ "wine_list_etl_transform.PUB_DATE" : has
+    "wine_list_etl_transform.RAWTEXTLOADING" {
+      INTEGER id PK
+      INTEGER PAGE_ID FK
+      INTEGER line_id 
+      VARCHAR TEXT 
+      DOUBLE X0 
+      DOUBLE X1 
+      DOUBLE TOP 
+      DOUBLE DOCTOP 
+      DOUBLE BOTTOM 
+      BOOLEAN UPRIGHT 
+      DOUBLE HEIGHT 
+      DOUBLE WIDTH 
+      VARCHAR DIRECTION 
+      VARCHAR FONTNAME 
+      DOUBLE SIZE 
+    }
+    "wine_list_etl_transform.PAGE" ||--o{ "wine_list_etl_transform.RAWTEXTLOADING" : has
+    "wine_list_etl_transform.SECTIONPATH" {
+      INTEGER ID PK
+      VARCHAR PATH 
+      INTEGER doc_id FK
+    }
+    "wine_list_etl_transform.doc" ||--o{ "wine_list_etl_transform.SECTIONPATH" : has
+    "wine_list_etl_transform.WINE" {
+      INTEGER id PK
+      INTEGER line_id FK
+      VARCHAR VINTAGE 
+      VARCHAR BASE_YEAR 
+      VARCHAR PROD_WINE_NAME 
+      VARCHAR DRYNESS 
+      VARCHAR DISGORGE_DATE 
+      VARCHAR GEO_INT 
+      VARCHAR CLASS 
+      VARCHAR VOL 
+      INTEGER PRICE 
+    }
+    "wine_list_etl_transform.pageLine" ||--o{ "wine_list_etl_transform.WINE" : has
+    "wine_list_etl_transform.doc" {
+      INTEGER id PK
+      VARCHAR doc_path 
+      INTEGER run_id FK
+    }
+    "wine_list_etl_transform.run" ||--o{ "wine_list_etl_transform.doc" : has
+    "wine_list_etl_transform.lineText" {
+      INTEGER id PK
+      INTEGER line_id FK
+      VARCHAR line_text 
+    }
+    "wine_list_etl_transform.pageline" ||--o{ "wine_list_etl_transform.lineText" : has
+    "wine_list_etl_transform.page" {
+      INTEGER id PK
+      INTEGER page_number 
+      INTEGER doc_id FK
+    }
+    "wine_list_etl_transform.doc" ||--o{ "wine_list_etl_transform.page" : has
+    "wine_list_etl_transform.pageLine" {
+      INTEGER id PK
+      INTEGER page_id FK
+      DOUBLE anchor_top 
+      INTEGER page_line_num 
+      INTEGER line_num_tot 
+    }
+    "wine_list_etl_transform.page" ||--o{ "wine_list_etl_transform.pageLine" : has
+    "wine_list_etl_transform.pageLineType" {
+      INTEGER id PK
+      INTEGER line_id FK
+      VARCHAR line_type 
+    }
+    "wine_list_etl_transform.pageLine" ||--o{ "wine_list_etl_transform.pageLineType" : has
+    "wine_list_etl_transform.page_csv" {
+      INTEGER id PK
+      VARCHAR text 
+      VARCHAR x0 
+      DOUBLE x1 
+      DOUBLE top 
+      DOUBLE doctop 
+      DOUBLE bottom 
+      BOOLEAN upright 
+      DOUBLE height 
+      DOUBLE width 
+      VARCHAR direction 
+      VARCHAR fontname 
+      DOUBLE size 
+      INTEGER page_number 
+    }
+
+    "wine_list_etl_transform.rawText" {
+      INTEGER id PK
+      INTEGER page_id FK
+      INTEGER line_id FK
+      VARCHAR text 
+      DOUBLE x0 
+      DOUBLE x1 
+      DOUBLE top 
+      DOUBLE doctop 
+      DOUBLE bottom 
+      BOOLEAN upright 
+      DOUBLE height 
+      DOUBLE width 
+      VARCHAR direction 
+      VARCHAR fontname 
+      DOUBLE size 
+    }
+    "wine_list_etl_transform.pageline" ||--o{ "wine_list_etl_transform.rawText" : has
+    "wine_list_etl_transform.page" ||--o{ "wine_list_etl_transform.rawText" : has
+    "wine_list_etl_transform.rect_csv" {
+      INTEGER id PK
+      DOUBLE x0 
+      DOUBLE y0 
+      DOUBLE x1 
+      DOUBLE y1 
+      DOUBLE bottom 
+      DOUBLE top 
+      DOUBLE width 
+      DOUBLE height 
+      VARCHAR pts 
+      DOUBLE linewidth 
+      DOUBLE page_number 
+    }
+
+    "wine_list_etl_transform.rectangle" {
+      INTEGER id PK
+      INTEGER page_id FK
+      DOUBLE x0 
+      DOUBLE y0 
+      DOUBLE x1 
+      DOUBLE y1 
+      DOUBLE bottom 
+      DOUBLE top 
+      DOUBLE width 
+      DOUBLE height 
+      VARCHAR pts 
+      DOUBLE linewidth 
+    }
+    "wine_list_etl_transform.page" ||--o{ "wine_list_etl_transform.rectangle" : has
+    "wine_list_etl_transform.run" {
+      INTEGER id PK
+      TIMESTAMP run_dt 
+    }
+
+    "wine_list_etl_transform.sectionPathtoPageLine" {
+      INTEGER id PK
+      INTEGER line_id FK
+      INTEGER sectionpath_id FK
+    }
+    "wine_list_etl_transform.pageLine" ||--o{ "wine_list_etl_transform.sectionPathtoPageLine" : has
+    "wine_list_etl_transform.sectionPath" ||--o{ "wine_list_etl_transform.sectionPathtoPageLine" : has
